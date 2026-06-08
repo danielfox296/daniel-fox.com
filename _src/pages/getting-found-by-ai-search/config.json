@@ -1,0 +1,27 @@
+{
+  "title": "Getting Found in AI Search Results | Liftwright",
+  "meta_description": "When buyers ask an assistant to recommend a builder or maker, will it name you? A clear look at earning visibility in AI answers without chasing vanity metrics.",
+  "output": "getting-found-by-ai-search.html",
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to get your business recommended in AI search answers",
+    "description": "When buyers ask an assistant to recommend a builder or maker, will it name you? A clear look at earning visibility in AI answers without chasing vanity metrics.",
+    "author": {
+      "@type": "Organization",
+      "name": "Liftwright"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Liftwright"
+    },
+    "mainEntity": {
+      "@type": "Question",
+      "name": "How do I make sure AI assistants recommend my business when buyers ask?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An assistant recommends the businesses it can read clearly. That means publishing plain, structured, authoritative answers to the exact questions a buyer asks before a considered purchase, so the model can find you, understand what you do, and cite you. It is the same authority that wins ordinary search, applied to a new front door. It is a real capability and one layer of demand, not a standalone channel or a magic switch."
+      }
+    }
+  }
+}

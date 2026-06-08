@@ -1,0 +1,23 @@
+{
+  "title": "Demand Generation for High-Ticket Buyers | Liftwright",
+  "meta_description": "How to generate steady demand for a considered, high-ticket purchase — and why owning the whole marketing function beats paying for scattered activity that never compounds.",
+  "output": "demand-generation-for-high-ticket-businesses.html",
+  "schema": {
+    "@type": "Article",
+    "headline": "How to actually generate demand for a high-ticket, considered purchase",
+    "description": "How to generate steady demand for a considered, high-ticket purchase — and why owning the whole marketing function beats paying for scattered activity that never compounds.",
+    "author": {
+      "@type": "Organization",
+      "name": "Liftwright"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Liftwright",
+      "url": "https://liftwright.co"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://liftwright.co/demand-generation-for-high-ticket-businesses.html"
+    }
+  }
+}

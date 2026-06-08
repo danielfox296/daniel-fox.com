@@ -1,0 +1,19 @@
+{
+  "title": "SEO for Builders & High-Ticket Trades | Liftwright",
+  "meta_description": "How custom builders, remodelers, and high-ticket trades win search for a researched purchase — and why content and SEO only compound when one owner runs the plan.",
+  "output": "seo-for-high-ticket-builders-and-trades.html",
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "SEO and content for builders and high-ticket trades",
+    "description": "How custom builders, remodelers, and high-ticket trades win search for a researched purchase — and why content and SEO only compound when one owner runs the plan.",
+    "author": {
+      "@type": "Organization",
+      "name": "Liftwright"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Liftwright"
+    }
+  }
+}
