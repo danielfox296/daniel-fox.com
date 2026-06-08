@@ -1,0 +1,48 @@
+<section class="section">
+  <div class="container reveal">
+    <p class="eyebrow">Start a conversation</p>
+    <h2 class="measure">Tell us about the business.</h2>
+    <p class="lead measure-wide">Two minutes here, then a short call. We'll be straight with you about whether the math and the fit are there &mdash; including if they're not.</p>
+
+    <!--
+      TODO (firewall + delivery): destination is daniel@liftwright.co, which needs:
+        1. Cloudflare Email Routing on liftwright.co -> forward daniel@liftwright.co to Daniel's inbox.
+        2. FormSubmit activation from the LIVE origin, then swap the action below to the random
+           alias FormSubmit emails back (hides the address in source — same pattern as the
+           danielchristopherfox.com contact form). Do NOT route to any @entuned.co address.
+    -->
+    <form class="form" action="https://formsubmit.co/daniel@liftwright.co" method="POST">
+      <input type="hidden" name="_subject" value="New inquiry from liftwright.co">
+      <input type="hidden" name="_next" value="https://liftwright.co/thanks.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <label for="name">Your name</label>
+      <input id="name" type="text" name="name" required>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required>
+
+      <label for="company">Company</label>
+      <input id="company" type="text" name="company" required>
+
+      <label for="website">Website</label>
+      <input id="website" type="url" name="website" placeholder="https://">
+
+      <label for="spend">Roughly what do you spend on marketing each month?</label>
+      <select id="spend" name="monthly_spend">
+        <option value="">Select one</option>
+        <option>Under $10k</option>
+        <option>$10k&ndash;$30k</option>
+        <option>$30k&ndash;$75k</option>
+        <option>$75k&ndash;$150k</option>
+        <option>$150k+</option>
+      </select>
+
+      <label for="message">What's the gap you're feeling?</label>
+      <textarea id="message" name="message" placeholder="What's working, what isn't, and what you wish someone would just take off your desk."></textarea>
+
+      <button class="btn btn-primary" type="submit">Send it over</button>
+    </form>
+  </div>
+</section>

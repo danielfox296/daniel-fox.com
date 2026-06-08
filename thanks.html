@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thanks | Liftwright</title>
+  <meta name="description" content="Your note is in. We&#x27;ll be in touch shortly.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://liftwright.co/thanks.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Thanks | Liftwright">
+  <meta property="og:description" content="Your note is in. We&#x27;ll be in touch shortly.">
+  <meta property="og:url" content="https://liftwright.co/thanks.html">
+  <meta property="og:image" content="https://liftwright.co/img/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Liftwright", "url": "https://liftwright.co", "description": "Fractional marketing leadership for established, profitable, under-led businesses with considered, high-ticket purchases. Strategy through pipeline, run as one team."}</script>
+  
+  
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Liftwright</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html#what-we-own">What we run</a>
+      <a href="index.html#fit">Who it's for</a>
+      <a href="index.html#operator">Who's behind it</a>
+      <a class="nav-cta" href="contact.html">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="section" style="min-height:52vh;display:flex;align-items:center">
+  <div class="container">
+    <p class="eyebrow">Got it</p>
+    <h1 class="measure">Your note is in.</h1>
+    <p class="lead measure">We read every one ourselves. If there's a fit worth a conversation, you'll hear back shortly &mdash; usually within a business day.</p>
+    <a class="btn btn-ghost" href="index.html" style="margin-top:1rem">Back to home</a>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="wordmark footer-wordmark">Liftwright</span>
+      <p class="footer-line">The fractional demand engine for businesses that get chosen after the customer does their research.</p>
+    </div>
+    <div class="footer-meta">
+      <a href="contact.html">Start a conversation</a>
+      <span>&copy; 2026 Liftwright</span>
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+    // Mobile nav toggle
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var links = document.querySelector('.nav-links');
+      if (btn && links) {
+        btn.addEventListener('click', function () {
+          var open = links.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+    })();
+    // Reveal on scroll
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
