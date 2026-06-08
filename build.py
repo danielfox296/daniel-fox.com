@@ -19,9 +19,10 @@ LAYOUTS = SRC / "layouts"
 SITE_URL = "https://liftwright.co"
 OG_IMAGE = f"{SITE_URL}/img/og-default.png"
 
-# Set this once the Liftwright GA4 property exists (own property — NOT the Daniel Fox account).
+# Liftwright GA4 property "Liftwright" (web stream "Liftwright Web", stream id 15028666922),
+# created 2026-06-08 under the existing "Daniel Fox" Analytics account (acct 121066079).
 # Empty string => no analytics tag is emitted (we never ship a broken/half-wired tag).
-GA_MEASUREMENT_ID = ""
+GA_MEASUREMENT_ID = "G-FGSHJ5C5ZT"
 
 # Liftwright is firewalled from the Daniel Fox / Music Behaviorist person entity and from
 # Entuned. The default org schema is neutral — no Person, no personal-brand binding.
