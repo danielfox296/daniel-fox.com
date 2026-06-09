@@ -6,7 +6,14 @@
     "@type": "Article",
     "headline": "Fractional marketing leadership vs. an agency vs. a freelancer",
     "description": "Agency, freelancer, or fractional marketing leader? A plain breakdown for owners of high-ticket businesses on who actually owns the outcome — and who just runs tasks.",
-    "author": { "@type": "Organization", "name": "Liftwright" },
-    "publisher": { "@type": "Organization", "name": "Liftwright" }
-  }
+    "author": {
+      "@type": "Organization",
+      "name": "Liftwright"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Liftwright"
+    }
+  },
+  "nav": "insights"
 }

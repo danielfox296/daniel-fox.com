@@ -19,6 +19,11 @@ LAYOUTS = SRC / "layouts"
 SITE_URL = "https://liftwright.co"
 OG_IMAGE = f"{SITE_URL}/img/og-default.png"
 
+# Nav keys for active-state highlighting. A page's config.json sets "nav" to one of these
+# to mark the matching header link as the current page. Insights cluster (index + pillar +
+# spokes) all use "insights" so the section stays lit while reading any piece of it.
+NAV_KEYS = ["what-we-run", "who-its-for", "about", "insights", "contact"]
+
 # Liftwright GA4 property "Liftwright" (web stream "Liftwright Web", stream id 15028666922),
 # created 2026-06-08 under the existing "Daniel Fox" Analytics account (acct 121066079).
 # Empty string => no analytics tag is emitted (we never ship a broken/half-wired tag).
@@ -111,6 +116,13 @@ def build_page(page_dir: pathlib.Path) -> dict | None:
     base = read(LAYOUTS / "base.html")
     header = partial("header").replace("{{nav_prefix}}", nav_prefix)
     footer = partial("footer").replace("{{nav_prefix}}", nav_prefix)
+
+    # Active-nav state: a page's config can set "nav" to one of NAV_KEYS; the matching
+    # header link gets aria-current="page" (styled in styles.css), the rest are cleared.
+    active = cfg.get("nav", "")
+    for key in NAV_KEYS:
+        marker = 'aria-current="page"' if key == active else ""
+        header = header.replace("{{nav_" + key + "}}", marker)
 
     replacements = {
         "{{title}}": html.escape(cfg["title"]),
