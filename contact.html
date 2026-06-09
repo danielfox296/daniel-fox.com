@@ -49,13 +49,11 @@
     <p class="lead measure-wide">Two minutes here, then a short call. We'll be straight with you about whether the math and the fit are there &mdash; including if they're not.</p>
 
     <!--
-      TODO (firewall + delivery): destination is daniel@liftwright.co, which needs:
-        1. Cloudflare Email Routing on liftwright.co -> forward daniel@liftwright.co to Daniel's inbox.
-        2. FormSubmit activation from the LIVE origin, then swap the action below to the random
-           alias FormSubmit emails back (hides the address in source — same pattern as the
-           danielchristopherfox.com contact form). Do NOT route to any @entuned.co address.
+      Delivery (DONE 2026-06-09): FormSubmit activated from the live origin; action below uses the
+      random alias that maps to daniel@liftwright.co (hides the address in source). daniel@liftwright.co
+      forwards to Daniel's inbox via Cloudflare Email Routing. Never route to any @entuned.co address.
     -->
-    <form class="form" action="https://formsubmit.co/daniel@liftwright.co" method="POST">
+    <form class="form" action="https://formsubmit.co/1e27cdc5003b1a7d3bec8181604ba053" method="POST">
       <input type="hidden" name="_subject" value="New inquiry from liftwright.co">
       <input type="hidden" name="_next" value="https://liftwright.co/thanks.html">
       <input type="hidden" name="_captcha" value="false">
