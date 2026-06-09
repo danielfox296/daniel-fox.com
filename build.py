@@ -36,8 +36,9 @@ SCHEMA_ORG = {
     "name": "Liftwright",
     "url": SITE_URL,
     "description": (
-        "Fractional marketing leadership for established, profitable, under-led businesses "
-        "with considered, high-ticket purchases. Strategy through pipeline, run as one team."
+        "Fractional CMO and marketing leadership for established, profitable companies "
+        "with considered, high-ticket purchases. We run the whole marketing function — "
+        "strategy through pipeline — as one team accountable for the number."
     ),
 }
 

@@ -1,6 +1,6 @@
 {
-  "title": "Insights — demand for high-ticket businesses | Liftwright",
-  "meta_description": "How demand actually works for considered, high-ticket purchases — the category argument, plus plain answers to the questions owners of high-ticket makers and trades ask next.",
+  "title": "Fractional CMO Insights — Demand for High-Ticket Businesses | Liftwright",
+  "meta_description": "How demand actually works for considered, high-ticket purchases — the fractional-CMO category argument, plus plain answers to the questions high-ticket business owners ask next.",
   "output": "insights.html",
   "nav": "insights",
   "schema": {
@@ -8,6 +8,10 @@
     "name": "Liftwright Insights",
     "description": "How demand actually works for considered, high-ticket purchases — the category argument, plus plain answers to the questions owners of high-ticket makers and trades ask next.",
     "url": "https://liftwright.co/insights.html",
-    "isPartOf": { "@type": "WebSite", "name": "Liftwright", "url": "https://liftwright.co" }
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Liftwright",
+      "url": "https://liftwright.co"
+    }
   }
 }
