@@ -23,7 +23,7 @@
   --font-body: 'Montserrat', system-ui, sans-serif;
   --font-serif: 'PT Serif', Georgia, 'Times New Roman', serif;
 
-  --container: 1140px;
+  --container: 960px;       /* one shared content width → consistent side margins site-wide */
   --radius: 8px;          /* cards / inputs */
   --radius-pill: 300px;   /* buttons, chips — fully rounded */
 }
@@ -77,14 +77,16 @@ h3 {
   letter-spacing: 0.005em;
 }
 
-/* The one warm move: a PT Serif italic phrase inside a caps headline. */
+/* Accent phrases inside headlines now render as part of the headline —
+   no serif, no italic, no separate color. (Kept as a no-op class so existing
+   <span class="accent"> markup stays valid across all hero headlines.) */
 .accent {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: 0;
-  color: var(--accent);
+  font-family: inherit;
+  font-style: normal;
+  font-weight: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  color: inherit;
 }
 
 /* The signature lime highlight — use on exactly ONE phrase per page. */
@@ -130,15 +132,17 @@ a:hover { color: var(--accent-deep); text-decoration: underline; }
   font-family: var(--font-head);
   font-weight: 600;
   font-size: 1.3rem;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--ink);
 }
 .wordmark:hover { color: var(--ink); text-decoration: none; }
 .nav-links { display: flex; align-items: center; gap: 1.9rem; }
 .nav-links a {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--ink-soft);
 }
 .nav-links a:hover { color: var(--ink); text-decoration: none; }
@@ -360,7 +364,7 @@ a:hover { color: var(--accent-deep); text-decoration: underline; }
 .footer-wordmark { color: var(--paper-on-ink); display: block; margin-bottom: 0.7rem; }
 .footer-line { color: var(--muted-on-ink); max-width: 38ch; font-size: 0.95rem; margin: 0; }
 .footer-nav { display: flex; flex-direction: column; gap: 0.55rem; }
-.footer-nav a { color: var(--paper-on-ink); font-size: 0.92rem; }
+.footer-nav a { color: var(--paper-on-ink); font-size: 0.84rem; letter-spacing: 0.07em; text-transform: uppercase; }
 .footer-nav a:hover { color: var(--lime); }
 .footer-meta { display: flex; flex-direction: column; gap: 0.6rem; text-align: right; }
 .footer-meta a { color: var(--paper-on-ink); }
@@ -371,8 +375,6 @@ a:hover { color: var(--accent-deep); text-decoration: underline; }
 /* Blog posts read in a narrow, centered column with generous side margins and
    left-justified text. Scoped to content only via `.section`/`.hero` so the
    full-width header and footer are untouched. */
-body.article .section > .container,
-body.article .hero > .container { max-width: 44rem; }
 body.article .section { padding: 3.25rem 0; }
 body.article .hero { padding: 4.75rem 0 2.5rem; }
 /* One uniform column width — drop the marketing measure caps inside articles. */
@@ -391,8 +393,6 @@ body.article blockquote.pull {
 
 /* ---------- Insights blog index (body.blog-index) ---------- */
 /* A traditional vertical post feed in the same centered column as the articles. */
-.blog-index .section > .container,
-.blog-index .hero > .container { max-width: 44rem; }
 .blog-index .hero { padding: 4.75rem 0 2.5rem; }
 .blog-index .section { padding: 3.5rem 0 4.5rem; }
 .post-entry { padding: 2.3rem 0; border-top: 1px solid var(--line); }
