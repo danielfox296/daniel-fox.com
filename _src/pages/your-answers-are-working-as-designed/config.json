@@ -1,0 +1,19 @@
+{
+  "title": "Your Answers About the Customer Are Working as Designed | Liftwright",
+  "meta_description": "Your answer to 'who is our customer' is calibrated to produce exactly your current numbers. Why the question gets filed as settled, and how to reopen it deliberately.",
+  "output": "your-answers-are-working-as-designed.html",
+  "schema": {
+    "@type": "Article",
+    "headline": "Your answers are working exactly as designed",
+    "description": "Your answer to 'who is our customer' is calibrated to produce exactly your current numbers. Why the question gets filed as settled, and how to reopen it.",
+    "author": {
+      "@type": "Organization",
+      "name": "Liftwright"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Liftwright"
+    }
+  },
+  "nav": "insights"
+}
