@@ -125,7 +125,12 @@ def build_page(page_dir: pathlib.Path) -> dict | None:
         marker = 'aria-current="page"' if key == active else ""
         header = header.replace("{{nav_" + key + "}}", marker)
 
+    # Optional per-page <body> class (e.g. "article", "blog-index") for layout variants.
+    bc = cfg.get("body_class", "")
+    body_attr = f' class="{html.escape(bc, quote=True)}"' if bc else ""
+
     replacements = {
+        "{{body_attr}}": body_attr,
         "{{title}}": html.escape(cfg["title"]),
         "{{meta_description}}": html.escape(cfg.get("meta_description", ""), quote=True),
         "{{canonical}}": canonical_for(output),

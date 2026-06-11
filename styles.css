@@ -367,6 +367,77 @@ a:hover { color: var(--accent-deep); text-decoration: underline; }
 .footer-meta a:hover { color: var(--lime); }
 .footer-meta span { color: var(--muted-on-ink); font-size: 0.86rem; }
 
+/* ---------- Article reading layout (body.article) ---------- */
+/* Blog posts read in a narrow, centered column with generous side margins and
+   left-justified text. Scoped to content only via `.section`/`.hero` so the
+   full-width header and footer are untouched. */
+body.article .section > .container,
+body.article .hero > .container { max-width: 44rem; }
+body.article .section { padding: 3.25rem 0; }
+body.article .hero { padding: 4.75rem 0 2.5rem; }
+/* One uniform column width — drop the marketing measure caps inside articles. */
+body.article .measure,
+body.article .measure-wide,
+body.article .hero h1,
+body.article .hero .lead,
+body.article .pull { max-width: none; }
+body.article p { font-size: 1.05rem; line-height: 1.78; }
+body.article .lead { font-size: 1.2rem; line-height: 1.62; }
+body.article blockquote.pull {
+  margin: 2rem 0;
+  padding-left: 1.4rem;
+  border-left: 3px solid var(--lime);
+}
+
+/* ---------- Insights blog index (body.blog-index) ---------- */
+/* A traditional vertical post feed in the same centered column as the articles. */
+.blog-index .section > .container,
+.blog-index .hero > .container { max-width: 44rem; }
+.blog-index .hero { padding: 4.75rem 0 2.5rem; }
+.blog-index .section { padding: 3.5rem 0 4.5rem; }
+.post-entry { padding: 2.3rem 0; border-top: 1px solid var(--line); }
+.post-entry:first-child { border-top: none; padding-top: 0.25rem; }
+.post-cat {
+  font-family: var(--font-head);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.55rem;
+}
+.post-title {
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.26;
+  margin: 0 0 0.6rem;
+}
+.post-title a { color: var(--ink); }
+.post-title a:hover { color: var(--accent); text-decoration: none; }
+.post-excerpt { color: var(--ink-soft); margin: 0 0 0.85rem; }
+.post-more {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.post-featured { padding-top: 0.25rem; }
+.post-featured .post-title { font-size: clamp(1.8rem, 4.2vw, 2.55rem); }
+.feed-group {
+  font-family: var(--font-head);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 3rem 0 0;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+.feed-group + .post-entry { border-top: none; padding-top: 1.4rem; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 820px) {
   .grid-2, .grid-3, .cap-grid, .fit-cols, .operator-grid, .explore-grid { grid-template-columns: 1fr; }

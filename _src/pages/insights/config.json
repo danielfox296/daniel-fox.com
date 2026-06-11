@@ -2,6 +2,7 @@
   "title": "Fractional CMO Insights — Demand for High-Ticket Businesses | Liftwright",
   "meta_description": "How demand actually works for considered, high-ticket purchases — the fractional-CMO category argument, plus plain answers to the questions high-ticket business owners ask next.",
   "output": "insights.html",
+  "body_class": "blog-index",
   "nav": "insights",
   "schema": {
     "@type": "CollectionPage",
