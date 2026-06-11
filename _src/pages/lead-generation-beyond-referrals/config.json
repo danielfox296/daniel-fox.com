@@ -1,13 +1,13 @@
 {
-  "title": "How to Generate Leads Beyond Referrals | Liftwright",
+  "title": "How to Generate Leads Beyond Referrals | Daniel Fox",
   "meta_description": "Real lead generation for high-ticket businesses — beyond referrals and luck — and why a fenced channel you can measure is the one that scales. A fractional CMO's view.",
   "output": "lead-generation-beyond-referrals.html",
   "schema": {
     "@type": "Article",
     "headline": "How to generate leads beyond referrals for a high-ticket business",
     "description": "Real lead generation for high-ticket businesses — beyond referrals and luck — and why a fenced channel you can measure is the one that scales.",
-    "author": { "@type": "Organization", "name": "Liftwright" },
-    "publisher": { "@type": "Organization", "name": "Liftwright" },
+    "author": { "@type": "Person", "name": "Daniel Fox" },
+    "publisher": { "@type": "Person", "name": "Daniel Fox" },
     "mainEntity": {
       "@type": "Question",
       "name": "How do I generate predictable leads for my high-ticket business beyond referrals?",

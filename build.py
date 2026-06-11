@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Liftwright static site generator.
+"""daniel-fox.com static site generator.
 
 Mirrors the Bowie (entuned.co) / danielchristopherfox.com SSG idiom: edit `_src/`,
 run `python3 build.py`, built HTML lands at the repo root. NEVER edit root *.html by hand.
@@ -16,7 +16,7 @@ PAGES = SRC / "pages"
 PARTIALS = SRC / "partials"
 LAYOUTS = SRC / "layouts"
 
-SITE_URL = "https://liftwright.co"
+SITE_URL = "https://daniel-fox.com"
 OG_IMAGE = f"{SITE_URL}/img/og-default.png"
 
 # Nav keys for active-state highlighting. A page's config.json sets "nav" to one of these
@@ -24,21 +24,22 @@ OG_IMAGE = f"{SITE_URL}/img/og-default.png"
 # spokes) all use "insights" so the section stays lit while reading any piece of it.
 NAV_KEYS = ["what-we-run", "who-its-for", "about", "insights", "contact"]
 
-# Liftwright GA4 property "Liftwright" (web stream "Liftwright Web", stream id 15028666922),
-# created 2026-06-08 under the existing "Daniel Fox" Analytics account (acct 121066079).
-# Empty string => no analytics tag is emitted (we never ship a broken/half-wired tag).
+# GA4 property under the "Daniel Fox" Analytics account (acct 121066079), measurement id
+# carried over unchanged when the site moved from liftwright.co to daniel-fox.com.
+# Empty string => no analytics tag is emitted (never ship a broken/half-wired tag).
 GA_MEASUREMENT_ID = "G-FGSHJ5C5ZT"
 
-# Liftwright is firewalled from the Daniel Fox / Music Behaviorist person entity and from
-# Entuned. The default org schema is neutral — no Person, no personal-brand binding.
+# This is Daniel Fox's own-name site. The default schema is the Person entity behind the
+# fractional-CMO offering. Article pages override `schema` in their config.json.
 SCHEMA_ORG = {
-    "@type": "Organization",
-    "name": "Liftwright",
+    "@type": "Person",
+    "name": "Daniel Fox",
     "url": SITE_URL,
+    "jobTitle": "Fractional CMO",
     "description": (
         "Fractional CMO and marketing leadership for established, profitable companies "
-        "with considered, high-ticket purchases. We run the whole marketing function — "
-        "strategy through pipeline — as one team accountable for the number."
+        "with considered, high-ticket purchases. I run the whole marketing function — "
+        "strategy through pipeline — and answer for the number."
     ),
 }
 

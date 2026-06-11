@@ -1,5 +1,5 @@
 {
-  "title": "Fractional CMO vs. Agency: Which Do You Need? | Liftwright",
+  "title": "Fractional CMO vs. Agency: Which Do You Need? | Daniel Fox",
   "meta_description": "Agency, freelancer, or fractional marketing leader? A plain breakdown for owners of high-ticket businesses on who actually owns the outcome — and who just runs tasks.",
   "output": "fractional-cmo-vs-marketing-agency.html",
   "schema": {
@@ -7,12 +7,12 @@
     "headline": "Fractional marketing leadership vs. an agency vs. a freelancer",
     "description": "Agency, freelancer, or fractional marketing leader? A plain breakdown for owners of high-ticket businesses on who actually owns the outcome — and who just runs tasks.",
     "author": {
-      "@type": "Organization",
-      "name": "Liftwright"
+      "@type": "Person",
+      "name": "Daniel Fox"
     },
     "publisher": {
-      "@type": "Organization",
-      "name": "Liftwright"
+      "@type": "Person",
+      "name": "Daniel Fox"
     }
   },
   "nav": "insights"

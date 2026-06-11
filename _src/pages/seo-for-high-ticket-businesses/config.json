@@ -1,13 +1,13 @@
 {
-  "title": "SEO for High-Ticket Businesses | Liftwright",
+  "title": "SEO for High-Ticket Businesses | Daniel Fox",
   "meta_description": "How a high-ticket business wins search for a researched, considered purchase — and why content and SEO only compound when one leader runs the plan. A fractional CMO's view.",
   "output": "seo-for-high-ticket-businesses.html",
   "schema": {
     "@type": "Article",
     "headline": "SEO and content for high-ticket businesses",
     "description": "How a high-ticket business wins search for a researched, considered purchase — and why content and SEO compound only when one leader runs the plan.",
-    "author": { "@type": "Organization", "name": "Liftwright" },
-    "publisher": { "@type": "Organization", "name": "Liftwright" }
+    "author": { "@type": "Person", "name": "Daniel Fox" },
+    "publisher": { "@type": "Person", "name": "Daniel Fox" }
   },
   "nav": "insights"
 }

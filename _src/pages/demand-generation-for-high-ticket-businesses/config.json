@@ -1,5 +1,5 @@
 {
-  "title": "Demand Generation for High-Ticket Buyers | Liftwright",
+  "title": "Demand Generation for High-Ticket Buyers | Daniel Fox",
   "meta_description": "How to generate steady demand for a considered, high-ticket purchase — and why owning the whole marketing function beats paying for scattered activity that never compounds.",
   "output": "demand-generation-for-high-ticket-businesses.html",
   "schema": {
@@ -7,17 +7,17 @@
     "headline": "How to actually generate demand for a high-ticket, considered purchase",
     "description": "How to generate steady demand for a considered, high-ticket purchase — and why owning the whole marketing function beats paying for scattered activity that never compounds.",
     "author": {
-      "@type": "Organization",
-      "name": "Liftwright"
+      "@type": "Person",
+      "name": "Daniel Fox"
     },
     "publisher": {
-      "@type": "Organization",
-      "name": "Liftwright",
-      "url": "https://liftwright.co"
+      "@type": "Person",
+      "name": "Daniel Fox",
+      "url": "https://daniel-fox.com"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://liftwright.co/demand-generation-for-high-ticket-businesses.html"
+      "@id": "https://daniel-fox.com/demand-generation-for-high-ticket-businesses.html"
     }
   },
   "nav": "insights"

@@ -1,5 +1,5 @@
 {
-  "title": "Your Dashboard Can't Tell You What's Wrong | Liftwright",
+  "title": "Your Dashboard Can't Tell You What's Wrong | Daniel Fox",
   "meta_description": "Declining return on ad spend has three different causes and one identical-looking graph. Why analytics flag the symptom, and where the real diagnosis actually happens.",
   "output": "your-dashboard-cant-tell-you-whats-wrong.html",
   "schema": {
@@ -7,12 +7,12 @@
     "headline": "Your dashboard can tell you something is wrong. It can't tell you what.",
     "description": "Declining return on ad spend has three different causes and one identical-looking graph. Why analytics flag the symptom, and where the real diagnosis happens.",
     "author": {
-      "@type": "Organization",
-      "name": "Liftwright"
+      "@type": "Person",
+      "name": "Daniel Fox"
     },
     "publisher": {
-      "@type": "Organization",
-      "name": "Liftwright"
+      "@type": "Person",
+      "name": "Daniel Fox"
     }
   },
   "body_class": "article",

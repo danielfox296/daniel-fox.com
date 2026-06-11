@@ -1,5 +1,5 @@
 {
-  "title": "Your Answers About the Customer Are Working as Designed | Liftwright",
+  "title": "Your Answers About the Customer Are Working as Designed | Daniel Fox",
   "meta_description": "Your answer to 'who is our customer' is calibrated to produce exactly your current numbers. Why the question gets filed as settled, and how to reopen it deliberately.",
   "output": "your-answers-are-working-as-designed.html",
   "schema": {
@@ -7,12 +7,12 @@
     "headline": "Your answers are working exactly as designed",
     "description": "Your answer to 'who is our customer' is calibrated to produce exactly your current numbers. Why the question gets filed as settled, and how to reopen it.",
     "author": {
-      "@type": "Organization",
-      "name": "Liftwright"
+      "@type": "Person",
+      "name": "Daniel Fox"
     },
     "publisher": {
-      "@type": "Organization",
-      "name": "Liftwright"
+      "@type": "Person",
+      "name": "Daniel Fox"
     }
   },
   "body_class": "article",

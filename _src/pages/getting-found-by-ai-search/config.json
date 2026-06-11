@@ -1,5 +1,5 @@
 {
-  "title": "Getting Found in AI Search Results | Liftwright",
+  "title": "Getting Found in AI Search Results | Daniel Fox",
   "meta_description": "When buyers ask an assistant to recommend a business like yours, will it name you? A clear look at earning visibility in AI answers without chasing vanity metrics.",
   "output": "getting-found-by-ai-search.html",
   "schema": {
@@ -8,12 +8,12 @@
     "headline": "How to get your business recommended in AI search answers",
     "description": "When buyers ask an assistant to recommend a business like yours, will it name you? A clear look at earning visibility in AI answers without chasing vanity metrics.",
     "author": {
-      "@type": "Organization",
-      "name": "Liftwright"
+      "@type": "Person",
+      "name": "Daniel Fox"
     },
     "publisher": {
-      "@type": "Organization",
-      "name": "Liftwright"
+      "@type": "Person",
+      "name": "Daniel Fox"
     },
     "mainEntity": {
       "@type": "Question",

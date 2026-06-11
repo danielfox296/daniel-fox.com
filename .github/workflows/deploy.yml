@@ -1,4 +1,4 @@
-name: Deploy liftwright.co
+name: Deploy daniel-fox.com
 
 on:
   push:
