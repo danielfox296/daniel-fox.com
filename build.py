@@ -31,6 +31,10 @@ GA_MEASUREMENT_ID = "G-FGSHJ5C5ZT"
 
 # This is Daniel Fox's own-name site. The default schema is the Person entity behind the
 # fractional-CMO offering. Article pages override `schema` in their config.json.
+# Disambiguation matters: a different, prominent "Dr. Daniel Fox" (mental-health/BPD author)
+# shares the name. Occupation, alma mater, prior company, and topic coverage pin THIS entity
+# down for engines. sameAs (LinkedIn / verified profiles) is deliberately left out until the
+# real profile URLs are confirmed — never assert a sameAs we can't stand behind.
 SCHEMA_ORG = {
     "@type": "Person",
     "name": "Daniel Fox",
@@ -38,9 +42,18 @@ SCHEMA_ORG = {
     "jobTitle": "Fractional CMO",
     "description": (
         "Fractional CMO and marketing leadership for established, profitable companies "
-        "with considered, high-ticket purchases. I run the whole marketing function — "
-        "strategy through pipeline — and answer for the number."
+        "with considered, high-ticket purchases. I run the whole marketing function, "
+        "strategy through pipeline, and answer for the number."
     ),
+    "alumniOf": {"@type": "CollegeOrUniversity", "name": "The Ohio State University"},
+    "knowsAbout": [
+        "Fractional CMO services",
+        "Marketing leadership",
+        "Demand generation",
+        "Positioning",
+        "Go-to-market strategy",
+        "High-ticket and considered-purchase marketing",
+    ],
 }
 
 

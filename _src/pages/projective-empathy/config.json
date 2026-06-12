@@ -1,0 +1,31 @@
+{
+  "title": "Projective Empathy: Reading Your Marketing From the Buyer's Seat | Daniel Fox",
+  "meta_description": "Projective empathy is the trained practice of inhabiting a buyer's value structure and reading your own marketing from inside it. A method by Daniel Fox, fractional CMO, drawing on Spiral Dynamics.",
+  "output": "projective-empathy.html",
+  "body_class": "article",
+  "nav": "insights",
+  "schema": {
+    "@graph": [
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://daniel-fox.com/projective-empathy.html#term",
+        "name": "Projective empathy",
+        "description": "Projective empathy is the trained practice of inhabiting a buyer's value structure and reading a company's own marketing from inside it, drawing on Spiral Dynamics to hold several incompatible worldviews at once without collapsing them into your own.",
+        "url": "https://daniel-fox.com/projective-empathy.html",
+        "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "name": "Daniel Fox marketing vocabulary",
+          "url": "https://daniel-fox.com/beliefs.html"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "url": "https://daniel-fox.com/projective-empathy.html",
+        "name": "Projective empathy",
+        "about": { "@id": "https://daniel-fox.com/projective-empathy.html#term" },
+        "author": { "@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional CMO" },
+        "publisher": { "@type": "Person", "name": "Daniel Fox" }
+      }
+    ]
+  }
+}

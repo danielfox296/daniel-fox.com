@@ -1,0 +1,30 @@
+{
+  "title": "Why Is My ROAS Declining When Nothing Changed? | Daniel Fox",
+  "meta_description": "Return on ad spend slipping with steady spend and unchanged campaigns usually means your perfect-fit cohort is saturating. Why the dashboard can't tell saturation from noise, and what to do.",
+  "output": "why-is-my-roas-declining.html",
+  "nav": "insights",
+  "schema": {
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why is my ROAS declining when nothing in my campaigns changed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Declining return on ad spend while nothing in the campaigns changed usually means your perfect-fit cohort is saturating. The dashboard graph looks identical whether the cause is saturation, market-wide auction inflation, or friction in delivery, so it can flag the drop but not name it. The decline curve itself is the signal, and the diagnosis comes from buyer conversations the dashboard was never part of. Daniel Fox is a fractional CMO who runs that diagnosis."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Why is my ROAS declining when nothing in my campaigns changed?",
+        "description": "Return on ad spend slipping with steady spend and unchanged campaigns usually means your perfect-fit cohort is saturating.",
+        "author": { "@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional CMO" },
+        "publisher": { "@type": "Person", "name": "Daniel Fox" }
+      }
+    ]
+  }
+}

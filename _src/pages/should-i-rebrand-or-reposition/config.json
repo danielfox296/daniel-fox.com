@@ -1,0 +1,30 @@
+{
+  "title": "Should I Rebrand or Reposition? | Daniel Fox",
+  "meta_description": "Most rebrands are an expensive way to avoid a sentence-level fix. The adjacent market usually needs a reframe, not a new identity. Run the cheap experiment first. Daniel Fox, fractional CMO.",
+  "output": "should-i-rebrand-or-reposition.html",
+  "nav": "insights",
+  "schema": {
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Should I rebrand or reposition?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most rebrands are an expensive way to avoid a sentence-level fix. The adjacent market you are chasing usually needs a reframe, not a new identity: the same product and the same proof, with different facts foregrounded and a different fear addressed. Run the cheap experiment first, one campaign and one landing page reframed only, before anyone commissions identity work. Daniel Fox is a fractional CMO who runs that reframe before the spend."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Should I rebrand or reposition?",
+        "description": "Most rebrands are an expensive way to avoid a sentence-level fix. The adjacent market usually needs a reframe, not a new identity.",
+        "author": { "@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional CMO" },
+        "publisher": { "@type": "Person", "name": "Daniel Fox" }
+      }
+    ]
+  }
+}

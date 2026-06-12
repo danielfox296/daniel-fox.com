@@ -547,6 +547,116 @@ body.article blockquote.pull {
 }
 .feed-group + .post-entry { border-top: none; padding-top: 1.4rem; }
 
+/* ---------- Byline (author attribution on doors / positions) ---------- */
+.byline { display: flex; align-items: center; gap: 0.7rem; margin-top: 1.9rem; }
+.byline-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  flex: none;
+}
+.byline-text { display: flex; flex-direction: column; line-height: 1.25; }
+.byline-name {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.94rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+.byline-role {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ---------- Answer capsule (door pages) ---------- */
+/* The first thing under the question: a tight, declarative answer an engine can lift. */
+.capsule {
+  font-size: 1.24rem;
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 60ch;
+  margin-top: 1.4rem;
+}
+.capsule strong { font-weight: 600; }
+
+/* ---------- Beliefs page (the takes) ---------- */
+.belief {
+  padding: 2.1rem 0;
+  border-top: 1px solid var(--line);
+}
+.belief:first-of-type { border-top: none; }
+.belief-num {
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.6rem;
+}
+.belief-claim {
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  line-height: 1.32;
+  letter-spacing: 0;
+  text-transform: none;
+  margin: 0 0 0.9rem;
+  max-width: 30ch;
+}
+.belief-body { max-width: 62ch; }
+.belief-body p { margin: 0 0 0.8rem; }
+.belief-link {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ---------- Related links band (doors -> spine + beliefs) ---------- */
+.related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 1.8rem; }
+.related-card {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.4rem;
+  color: var(--ink);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.related-card:hover { border-color: var(--accent); text-decoration: none; transform: translateY(-2px); }
+.related-kicker {
+  font-family: var(--font-head);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.related-title { font-weight: 500; font-size: 1.02rem; }
+
+/* ---------- Defined term (vocabulary page) ---------- */
+.term-def {
+  border-left: 3px solid var(--lime);
+  padding: 0.4rem 0 0.4rem 1.4rem;
+  margin: 1.6rem 0 0;
+  max-width: 62ch;
+}
+.term-def dt {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.4rem;
+}
+.term-def dd { margin: 0; font-size: 1.1rem; line-height: 1.6; color: var(--ink-soft); }
+
 /* ---------- Responsive ---------- */
 /* Nav collapses to a menu earlier than the content grids (920px) so the five-item
    bar never crowds or wraps in the tight 820–960px band. */
@@ -594,7 +704,7 @@ body.article blockquote.pull {
 }
 
 @media (max-width: 820px) {
-  .grid-2, .grid-3, .cap-grid, .fit-cols, .operator-grid, .explore-grid, .steps { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .cap-grid, .fit-cols, .operator-grid, .explore-grid, .steps, .related-grid { grid-template-columns: 1fr; }
   .steps { gap: 1.5rem; }
   .operator-stats { gap: 1.5rem 1.8rem; }
   .footer-inner { flex-direction: column; }

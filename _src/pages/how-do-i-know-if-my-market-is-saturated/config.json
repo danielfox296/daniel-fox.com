@@ -1,0 +1,30 @@
+{
+  "title": "How Do I Know If My Market Is Saturated? | Daniel Fox",
+  "meta_description": "A saturating market and a market you address wrong produce the same silence. The wrong market won't tell you they're the wrong market. How to separate the two. Daniel Fox, fractional CMO.",
+  "output": "how-do-i-know-if-my-market-is-saturated.html",
+  "nav": "insights",
+  "schema": {
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I know if my market is saturated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "From the data alone you usually can't, and that is the trap. A saturating market and a market you are addressing wrong produce the same silence: no complaints, no friction, just fewer sales. The wrong market won't tell you they're the wrong market. You separate saturation from wrong address by going to people, not dashboards: buyer conversations, win and loss interviews, and a reframed test into the cohort you suspect you are missing. Daniel Fox is a fractional CMO who runs that work."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "How do I know if my market is saturated?",
+        "description": "A saturating market and a market you address wrong produce the same silence. How to tell them apart.",
+        "author": { "@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional CMO" },
+        "publisher": { "@type": "Person", "name": "Daniel Fox" }
+      }
+    ]
+  }
+}
