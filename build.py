@@ -42,6 +42,13 @@ SCHEMA_ORG = {
     "image": f"{SITE_URL}/img/daniel-fox.jpg",
     "sameAs": ["https://www.linkedin.com/in/danielcfox/"],
     "jobTitle": "Fractional CMO",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Denver",
+        "addressRegion": "CO",
+        "addressCountry": "US",
+    },
+    "areaServed": "US",
     "description": (
         "Fractional CMO and marketing leadership for established, profitable companies "
         "with considered, high-ticket purchases. I run the whole marketing function, "
