@@ -1,0 +1,41 @@
+{
+  "title": "Is a Fractional CMO Worth It? | Daniel Fox",
+  "meta_description": "Worth is only knowable if it is fenced. Anchor to incremental won deals, baseline before touching anything, and commit to a leading indicator you control. Daniel Fox, fractional B2C CMO.",
+  "output": "is-a-fractional-cmo-worth-it.html",
+  "nav": "insights",
+  "og_type": "article",
+  "schema": {
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is a fractional CMO worth the investment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Worth is only knowable if it is fenced. Most engagements are set up so you can never tell whether the fractional CMO moved anything, because the contribution is never separated from referrals and seasonality. The honest version starts with a baseline before anything is touched, commits to a leading indicator the CMO actually controls, and names revenue as the goal without guaranteeing it. For a high-ticket business, roughly 1.5 to 4 additional won deals a month covers the fee for a year, so the bar is a small number of incremental wins, not a leap. The red flag is an engagement measured by assets produced instead of a number moved. Daniel Fox is a fractional B2C CMO who fences the contribution before touching anything."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Is a fractional CMO worth the investment?",
+        "description": "Worth is only knowable if it is fenced. Anchor to incremental won deals, baseline before touching anything, commit to a leading indicator you control, and watch for the engagement set up to be unfalsifiable.",
+        "author": {
+          "@type": "Person",
+          "name": "Daniel Fox",
+          "url": "https://daniel-fox.com",
+          "jobTitle": "Fractional B2C CMO"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Daniel Fox"
+        },
+        "datePublished": "2026-06-12",
+        "dateModified": "2026-06-12"
+      }
+    ]
+  }
+}
