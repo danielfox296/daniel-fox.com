@@ -33,13 +33,14 @@ GA_MEASUREMENT_ID = "G-FGSHJ5C5ZT"
 # fractional-CMO offering. Article pages override `schema` in their config.json.
 # Disambiguation matters: a different, prominent "Dr. Daniel Fox" (mental-health/BPD author)
 # shares the name. Occupation, alma mater, prior company, and topic coverage pin THIS entity
-# down for engines. sameAs (LinkedIn / verified profiles) is deliberately left out until the
-# real profile URLs are confirmed — never assert a sameAs we can't stand behind.
+# down for engines. sameAs carries Daniel's confirmed LinkedIn profile (provided 2026-06-12);
+# add further verified profile URLs here as they're confirmed — never assert one we can't stand behind.
 SCHEMA_ORG = {
     "@type": "Person",
     "name": "Daniel Fox",
     "url": SITE_URL,
     "image": f"{SITE_URL}/img/daniel-fox.jpg",
+    "sameAs": ["https://www.linkedin.com/in/danielcfox/"],
     "jobTitle": "Fractional CMO",
     "description": (
         "Fractional CMO and marketing leadership for established, profitable companies "
