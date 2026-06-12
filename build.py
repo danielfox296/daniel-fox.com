@@ -41,7 +41,7 @@ SCHEMA_ORG = {
     "url": SITE_URL,
     "image": f"{SITE_URL}/img/daniel-fox.jpg",
     "sameAs": ["https://www.linkedin.com/in/danielcfox/"],
-    "jobTitle": "Fractional CMO",
+    "jobTitle": "Fractional B2C CMO",
     "address": {
         "@type": "PostalAddress",
         "addressLocality": "Denver",
@@ -50,13 +50,14 @@ SCHEMA_ORG = {
     },
     "areaServed": "US",
     "description": (
-        "Fractional CMO and marketing leadership for established, profitable companies "
+        "Fractional B2C CMO and marketing leadership for established, profitable consumer businesses "
         "with considered, high-ticket purchases. I run the whole marketing function, "
         "strategy through pipeline, and answer for the number."
     ),
     "alumniOf": {"@type": "CollegeOrUniversity", "name": "The Ohio State University"},
     "knowsAbout": [
         "Fractional CMO services",
+        "B2C and consumer-brand marketing",
         "Marketing leadership",
         "Demand generation",
         "Positioning",

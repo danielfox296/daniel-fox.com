@@ -1,0 +1,41 @@
+{
+  "title": "Fractional CMO vs. Full-Time Marketing Director | Daniel Fox",
+  "meta_description": "The full-time marketing director a $3 to $12M company can afford usually buys hands, not judgment. How fractional leadership compares, and when each one fits. Daniel Fox.",
+  "output": "fractional-cmo-vs-full-time-marketing-director.html",
+  "nav": "insights",
+  "og_type": "article",
+  "schema": {
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Fractional CMO vs. full-time marketing director: which is better?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For a $3 to $12M company, the full-time marketing director you can actually afford usually buys execution, not strategic judgment. A real CMO who can author the direction runs about $300,000 to $450,000 a year all in, which is not what a company at this stage is hiring at. So the affordable full-time seat tends to fail in one of two ways: a capable executor with no one authoring strategy, or a real executive underused on overhead. A fractional CMO puts senior judgment on top of the hands you already have, part-time, without funding the overhead of the seat. Daniel Fox is a fractional B2C CMO who takes that strategic seat."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Fractional CMO vs. full-time marketing director: which is better?",
+        "description": "The full-time marketing director a $3 to $12M company can afford usually buys hands, not judgment. How fractional leadership compares, and when each one fits.",
+        "author": {
+          "@type": "Person",
+          "name": "Daniel Fox",
+          "url": "https://daniel-fox.com",
+          "jobTitle": "Fractional B2C CMO"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Daniel Fox"
+        },
+        "datePublished": "2026-06-12",
+        "dateModified": "2026-06-12"
+      }
+    ]
+  }
+}

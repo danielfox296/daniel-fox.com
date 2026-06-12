@@ -1,6 +1,6 @@
 {
   "title": "Why Aren't My Ads Converting With a New Audience? | Daniel Fox",
-  "meta_description": "The messaging that built trust with your first audience is actively disqualifying the next one. Trust-builders become door-closers. What to do instead. Daniel Fox, fractional CMO.",
+  "meta_description": "The messaging that built trust with your first audience is actively disqualifying the next one. Trust-builders become door-closers. What to do instead. Daniel Fox, fractional B2C CMO.",
   "output": "why-arent-my-ads-converting-with-a-new-audience.html",
   "nav": "insights",
   "schema": {
@@ -13,7 +13,7 @@
             "name": "Why aren't my ads converting with a new audience?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Because the messaging that built trust with your first audience is actively disqualifying the next one. The same lines that reassured your original cohort read as evasive, or unserious, or unrigorous to a different one. Your trust-builders have become door-closers. The fix is not new ad mechanics but re-seating the message inside the new audience's value structure and foregrounding different true facts. Daniel Fox is a fractional CMO who does that work."
+              "text": "Because the messaging that built trust with your first audience is actively disqualifying the next one. The same lines that reassured your original cohort read as evasive, or unserious, or unrigorous to a different one. Your trust-builders have become door-closers. The fix is not new ad mechanics but re-seating the message inside the new audience's value structure and foregrounding different true facts. Daniel Fox is a fractional B2C CMO who does that work."
             }
           }
         ]
@@ -26,7 +26,7 @@
           "@type": "Person",
           "name": "Daniel Fox",
           "url": "https://daniel-fox.com",
-          "jobTitle": "Fractional CMO"
+          "jobTitle": "Fractional B2C CMO"
         },
         "publisher": {
           "@type": "Person",
