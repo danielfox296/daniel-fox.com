@@ -18,7 +18,10 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://daniel-fox.com/demand-generation-for-high-ticket-businesses.html"
-    }
+    },
+    "datePublished": "2026-06-08",
+    "dateModified": "2026-06-11"
   },
-  "nav": "insights"
+  "nav": "insights",
+  "og_type": "article"
 }

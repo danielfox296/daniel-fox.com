@@ -6,8 +6,17 @@
     "@type": "Article",
     "headline": "SEO and content for high-ticket businesses",
     "description": "How a high-ticket business wins search for a researched, considered purchase — and why content and SEO compound only when one leader runs the plan.",
-    "author": { "@type": "Person", "name": "Daniel Fox" },
-    "publisher": { "@type": "Person", "name": "Daniel Fox" }
+    "author": {
+      "@type": "Person",
+      "name": "Daniel Fox"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Daniel Fox"
+    },
+    "datePublished": "2026-06-09",
+    "dateModified": "2026-06-11"
   },
-  "nav": "insights"
+  "nav": "insights",
+  "og_type": "article"
 }

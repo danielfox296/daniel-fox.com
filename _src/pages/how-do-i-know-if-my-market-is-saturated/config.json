@@ -22,9 +22,20 @@
         "@type": "Article",
         "headline": "How do I know if my market is saturated?",
         "description": "A saturating market and a market you address wrong produce the same silence. How to tell them apart.",
-        "author": { "@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional CMO" },
-        "publisher": { "@type": "Person", "name": "Daniel Fox" }
+        "author": {
+          "@type": "Person",
+          "name": "Daniel Fox",
+          "url": "https://daniel-fox.com",
+          "jobTitle": "Fractional CMO"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Daniel Fox"
+        },
+        "datePublished": "2026-06-11",
+        "dateModified": "2026-06-12"
       }
     ]
-  }
+  },
+  "og_type": "article"
 }

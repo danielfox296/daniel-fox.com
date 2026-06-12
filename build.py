@@ -39,6 +39,7 @@ SCHEMA_ORG = {
     "@type": "Person",
     "name": "Daniel Fox",
     "url": SITE_URL,
+    "image": f"{SITE_URL}/img/daniel-fox.jpg",
     "jobTitle": "Fractional CMO",
     "description": (
         "Fractional CMO and marketing leadership for established, profitable companies "
@@ -148,6 +149,7 @@ def build_page(page_dir: pathlib.Path) -> dict | None:
         "{{title}}": html.escape(cfg["title"]),
         "{{meta_description}}": html.escape(cfg.get("meta_description", ""), quote=True),
         "{{canonical}}": canonical_for(output),
+        "{{og_type}}": cfg.get("og_type", "website"),
         "{{og_image}}": OG_IMAGE,
         "{{robots}}": cfg.get("robots", "index, follow"),
         "{{schema}}": build_schema(cfg),
