@@ -35,8 +35,19 @@
       <label for="message">What's the gap you're feeling?</label>
       <textarea id="message" name="message" placeholder="What's working, what isn't, and what you wish someone would just take off your desk."></textarea>
 
-      <button class="btn btn-primary" type="submit">Send it over</button>
+      <button id="submit-btn" class="btn btn-primary" type="submit">Send it over</button>
     </form>
     <p class="measure" style="margin-top:1.5rem;opacity:0.8">Prefer to skip the form? <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener">Grab a time directly.</a></p>
   </div>
 </section>
+<script>
+(function () {
+  var form = document.querySelector('.contact-form, form');
+  var btn = document.getElementById('submit-btn');
+  if (!form || !btn) return;
+  form.addEventListener('submit', function () {
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+  });
+}());
+</script>

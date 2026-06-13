@@ -10,7 +10,7 @@
         <p>Before that, I founded, bootstrapped, built, and sold Skreened &mdash; a custom-apparel company I grew past 100 people and roughly $16M in revenue before it was acquired. I didn't inherit that growth; I engineered the demand under it: an organic search engine that carried the business to its first $8M with almost no ad spend, then a content-and-culture engine that doubled it. That's the difference between me and the flood of cheaper, under-powered help. You're not handing the most important function in your business to someone learning on your budget. You're handing it to one accountable leader who has carried a P&amp;L, scaled a team, and answered for the number at the end of it.</p>
         <div class="operator-stats">
           <div>
-            <div class="operator-stat">Dozens</div>
+            <div class="operator-stat stat-count" data-count="30" data-suffix="+">Dozens</div>
             <div class="operator-stat-label">fractional engagements led</div>
           </div>
           <div>
@@ -18,7 +18,7 @@
             <div class="operator-stat-label">Skreened, built and sold</div>
           </div>
           <div>
-            <div class="operator-stat">Hundreds</div>
+            <div class="operator-stat stat-count" data-count="100" data-suffix="+">Hundreds</div>
             <div class="operator-stat-label">of people led</div>
           </div>
         </div>
@@ -26,3 +26,30 @@
     </div>
   </div>
 </section>
+<script>
+(function () {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var stats = document.querySelectorAll('.stat-count[data-count]');
+  if (!stats.length || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      var target = parseInt(el.dataset.count, 10);
+      var suffix = el.dataset.suffix || '';
+      var duration = 1400;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        el.textContent = Math.floor(progress * target) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target + suffix;
+      }
+      requestAnimationFrame(step);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  stats.forEach(function (el) { io.observe(el); });
+}());
+</script>

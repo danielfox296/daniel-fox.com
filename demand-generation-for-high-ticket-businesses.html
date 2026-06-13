@@ -228,6 +228,10 @@
     // Reveal on scroll
     (function () {
       var els = document.querySelectorAll('.reveal');
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        els.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
       if (!('IntersectionObserver' in window) || !els.length) {
         els.forEach(function (el) { el.classList.add('in'); });
         return;
