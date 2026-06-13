@@ -253,7 +253,8 @@ a:hover { color: var(--accent-deep); text-decoration: underline; }
 .section-ink p { color: var(--muted-on-ink); }
 .section-ink .eyebrow { color: var(--lime); }
 .section-ink .accent { color: var(--lime); }
-.section-ink a { color: var(--lime); }
+/* :not(.btn) so pill buttons keep their own colors instead of going lime-on-lime. */
+.section-ink a:not(.btn) { color: var(--lime); }
 
 /* ---------- Hero ---------- */
 .hero { padding: 6rem 0 4.5rem; }
@@ -700,7 +701,9 @@ body.article blockquote.pull {
   }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 0.7rem 0; width: 100%; white-space: normal; }
-  .nav-cta { margin-top: 0.5rem; }
+  /* Higher specificity than `.nav-links a` so the pill keeps its padding/shape
+     instead of stretching full-width with text jammed against the left edge. */
+  .nav-links a.nav-cta { margin-top: 0.7rem; padding: 0.6rem 1.4rem; width: auto; text-align: center; }
 }
 
 @media (max-width: 820px) {
