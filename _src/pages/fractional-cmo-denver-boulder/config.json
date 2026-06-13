@@ -1,0 +1,65 @@
+{
+  "title": "Fractional B2C CMO in Denver & Boulder, Colorado | Daniel Fox",
+  "meta_description": "Daniel Fox is a fractional B2C CMO based in the Denver and Boulder area. I run the entire marketing function for established consumer brands across Colorado and remotely nationwide. One senior leader, accountable for the number.",
+  "output": "fractional-cmo-denver-boulder.html",
+  "og_type": "website",
+  "schema": {
+    "@graph": [
+      {
+        "@type": "Service",
+        "serviceType": "Fractional B2C CMO / fractional marketing leadership",
+        "provider": {
+          "@type": "Person",
+          "name": "Daniel Fox",
+          "url": "https://daniel-fox.com",
+          "jobTitle": "Fractional B2C CMO",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Denver",
+            "addressRegion": "CO",
+            "addressCountry": "US"
+          }
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Denver"},
+          {"@type": "City", "name": "Boulder"},
+          {"@type": "AdministrativeArea", "name": "Colorado"},
+          {"@type": "Country", "name": "United States"}
+        ],
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": "Established, profitable consumer businesses with considered, high-ticket purchases"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you only work with companies in Denver and Boulder?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. I'm based in the Denver and Boulder area and meet Front Range companies in person when it helps, and I work remotely with established consumer businesses across the country. The work is the same either way; the in-person option is just there when proximity is useful."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does a fractional B2C CMO do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I run the entire marketing function part-time, strategy through pipeline: positioning, channels, content and search, paid, email, creative, and the measurement to prove it. One senior leader accountable for the number, instead of a stack of agencies and freelancers no one is running."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does a fractional CMO cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most fractional CMOs run $8,000 to $22,000 a month; my engagements start at $10,000, scoped to the work. The more useful question is what the seat returns against a full-time hire or the unled spend you already carry."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
