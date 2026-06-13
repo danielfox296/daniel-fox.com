@@ -166,19 +166,21 @@
         });
       }
     })();
-    // Reveal on scroll
+    // Reveal on scroll — with a hard failsafe so content can never stay hidden.
     (function () {
       var els = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window) || !els.length) {
-        els.forEach(function (el) { el.classList.add('in'); });
-        return;
-      }
+      if (!els.length) { return; }
+      function showAll() { els.forEach(function (el) { el.classList.add('in'); }); }
+      if (!('IntersectionObserver' in window)) { showAll(); return; }
+      // threshold 0: reveal as soon as any part enters — works for elements taller than the viewport.
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
         });
-      }, { threshold: 0.12 });
+      }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
       els.forEach(function (el) { io.observe(el); });
+      // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
+      window.addEventListener('load', function () { setTimeout(showAll, 1200); });
     })();
   </script>
 </body>
