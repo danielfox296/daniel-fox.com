@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614d">
+  <link rel="stylesheet" href="styles.css?v=20260614e">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is a fractional CMO worth the investment?", "acceptedAnswer": {"@type": "Answer", "text": "Worth is only knowable if it is fenced. Most engagements are set up so you can never tell whether the fractional CMO moved anything, because the contribution is never separated from referrals and seasonality. The honest version starts with a baseline before anything is touched, commits to a leading indicator the CMO actually controls, and names revenue as the goal without guaranteeing it. For a high-ticket business, roughly 1.5 to 4 additional won deals a month covers the fee for a year, so the bar is a small number of incremental wins, not a leap. The red flag is an engagement measured by assets produced instead of a number moved. Daniel Fox is a fractional B2C CMO who fences the contribution before touching anything."}}]}, {"@type": "Article", "headline": "Is a fractional CMO worth the investment?", "description": "Worth is only knowable if it is fenced. Anchor to incremental won deals, baseline before touching anything, commit to a leading indicator you control, and watch for the engagement set up to be unfalsifiable.", "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-12", "dateModified": "2026-06-12"}]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -91,7 +91,7 @@
 <section class="section section-line">
   <div class="container reveal" style="max-width:64ch">
     <h2>How to set the fence in the first month</h2>
-    <p>So whether it is worth it is not a yes or a no. It is a setup. In the first month you establish four things: the baseline, so today's numbers are on record before anything changes; the leading indicator we both watch; the exclusions, so the contribution stays legible; and the goal, revenue, named plainly and never sold as a promise.</p>
+    <p>So whether it is worth it comes down to a setup. In the first month you establish four things: the baseline, so today's numbers are on record before anything changes; the leading indicator we both watch; the exclusions, so the contribution stays legible; and the goal, revenue, named plainly and never sold as a promise.</p>
     <p>Get those four in place and worth becomes a thing you can check, month by month, against numbers that were there before I arrived. Skip them and you are buying confidence, which is what the unfalsifiable engagements sell. A fractional CMO is worth it when the work is fenced well enough that you could prove it was not. Insist on the fence and the rest gets simple.</p>
   </div>
 </section>
@@ -155,13 +155,13 @@
         });
       }
     })();
-    // Reveal on scroll — with a hard failsafe so content can never stay hidden.
+    // Reveal on scroll -with a hard failsafe so content can never stay hidden.
     (function () {
       var els = document.querySelectorAll('.reveal');
       if (!els.length) { return; }
       function showAll() { els.forEach(function (el) { el.classList.add('in'); }); }
       if (!('IntersectionObserver' in window)) { showAll(); return; }
-      // threshold 0: reveal as soon as any part enters — works for elements taller than the viewport.
+      // threshold 0: reveal as soon as any part enters -works for elements taller than the viewport.
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
@@ -171,7 +171,7 @@
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
     })();
-    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // Subtle parallax on full-bleed photo bands -desktop pointer devices only, and never
     // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
     // translate up to ~9% of its height never bares an edge.
     (function () {

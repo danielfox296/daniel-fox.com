@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614d">
+  <link rel="stylesheet" href="styles.css?v=20260614e">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Your answers are working exactly as designed", "description": "Your answer to 'who is our customer' is calibrated to produce exactly your current numbers. Why the question gets filed as settled, and how to reopen it.", "author": {"@type": "Person", "name": "Daniel Fox"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-11", "dateModified": "2026-06-11"}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -95,7 +95,7 @@
     <div class="measure-wide" style="margin-top:1.5rem">
       <p>My training here draws on Spiral Dynamics, a developmental model of value systems. The practical skill it builds is holding several incompatible worldviews at once without collapsing them into your own.</p>
       <p>You sit inside the optimizer's worldview, or the skeptic's, or the clinician's, and you let your own homepage make its case to you. The page reads completely differently from each seat. Things that built trust from one seat drain it from another. A line that reads as reassuring to the founder reads as evasive to a buyer who wants data. A visual palette that signals care and gentleness to one cohort signals unrigor to another.</p>
-      <p>The point is not that any one seat is right. The point is that you can't see the problem from only one of them.</p>
+      <p>The point holds regardless of which single seat happens to be right. It's that you can't see the problem from only one of them.</p>
     </div>
   </div>
 </section>
@@ -209,13 +209,13 @@
         });
       }
     })();
-    // Reveal on scroll — with a hard failsafe so content can never stay hidden.
+    // Reveal on scroll -with a hard failsafe so content can never stay hidden.
     (function () {
       var els = document.querySelectorAll('.reveal');
       if (!els.length) { return; }
       function showAll() { els.forEach(function (el) { el.classList.add('in'); }); }
       if (!('IntersectionObserver' in window)) { showAll(); return; }
-      // threshold 0: reveal as soon as any part enters — works for elements taller than the viewport.
+      // threshold 0: reveal as soon as any part enters -works for elements taller than the viewport.
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
@@ -225,7 +225,7 @@
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
     })();
-    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // Subtle parallax on full-bleed photo bands -desktop pointer devices only, and never
     // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
     // translate up to ~9% of its height never bares an edge.
     (function () {

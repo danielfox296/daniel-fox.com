@@ -5,16 +5,16 @@
    Hierarchy comes from SIZE + UPPERCASE + LETTER-SPACING, not bold weight. */
 
 :root {
-  --bg: #f7f3f2;          /* cream — warm off-white page bg */
-  --bg-panel: #efe7e3;    /* recessed warm panel */
-  --bg-ink: #2e2d2b;      /* near-black warm ink (dark bands) */
-  --ink: #2e2d2b;         /* primary text */
-  --ink-soft: #56524c;    /* secondary text (warm) */
-  --ink-faint: #7f7e74;   /* stone — tertiary / labels */
-  --line: rgba(46, 45, 43, 0.13); /* hairlines */
-  --line-ink: rgba(247, 243, 242, 0.16);
-  --accent: #ab8771;      /* clay — serif-italic accents, eyebrows, links */
-  --accent-deep: #8d6a55;
+  --bg: #f6f5f4;          /* off-white page bg (neutral, de-warmed) */
+  --bg-panel: #eaebec;    /* recessed cool-neutral gray panel (section differentiation) */
+  --bg-ink: #26282b;      /* near-black, cool (dark bands / footer) */
+  --ink: #2b2c2e;         /* primary text (neutral) */
+  --ink-soft: #54565a;    /* secondary text (neutral-cool) */
+  --ink-faint: #7c7d81;   /* tertiary / labels (neutral-cool) */
+  --line: rgba(40, 42, 45, 0.13); /* hairlines */
+  --line-ink: rgba(246, 245, 244, 0.16);
+  --accent: #44474a;      /* neutral dark gray — eyebrows, links, accents (was clay) */
+  --accent-deep: #2a2c2e;
   --lime: #cef099;        /* signature chartreuse — highlight + primary fill */
   --paper-on-ink: #f7f3f2;
   --muted-on-ink: rgba(247, 243, 242, 0.70);
@@ -118,6 +118,9 @@ h3 {
   background: linear-gradient(transparent 58%, var(--lime) 58%);
   padding: 0 0.05em;
 }
+/* On a dark photo band the lime highlight read as a green strike-through over the white
+   headline, so it is dropped there — the phrase simply stays in the white headline. */
+.photo-section .marker { background: none; padding: 0; }
 
 p { margin: 0 0 1.1rem; text-wrap: pretty; }
 a { color: var(--accent); text-decoration: none; }
@@ -175,6 +178,8 @@ a:hover { color: var(--accent-deep); text-decoration: underline; }
   white-space: nowrap;
 }
 .wordmark:hover { color: var(--ink); text-decoration: none; }
+/* In the dark footer the wordmark stays light on hover (the default ink hover would vanish). */
+.site-footer .wordmark:hover { color: var(--paper-on-ink); }
 .wordmark-role {
   display: inline-block;
   margin-left: 0.6rem;
@@ -213,7 +218,7 @@ a:hover { color: var(--accent-deep); text-decoration: underline; }
 /* Active page — signature lime underline on the current section's link. */
 .nav-links a[aria-current="page"]:not(.nav-cta) {
   color: var(--ink);
-  background: linear-gradient(transparent 80%, var(--lime) 80%);
+  background: linear-gradient(transparent 80%, var(--ink) 80%);
 }
 .nav-cta[aria-current="page"] { background: var(--ink); color: var(--paper-on-ink) !important; }
 .nav-toggle { display: none; }
@@ -406,7 +411,7 @@ a:hover { color: var(--accent-deep); text-decoration: underline; }
   font-weight: 700;
   line-height: 1;
 }
-.fit-yes li::before { content: "\2713"; color: var(--accent-deep); background: rgba(171, 135, 113, 0.16); }
+.fit-yes li::before { content: "\2713"; color: var(--accent-deep); background: rgba(68, 71, 74, 0.14); }
 .fit-no li::before { content: "\2715"; color: var(--ink-faint); background: rgba(127, 126, 116, 0.14); }
 
 /* pull quote (voice of customer) */

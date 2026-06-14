@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{nav_prefix}}styles.css?v=20260614d">
+  <link rel="stylesheet" href="{{nav_prefix}}styles.css?v=20260614e">
   {{schema}}
   {{ga}}
   {{page_css}}
@@ -43,13 +43,13 @@
         });
       }
     })();
-    // Reveal on scroll — with a hard failsafe so content can never stay hidden.
+    // Reveal on scroll -with a hard failsafe so content can never stay hidden.
     (function () {
       var els = document.querySelectorAll('.reveal');
       if (!els.length) { return; }
       function showAll() { els.forEach(function (el) { el.classList.add('in'); }); }
       if (!('IntersectionObserver' in window)) { showAll(); return; }
-      // threshold 0: reveal as soon as any part enters — works for elements taller than the viewport.
+      // threshold 0: reveal as soon as any part enters -works for elements taller than the viewport.
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
@@ -59,7 +59,7 @@
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
     })();
-    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // Subtle parallax on full-bleed photo bands -desktop pointer devices only, and never
     // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
     // translate up to ~9% of its height never bares an edge.
     (function () {

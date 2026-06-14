@@ -1,6 +1,6 @@
 {
   "title": "What Does a Fractional CMO Do? The Whole Function | Daniel Fox",
-  "meta_description": "What a fractional CMO does: runs the entire marketing function — strategy, content, SEO, AI-search visibility, paid, capture, nurture, creative, and measurement — part-time, with one number to hold.",
+  "meta_description": "What a fractional CMO does: runs the entire marketing function (strategy, content, SEO, AI-search visibility, paid, capture, nurture, creative, and measurement) part-time, with one number to hold.",
   "output": "what-we-run.html",
   "nav": "what-we-run",
   "schema": {
@@ -13,7 +13,7 @@
             "name": "How is this different from an agency?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "An agency executes the tasks you assign and reports activity. A fractional CMO answers for the outcome — sets the strategy, directs the agencies and freelancers you already have, and stands behind the number. You stop managing marketing; I run it."
+              "text": "An agency executes the tasks you assign and reports activity. A fractional CMO answers for the outcome: sets the strategy, directs the agencies and freelancers you already have, and stands behind the number. You stop managing marketing; I run it."
             }
           },
           {
@@ -21,7 +21,7 @@
             "name": "How is it different from hiring a full-time CMO?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Same caliber of leader, without the full-time salary, the equity, or the six-month search and ramp. Ownership-level responsibility without ownership-level equity — starting in weeks, not quarters."
+              "text": "Same caliber of leader, without the full-time salary, the equity, or the six-month search and ramp. Ownership-level responsibility without ownership-level equity, starting in weeks, not quarters."
             }
           },
           {
@@ -37,7 +37,7 @@
             "name": "When will I see results?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The diagnosis is quick — you'll know where customers really come from in the first weeks. Building and optimizing demand compounds over a considered-purchase cycle. I set a baseline up front, so what you see is genuinely new, not a number I backed into."
+              "text": "The diagnosis is quick: you'll know where customers really come from in the first weeks. Building and optimizing demand compounds over a considered-purchase cycle. I set a baseline up front, so what you see is genuinely new, not a number I backed into."
             }
           },
           {
@@ -45,7 +45,7 @@
             "name": "Will you work with my current team and agency?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes — I lead them. Most companies already have some marketing in motion. I run and direct it, cut what isn't working, and add what's missing."
+              "text": "Yes, I lead them. Most companies already have some marketing in motion. I run and direct it, cut what isn't working, and add what's missing."
             }
           },
           {

@@ -1,6 +1,6 @@
 {
   "title": "Do I Need a CMO for My Small Business? | Daniel Fox",
-  "meta_description": "For most small businesses the honest answer is no, not yet. The test is not headcount, it is whether activity has outrun decisions. Daniel Fox, fractional B2C CMO.",
+  "meta_description": "For most small businesses the honest answer is no, not yet. The test is whether activity has outrun decisions. Daniel Fox, fractional B2C CMO.",
   "output": "do-i-need-a-cmo-for-my-small-business.html",
   "nav": "insights",
   "og_type": "article",
@@ -14,7 +14,7 @@
             "name": "Do I really need a CMO for my small business?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "For most small businesses the honest answer is no, not yet. A CMO is not a title you reach at a certain size. It is the seat where someone derives the work from the customer's values first, then drives revenue down to the last bit of copy and color. If you only need copy and graphics made, you need hands. If you are pre-revenue, or you want your existing plan executed rather than challenged and tested, a director or marketing manager fits better. The need arrives when spend and activity have outrun the decisions behind them and nobody senior owns whether it is the right work."
+              "text": "For most small businesses the honest answer is no, not yet. A CMO is the seat where someone derives the work from the customer's values first, then drives revenue down to the last bit of copy and color, whatever size you happen to be. If you only need copy and graphics made, you need hands. If you are pre-revenue, or you want your existing plan executed rather than challenged and tested, a director or marketing manager fits better. The need arrives when spend and activity have outrun the decisions behind them and nobody senior owns whether it is the right work."
             }
           }
         ]
@@ -22,7 +22,7 @@
       {
         "@type": "Article",
         "headline": "Do I really need a CMO for my small business?",
-        "description": "A CMO is not a headcount milestone. The need arrives only when activity has outrun the decisions behind it. For most small businesses the honest answer is no, not yet.",
+        "description": "A CMO is a seat you fill when activity has outrun the decisions behind it, whatever your headcount. For most small businesses the honest answer is no, not yet.",
         "author": {
           "@type": "Person",
           "name": "Daniel Fox",

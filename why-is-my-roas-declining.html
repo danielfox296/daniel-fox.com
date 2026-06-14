@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614d">
+  <link rel="stylesheet" href="styles.css?v=20260614e">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is my ROAS declining when nothing in my campaigns changed?", "acceptedAnswer": {"@type": "Answer", "text": "Declining return on ad spend while nothing in the campaigns changed usually means your perfect-fit cohort is saturating. The dashboard graph looks identical whether the cause is saturation, market-wide auction inflation, or friction in delivery, so it can flag the drop but not name it. The decline curve itself is the signal, and the diagnosis comes from buyer conversations the dashboard was never part of. Daniel Fox is a fractional B2C CMO who runs that diagnosis."}}]}, {"@type": "Article", "headline": "Why is my ROAS declining when nothing in my campaigns changed?", "description": "Return on ad spend slipping with steady spend and unchanged campaigns usually means your perfect-fit cohort is saturating.", "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-11", "dateModified": "2026-06-12"}]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -59,7 +59,7 @@
   <div class="container reveal" style="max-width:64ch">
     <h2>The cohort is finite, and you are spending into its edge</h2>
     <p>The people who convert cheaply are the ones already shaped like your offer. They recognize what you sell before you finish the sentence. That group is real, and it is smaller than the spend curve assumes. Early on your budget reaches the center of it, where intent is high and persuasion is short. As you spend more, the same campaign reaches people one step further out, who need more convincing for the same sale.</p>
-    <p>Run the thought experiment to the end. Pour an unlimited budget into your single best campaign. Return on ad spend falls, every time, with the creative and the targeting held exactly as they were. The shape of that fall is the saturation reading. Nothing in the account changed because the change was never in the account. It was in how much of the fitting cohort you had left.</p>
+    <p>Run the thought experiment to the end. Pour an unlimited budget into your single best campaign. Return on ad spend falls, every time, with the creative and the targeting held exactly as they were. The shape of that fall is the saturation reading. Nothing in the account changed because the change lived elsewhere: in how much of the fitting cohort you had left.</p>
     <p>That is also why adding budget feels like it should fix the drop and does the opposite. More spend reaches further from the center, where the people are colder and the cost to convince them is higher, so the blended number gets worse the harder you push.</p>
   </div>
 </section>
@@ -75,7 +75,7 @@
 <section class="section">
   <div class="container reveal" style="max-width:64ch">
     <h2>Stop asking the chart to diagnose, and go to the ground</h2>
-    <p>The resolution is not another view in the analytics. It is buyer conversations, win and loss interviews, and walking the full path your value proposition takes to a customer. You ask the people who bought what nearly stopped them, and the people who did not what they went with instead. You watch the handoff from ad to inbox to quote with your own eyes.</p>
+    <p>The resolution lives outside the analytics. It is buyer conversations, win and loss interviews, and walking the full path your value proposition takes to a customer. You ask the people who bought what nearly stopped them, and the people who did not what they went with instead. You watch the handoff from ad to inbox to quote with your own eyes.</p>
     <p>One honest limit, because pretending otherwise is how money gets wasted: there is no clean data method that separates a saturating cohort from market-wide cost inflation. Anyone selling you a metric for that is selling you a metric. The separation comes from ground-truth work, and a baseline set before the work starts so what you see next is genuinely new.</p>
     <p>In practice that is a dozen real conversations, not a survey: the buyers who almost walked, the ones who chose a competitor instead, and a walk through the path a lead takes from the ad to the moment a human follows up. The cause is usually visible within the first few of them.</p>
   </div>
@@ -140,13 +140,13 @@
         });
       }
     })();
-    // Reveal on scroll — with a hard failsafe so content can never stay hidden.
+    // Reveal on scroll -with a hard failsafe so content can never stay hidden.
     (function () {
       var els = document.querySelectorAll('.reveal');
       if (!els.length) { return; }
       function showAll() { els.forEach(function (el) { el.classList.add('in'); }); }
       if (!('IntersectionObserver' in window)) { showAll(); return; }
-      // threshold 0: reveal as soon as any part enters — works for elements taller than the viewport.
+      // threshold 0: reveal as soon as any part enters -works for elements taller than the viewport.
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
@@ -156,7 +156,7 @@
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
     })();
-    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // Subtle parallax on full-bleed photo bands -desktop pointer devices only, and never
     // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
     // translate up to ~9% of its height never bares an edge.
     (function () {

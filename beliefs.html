@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614d">
+  <link rel="stylesheet" href="styles.css?v=20260614e">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "image": "https://daniel-fox.com/img/daniel-fox.jpg", "sameAs": ["https://www.linkedin.com/in/danielcfox/"], "jobTitle": "Fractional B2C CMO", "address": {"@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US"}, "areaServed": "US", "description": "Fractional B2C CMO and marketing leadership for established, profitable consumer businesses with considered, high-ticket purchases. I run the whole marketing function, strategy through pipeline, and answer for the number.", "alumniOf": {"@type": "CollegeOrUniversity", "name": "The Ohio State University"}, "knowsAbout": ["Fractional CMO services", "B2C and consumer-brand marketing", "Marketing leadership", "Demand generation", "Positioning", "Go-to-market strategy", "High-ticket and considered-purchase marketing"]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -115,7 +115,7 @@
 
     <div class="belief">
       <p class="belief-num">Seven</p>
-      <h2 class="belief-claim">Empathy is a technical discipline, not a personality trait.</h2>
+      <h2 class="belief-claim">Empathy is a technical discipline you train.</h2>
       <div class="belief-body">
         <p>Most marketing is written from inside the founder's value system and pointed outward. The method I use runs the other way. I sit inside the buyer's value structure and let your own marketing make its case to me from that seat, where the lines that build trust and the lines that drain it stop looking the same. It is trained, and it is the part that is hard to hire one task at a time.</p>
         <p><a class="belief-link" href="projective-empathy.html">The method I call projective empathy &rarr;</a></p>
@@ -168,13 +168,13 @@
         });
       }
     })();
-    // Reveal on scroll — with a hard failsafe so content can never stay hidden.
+    // Reveal on scroll -with a hard failsafe so content can never stay hidden.
     (function () {
       var els = document.querySelectorAll('.reveal');
       if (!els.length) { return; }
       function showAll() { els.forEach(function (el) { el.classList.add('in'); }); }
       if (!('IntersectionObserver' in window)) { showAll(); return; }
-      // threshold 0: reveal as soon as any part enters — works for elements taller than the viewport.
+      // threshold 0: reveal as soon as any part enters -works for elements taller than the viewport.
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
@@ -184,7 +184,7 @@
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
     })();
-    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // Subtle parallax on full-bleed photo bands -desktop pointer devices only, and never
     // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
     // translate up to ~9% of its height never bares an edge.
     (function () {

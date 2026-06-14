@@ -1,13 +1,13 @@
 {
-  "title": "Fractional CMO Insights — Demand for High-Ticket Businesses | Daniel Fox",
-  "meta_description": "How demand actually works for considered, high-ticket purchases — the fractional-CMO category argument, plus plain answers to the questions high-ticket business owners ask next.",
+  "title": "Fractional CMO Insights: Demand for High-Ticket Businesses | Daniel Fox",
+  "meta_description": "How demand actually works for considered, high-ticket purchases: the fractional-CMO category argument, plus plain answers to the questions high-ticket business owners ask next.",
   "output": "insights.html",
   "body_class": "blog-index",
   "nav": "insights",
   "schema": {
     "@type": "CollectionPage",
-    "name": "Daniel Fox — Insights",
-    "description": "How demand actually works for considered, high-ticket purchases — the category argument, plus plain answers to the questions owners of high-ticket businesses ask next.",
+    "name": "Daniel Fox: Insights",
+    "description": "How demand actually works for considered, high-ticket purchases: the category argument, plus plain answers to the questions owners of high-ticket businesses ask next.",
     "url": "https://daniel-fox.com/insights.html",
     "isPartOf": {
       "@type": "WebSite",

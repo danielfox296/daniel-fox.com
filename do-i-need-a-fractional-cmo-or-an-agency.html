@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614d">
+  <link rel="stylesheet" href="styles.css?v=20260614e">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need a fractional CMO or an agency?", "acceptedAnswer": {"@type": "Answer", "text": "Agencies execute inside the answers you already hold about who your customer is and what they value. A fractional CMO reopens those answers. If your current answers are producing your current ceiling, execution is not the constraint and another agency will reach the same ceiling faster. Choose the agency when the strategy is right and the doing is the gap. Choose a fractional CMO when the number has stopped responding to more and better effort. Daniel Fox is a fractional B2C CMO who reopens the answers."}}]}, {"@type": "Article", "headline": "Do I need a fractional CMO or an agency?", "description": "Agencies execute inside your current answers. A fractional CMO reopens them. How to tell which you need.", "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-11", "dateModified": "2026-06-11"}]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -77,7 +77,7 @@
     <p>One question sorts it. Is your strategy sound and the gap is getting it done well and consistently? Hire the agency, or the freelancer. That is a doing problem, and doing is what they sell. Has the number stopped responding to more spend and better work, across more than one capable team? That is an answers problem, and no one executing the current answers will solve it.</p>
     <p>A fractional CMO can also direct the agencies you already have, so this is rarely either-or. I reopen the strategy and then point your existing execution at the new answer. If you want the plain side-by-side of agency, freelancer, in-house hire, and fractional leadership, <a href="fractional-cmo-vs-marketing-agency.html">the full comparison is here</a>.</p></div></section>
 <section class="section section-line"><div class="container reveal" style="max-width:64ch">
-    <p>There is a sequencing answer too. Reopen the strategy first, then hand the new brief to the agency or freelancer you already pay. What changes is the order of the work, not the size of the team.</p>
+    <p>There is a sequencing answer too. Reopen the strategy first, then hand the new brief to the agency or freelancer you already pay. What changes is the order of the work, while the size of the team stays the same.</p>
   </div>
 </section>
 
@@ -140,13 +140,13 @@
         });
       }
     })();
-    // Reveal on scroll — with a hard failsafe so content can never stay hidden.
+    // Reveal on scroll -with a hard failsafe so content can never stay hidden.
     (function () {
       var els = document.querySelectorAll('.reveal');
       if (!els.length) { return; }
       function showAll() { els.forEach(function (el) { el.classList.add('in'); }); }
       if (!('IntersectionObserver' in window)) { showAll(); return; }
-      // threshold 0: reveal as soon as any part enters — works for elements taller than the viewport.
+      // threshold 0: reveal as soon as any part enters -works for elements taller than the viewport.
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
@@ -156,7 +156,7 @@
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
     })();
-    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // Subtle parallax on full-bleed photo bands -desktop pointer devices only, and never
     // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
     // translate up to ~9% of its height never bares an edge.
     (function () {
