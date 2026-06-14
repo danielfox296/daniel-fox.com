@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is a fractional CMO worth the investment?", "acceptedAnswer": {"@type": "Answer", "text": "Worth is only knowable if it is fenced. Most engagements are set up so you can never tell whether the fractional CMO moved anything, because the contribution is never separated from referrals and seasonality. The honest version starts with a baseline before anything is touched, commits to a leading indicator the CMO actually controls, and names revenue as the goal without guaranteeing it. For a high-ticket business, roughly 1.5 to 4 additional won deals a month covers the fee for a year, so the bar is a small number of incremental wins, not a leap. The red flag is an engagement measured by assets produced instead of a number moved. Daniel Fox is a fractional B2C CMO who fences the contribution before touching anything."}}]}, {"@type": "Article", "headline": "Is a fractional CMO worth the investment?", "description": "Worth is only knowable if it is fenced. Anchor to incremental won deals, baseline before touching anything, commit to a leading indicator you control, and watch for the engagement set up to be unfalsifiable.", "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-12", "dateModified": "2026-06-12"}]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,7 +42,8 @@
 </header>
 
   <main>
-    <section class="hero">
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-trading-dark.jpg')"></div>
   <div class="container">
     <p class="eyebrow">Worth it, fenced</p>
     <h1>Is a fractional CMO worth the investment?</h1>
@@ -51,15 +52,6 @@
       <img class="byline-avatar" src="img/daniel-fox.jpg" alt="Daniel Fox" width="50" height="50">
       <span class="byline-text"><span class="byline-name">Daniel Fox</span><span class="byline-role">Fractional B2C CMO</span></span>
     </div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/growth-chart-laptop.jpg" alt="An upward growth chart on a laptop screen" loading="lazy" decoding="async">
-      <figcaption>“Worth it” is only knowable once the contribution is fenced.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -96,14 +88,6 @@
   </div>
 </section>
 
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/calculator-finance.jpg" alt="Working through numbers on a calculator at a desk" loading="lazy" decoding="async">
-    </figure>
-  </div>
-</section>
-
 <section class="section section-line">
   <div class="container reveal" style="max-width:64ch">
     <h2>How to set the fence in the first month</h2>
@@ -128,7 +112,8 @@
   </div>
 </section>
 
-<section class="section section-ink">
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
   <div class="container reveal" style="text-align:center">
     <h2 class="measure" style="margin:0 auto 1rem">Find out what fencing the contribution would look like for your business.</h2>
     <p class="lead" style="margin:0 auto 2rem;max-width:48ch">A short conversation about the baseline, the indicator, and whether the math is there before either of us commits.</p>
@@ -185,6 +170,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>

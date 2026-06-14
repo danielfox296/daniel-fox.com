@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to generate leads beyond referrals for a high-ticket business", "description": "Real lead generation for high-ticket businesses — beyond referrals and luck — and why a fenced channel you can measure is the one that scales.", "author": {"@type": "Person", "name": "Daniel Fox"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "mainEntity": {"@type": "Question", "name": "How do I generate predictable leads for my high-ticket business beyond referrals?", "acceptedAnswer": {"@type": "Answer", "text": "Build at least one net-new source of demand you can measure and attribute — authority content, search visibility, lead capture, and nurture aimed at a weeks-long decision — running alongside referrals rather than depending on them. Pace that demand to your real capacity so you generate work you can actually deliver, and put one accountable leader in charge of the whole channel."}}, "datePublished": "2026-06-09", "dateModified": "2026-06-11"}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,7 +42,8 @@
 </header>
 
   <main>
-    <section class="hero">
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-city-night.jpg')"></div>
   <div class="container">
     <p class="eyebrow">Lead generation beyond referrals</p>
     <h1>How to generate leads <span class="accent">beyond referrals.</span></h1>
@@ -51,15 +52,6 @@
       <a class="btn btn-primary" href="contact.html">Start a conversation</a>
       <a class="btn btn-ghost" href="#the-path">See the path</a>
     </div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/handshake-deal.jpg" alt="Two people shaking hands on an agreement" loading="lazy" decoding="async">
-      <figcaption>Referrals are a great start and a fragile foundation.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -100,14 +92,6 @@
   </div>
 </section>
 
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/audience-crowd.jpg" alt="A large group of people standing together" loading="lazy" decoding="async">
-    </figure>
-  </div>
-</section>
-
 <section class="section section-line">
   <div class="container reveal">
     <p class="eyebrow">The fenced channel</p>
@@ -134,14 +118,6 @@
   </div>
 </section>
 
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/analytics-laptop.jpg" alt="Performance-marketing analytics graphs on a laptop screen" loading="lazy" decoding="async">
-    </figure>
-  </div>
-</section>
-
 <section class="section section-line">
   <div class="container reveal">
     <p class="eyebrow">Why it only compounds with one leader</p>
@@ -154,7 +130,8 @@
   </div>
 </section>
 
-<section class="section section-ink">
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
   <div class="container reveal" style="text-align:center">
     <h2 class="measure" style="margin:0 auto 1rem">Ready to build a lead channel you can count on instead of one you hope for?</h2>
     <p class="lead" style="margin:0 auto 2rem;max-width:48ch">A short conversation tells us both whether the math, the capacity, and the fit are there. No pitch deck, no pressure.</p>
@@ -211,6 +188,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>

@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to actually generate demand for a high-ticket, considered purchase", "description": "How to generate steady demand for a considered, high-ticket purchase — and why one accountable leader running the whole marketing function beats paying for scattered activity that never compounds.", "author": {"@type": "Person", "name": "Daniel Fox"}, "publisher": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://daniel-fox.com/demand-generation-for-high-ticket-businesses.html"}, "datePublished": "2026-06-08", "dateModified": "2026-06-11"}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,7 +42,8 @@
 </header>
 
   <main>
-    <section class="hero">
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-city-night.jpg')"></div>
   <div class="container">
     <p class="eyebrow">Demand generation for high-ticket consumer brands</p>
     <h1>How to <span class="accent">actually generate demand</span> for a high-ticket, considered purchase.</h1>
@@ -51,15 +52,6 @@
       <a class="btn btn-primary" href="contact.html">Start a conversation</a>
       <a class="btn btn-ghost" href="#what-demand-means">See how it works</a>
     </div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/growth-analysis.jpg" alt="Analyzing growth charts and graphs on a laptop" loading="lazy" decoding="async">
-      <figcaption>Demand you can see, size, and repeat — not referral roulette.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -111,14 +103,6 @@
       <div class="cap-item"><span class="cap-name">Measurement</span><span class="cap-desc">A scoreboard that's actually read, with your contribution fenced from referrals and season so you know what worked.</span></div>
     </div>
     <p class="measure-wide" style="margin-top:2.5rem">Every one of these layers only pays off when it's conducted from one plan. Content that doesn't feed search wastes the search. Paid that doesn't point at a capture page wastes the spend. Nurture with nothing to nurture wastes the list. The layers are not the strategy. The strategy is the thing that decides what each layer is for, in what order, against which number, and then holds all of them to it.</p>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/analytics-laptop.jpg" alt="Performance-marketing analytics graphs on a laptop screen" loading="lazy" decoding="async">
-    </figure>
   </div>
 </section>
 
@@ -174,14 +158,6 @@
   </div>
 </section>
 
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/team-meeting.jpg" alt="A leader running a working session with a team and laptops" loading="lazy" decoding="async">
-    </figure>
-  </div>
-</section>
-
 <section class="section section-line">
   <div class="container reveal">
     <p class="eyebrow">Where to go deeper</p>
@@ -208,7 +184,8 @@
   </div>
 </section>
 
-<section class="section section-ink">
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
   <div class="container reveal" style="text-align:center">
     <h2 class="measure" style="margin:0 auto 1rem">Spending like a company with a marketing department, but no one's running it?</h2>
     <p class="lead" style="margin:0 auto 2rem;max-width:48ch">That's the gap this whole page is about. A short conversation tells us both whether the math and the fit are there. No pitch deck, no pressure.</p>
@@ -265,6 +242,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>

@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should I rebrand or reposition?", "acceptedAnswer": {"@type": "Answer", "text": "Most rebrands are an expensive way to avoid a sentence-level fix. The adjacent market you are chasing usually needs a reframe, not a new identity: the same product and the same proof, with different facts foregrounded and a different fear addressed. Run the cheap experiment first, one campaign and one landing page reframed only, before anyone commissions identity work. Daniel Fox is a fractional B2C CMO who runs that reframe before the spend."}}]}, {"@type": "Article", "headline": "Should I rebrand or reposition?", "description": "Most rebrands are an expensive way to avoid a sentence-level fix. The adjacent market usually needs a reframe, not a new identity.", "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-11", "dateModified": "2026-06-11"}]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,7 +42,8 @@
 </header>
 
   <main>
-    <section class="hero">
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-office-night.jpg')"></div>
   <div class="container">
     <p class="eyebrow">Positioning vs. identity</p>
     <h1>Should I rebrand or reposition?</h1>
@@ -51,15 +52,6 @@
       <img class="byline-avatar" src="img/daniel-fox.jpg" alt="Daniel Fox" width="50" height="50">
       <span class="byline-text"><span class="byline-name">Daniel Fox</span><span class="byline-role">Fractional B2C CMO</span></span>
     </div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/paint-swatches.jpg" alt="Paint and color swatches, suggesting a rebrand" loading="lazy" decoding="async">
-      <figcaption>Most “rebrands” are repositioning in disguise.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -78,14 +70,6 @@
     <h2>Same product, different platform, different first sentence</h2>
     <p>I ran this at scale once. A company I founded, Skreened, sold custom apparel and ceilinged on its own direct channel around eight million in revenue. The growth was on other platforms, where the buyer discovers and trusts in a completely different way. The product stayed identical. The prices stayed identical. The claims stayed identical. What changed was which true thing got said first, because a shopper on a marketplace search reads a title for different reasons than a shopper on your own site.</p>
     <p>None of that was a rebrand. The mark never moved. We reframed the same goods for how each new buyer found and judged them, and the channels that had looked like dead ends opened.</p>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/color-swatches-fan.jpg" alt="A fan of color swatches on a white surface" loading="lazy" decoding="async">
-    </figure>
   </div>
 </section>
 
@@ -113,7 +97,8 @@
   </div>
 </section>
 
-<section class="section section-ink">
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
   <div class="container reveal" style="text-align:center">
     <h2 class="measure" style="margin:0 auto 1rem">Before you brief a rebrand, test the sentence.</h2>
     <p class="lead" style="margin:0 auto 2rem;max-width:48ch">A short conversation to find out whether your next market needs a reframe or a real identity change, and which one your money should go to first.</p>
@@ -170,6 +155,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>

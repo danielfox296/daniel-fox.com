@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "image": "https://daniel-fox.com/img/daniel-fox.jpg", "sameAs": ["https://www.linkedin.com/in/danielcfox/"], "jobTitle": "Fractional B2C CMO", "address": {"@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US"}, "areaServed": "US", "description": "Fractional B2C CMO and marketing leadership for established, profitable consumer businesses with considered, high-ticket purchases. I run the whole marketing function, strategy through pipeline, and answer for the number.", "alumniOf": {"@type": "CollegeOrUniversity", "name": "The Ohio State University"}, "knowsAbout": ["Fractional CMO services", "B2C and consumer-brand marketing", "Marketing leadership", "Demand generation", "Positioning", "Go-to-market strategy", "High-ticket and considered-purchase marketing"]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,15 +42,7 @@
 </header>
 
   <main>
-    <section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/partners-handshake.jpg" alt="Business partners shaking hands in agreement" loading="lazy" decoding="async">
-    </figure>
-  </div>
-</section>
-
-<section class="section">
+    <section class="section">
   <div class="container reveal">
     <p class="eyebrow">Start a conversation</p>
     <h1 class="measure">Tell me about <span class="accent">the business.</span></h1>
@@ -142,6 +134,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>

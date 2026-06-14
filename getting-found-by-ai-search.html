@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to get your business recommended in AI search answers", "description": "When buyers ask an assistant to recommend a business like yours, will it name you? A clear look at earning visibility in AI answers without chasing vanity metrics.", "author": {"@type": "Person", "name": "Daniel Fox"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "mainEntity": {"@type": "Question", "name": "How do I make sure AI assistants recommend my business when buyers ask?", "acceptedAnswer": {"@type": "Answer", "text": "An assistant recommends the businesses it can read clearly. That means publishing plain, structured, authoritative answers to the exact questions a buyer asks before a considered purchase, so the model can find you, understand what you do, and cite you. It is the same authority that wins ordinary search, applied to a new front door. It is a real capability and one layer of demand, not a standalone channel or a magic switch."}}, "datePublished": "2026-06-08", "dateModified": "2026-06-11"}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,7 +42,8 @@
 </header>
 
   <main>
-    <section class="hero">
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-ai-network.jpg')"></div>
   <div class="container">
     <p class="eyebrow">AI search visibility</p>
     <h1>How to get your business <span class="accent">recommended</span> in AI search answers</h1>
@@ -51,15 +52,6 @@
       <a class="btn btn-primary" href="contact.html">Start a conversation</a>
       <a class="btn btn-ghost" href="#whats-changing">What's actually changing</a>
     </div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/ai-circuit-brain.jpg" alt="A circuit board shaped like a brain, suggesting AI search" loading="lazy" decoding="async">
-      <figcaption>Buyers now ask an AI before they ask around.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -92,14 +84,6 @@
       </div>
     </div>
     <p class="measure-wide" style="margin-top:2.5rem">If that sounds like good search practice, that's because it is. The work that makes you citable to an assistant is largely the same work that makes you findable in <a href="seo-for-high-ticket-businesses.html">search for high-ticket businesses</a> &mdash; both are the &ldquo;getting found&rdquo; question, answered for two front doors at once. You're not building a separate AI strategy. You're building the authority that serves both.</p>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/search-magnifying-laptop.jpg" alt="A magnifying glass beside a laptop, suggesting search" loading="lazy" decoding="async">
-    </figure>
   </div>
 </section>
 
@@ -145,7 +129,8 @@
   </div>
 </section>
 
-<section class="section section-ink">
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
   <div class="container reveal" style="text-align:center">
     <h2 class="measure" style="margin:0 auto 1rem">Want to be the name the assistant gives?</h2>
     <p class="lead" style="margin:0 auto 2rem;max-width:48ch">A short conversation tells us both whether the math and the fit are there &mdash; and where AI visibility sits inside the demand engine your business actually needs. No pitch deck, no pressure.</p>
@@ -203,6 +188,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>

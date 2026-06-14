@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "DefinedTerm", "@id": "https://daniel-fox.com/projective-empathy.html#term", "name": "Projective empathy", "description": "Projective empathy is the trained practice of inhabiting a buyer's value structure and reading a company's own marketing from inside it, drawing on Spiral Dynamics to hold several incompatible worldviews at once without collapsing them into your own.", "url": "https://daniel-fox.com/projective-empathy.html", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Daniel Fox marketing vocabulary", "url": "https://daniel-fox.com/beliefs.html"}}, {"@type": "WebPage", "url": "https://daniel-fox.com/projective-empathy.html", "name": "Projective empathy", "datePublished": "2026-06-11", "dateModified": "2026-06-11", "about": {"@id": "https://daniel-fox.com/projective-empathy.html#term"}, "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}}]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,7 +42,8 @@
 </header>
 
   <main>
-    <section class="hero">
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-boutique.jpg')"></div>
   <div class="container">
     <p class="eyebrow">The method, defined</p>
     <h1>Projective empathy</h1>
@@ -57,15 +58,6 @@
   </div>
 </section>
 
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/boutique-retail.jpg" alt="A customer browsing inside a considered, premium retail space" loading="lazy" decoding="async">
-      <figcaption>Seeing the purchase through the buyer's eyes, not your own.</figcaption>
-    </figure>
-  </div>
-</section>
-
 <section class="section section-line">
   <div class="container reveal" style="max-width:64ch">
     <p>Most marketing is written from inside the founder's value system and pointed outward. The team writes what would persuade them, and ships it to people who are not them. Projective empathy runs the other direction. You take a seat inside the buyer's worldview and let the company's own homepage, ad, and pitch make their case to you from there.</p>
@@ -75,15 +67,8 @@
   </div>
 </section>
 
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/interview-two-people.jpg" alt="Two people in conversation across a table" loading="lazy" decoding="async">
-    </figure>
-  </div>
-</section>
-
-<section class="section section-ink">
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
   <div class="container reveal" style="text-align:center">
     <h2 class="measure" style="margin:0 auto 1rem">Read from the buyer's seat, not your own.</h2>
     <p class="lead" style="margin:0 auto 2rem;max-width:48ch">This is the seat I take inside a company's marketing. See <a href="beliefs.html">what I work from</a>, or start a short conversation.</p>
@@ -140,6 +125,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>

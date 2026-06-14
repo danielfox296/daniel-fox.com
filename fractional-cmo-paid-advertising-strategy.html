@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can a fractional CMO handle paid advertising strategy?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and the first thing worth saying is that most paid problems are not paid problems. Your ads manager owns the dashboard, the bids, and the budgets. Almost nobody owns whether the message in those ads actually fits the customer. When paid stalls, that gap is usually where it is hiding, not in the media buying. A fractional CMO audits the message before the media settings, hunts the borrowed clichés that never fit this company, and re-derives the positioning from the buyer's values. Daniel Fox is a fractional B2C CMO who does that work above the ads manager."}}]}, {"@type": "Article", "headline": "Can a fractional CMO handle paid advertising strategy?", "description": "Most paid problems are not paid problems. Why declining performance usually lives in the message, not the media buying, and what a fractional CMO does above the ads manager.", "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-12", "dateModified": "2026-06-12"}]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,7 +42,8 @@
 </header>
 
   <main>
-    <section class="hero">
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-trading-dark.jpg')"></div>
   <div class="container">
     <p class="eyebrow">Paid that actually converts</p>
     <h1>Can a fractional CMO handle paid advertising strategy?</h1>
@@ -51,15 +52,6 @@
       <img class="byline-avatar" src="img/daniel-fox.jpg" alt="Daniel Fox" width="50" height="50">
       <span class="byline-text"><span class="byline-name">Daniel Fox</span><span class="byline-role">Fractional B2C CMO</span></span>
     </div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/analytics-laptop.jpg" alt="Performance-marketing analytics graphs on a laptop screen" loading="lazy" decoding="async">
-      <figcaption>Paid is only as good as the measurement behind it.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -83,14 +75,6 @@
     <h2>A wellness brand whose declining ROAS was telling the truth, just not the obvious one</h2>
     <p>A wellness brand showed me how far that gap can run. Their return on ad spend was declining, and so were sales, both at once. The obvious read is a media-buying failure. It wasn't. Their first and only cohort, the audience that mirrored the founder's own mindset and happened to be local, had simply been tapped out. The graph said the ads were getting worse. The truth was that the only audience they had ever spoken to was the founder's reflection, and it was exhausted. We brought in three new cohorts and ran positioning experiments against each. The payoff came in three parts: new volume, more data, and a finer point on the original cohort, which had been bleeding into the others without anyone noticing.</p>
     <p>The same account proved a message can move performance with no change to the media plan. Two of those cohorts shared one product but held very different values. One was optimizing for performance, in an entrepreneurial, capitalistic frame. The other was optimizing for wellbeing, in a spiritual, yoga frame. Same product, same claims. The job was to read each cohort's underlying values without judging either as right, then put a different honest value-frame in front of each. That is projective empathy on a live ad account, and it is what made the spend efficient.</p>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/dashboard-data.jpg" alt="A dashboard screen full of marketing data" loading="lazy" decoding="async">
-    </figure>
   </div>
 </section>
 
@@ -118,7 +102,8 @@
   </div>
 </section>
 
-<section class="section section-ink">
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
   <div class="container reveal" style="text-align:center">
     <h2 class="measure" style="margin:0 auto 1rem">If your ads are competently run and the number still won't move, the message is the likely ceiling.</h2>
     <p class="lead" style="margin:0 auto 2rem;max-width:48ch">A short conversation to find out whether your paid problem is a media problem or a message problem.</p>
@@ -175,6 +160,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>

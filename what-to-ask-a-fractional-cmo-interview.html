@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What should I ask a fractional CMO in an interview?", "acceptedAnswer": {"@type": "Answer", "text": "Skip the resume questions. Every question that matters tests one thing: does this person diagnose before they prescribe? Anyone who tells you the first thing they would do before they have looked at your creative, your analytics, and your current positioning is selling a playbook, because from outside the company that data is opaque. Ask what happens in month one and listen for a baseline and customer conversations, not a week-one to-do list. Ask what they refuse to do, because a CMO who refuses nothing does not know the edges of their own capabilities or is over-promising to win a bad-fit job. Ask what they actually believe, because a CMO with no positions you could disagree with has no positions at all. Daniel Fox is a fractional B2C CMO who works this way."}}]}, {"@type": "Article", "headline": "What should I ask a fractional CMO in an interview?", "description": "Skip the resume questions. Every question worth asking a fractional CMO tests whether they diagnose before they prescribe, refuse the right work, and hold real positions.", "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-12", "dateModified": "2026-06-12"}]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,7 +42,8 @@
 </header>
 
   <main>
-    <section class="hero">
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/boardroom-listening.jpg')"></div>
   <div class="container">
     <p class="eyebrow">Before you hire</p>
     <h1>What should I ask a fractional CMO in an interview?</h1>
@@ -51,15 +52,6 @@
       <img class="byline-avatar" src="img/daniel-fox.jpg" alt="Daniel Fox" width="50" height="50">
       <span class="byline-text"><span class="byline-name">Daniel Fox</span><span class="byline-role">Fractional B2C CMO</span></span>
     </div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/interview-two-people.jpg" alt="Two people in conversation across a table" loading="lazy" decoding="async">
-      <figcaption>The questions that separate an operator from a vendor.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -88,14 +80,6 @@
   </div>
 </section>
 
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/strategy-whiteboard.jpg" alt="A marketing strategy mapped out in diagrams on a glass whiteboard" loading="lazy" decoding="async">
-    </figure>
-  </div>
-</section>
-
 <section class="section">
   <div class="container reveal" style="max-width:64ch">
     <h2>Ask what they actually believe</h2>
@@ -120,7 +104,8 @@
   </div>
 </section>
 
-<section class="section section-ink">
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
   <div class="container reveal" style="text-align:center">
     <h2 class="measure" style="margin:0 auto 1rem">Ask me these questions yourself.</h2>
     <p class="lead" style="margin:0 auto 2rem;max-width:48ch">A short conversation is the fastest way to hear whether I diagnose before I prescribe.</p>
@@ -177,6 +162,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>

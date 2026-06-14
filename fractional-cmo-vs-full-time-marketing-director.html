@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Fractional CMO vs. full-time marketing director: which is better?", "acceptedAnswer": {"@type": "Answer", "text": "For a $3 to $12M company, the full-time marketing director you can actually afford usually buys execution, not strategic judgment. A real CMO who can author the direction runs about $300,000 to $450,000 a year all in, which is not what a company at this stage is hiring at. So the affordable full-time seat tends to fail in one of two ways: a capable executor with no one authoring strategy, or a real executive underused on overhead. A fractional CMO puts senior judgment on top of the hands you already have, part-time, without funding the overhead of the seat. Daniel Fox is a fractional B2C CMO who takes that strategic seat."}}]}, {"@type": "Article", "headline": "Fractional CMO vs. full-time marketing director: which is better?", "description": "The full-time marketing director a $3 to $12M company can afford usually buys hands, not judgment. How fractional leadership compares, and when each one fits.", "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-12", "dateModified": "2026-06-12"}]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,7 +42,8 @@
 </header>
 
   <main>
-    <section class="hero">
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/boardroom-listening.jpg')"></div>
   <div class="container">
     <p class="eyebrow">The seat you can afford</p>
     <h1>Fractional CMO vs. full-time marketing director: which is better?</h1>
@@ -51,14 +52,6 @@
       <img class="byline-avatar" src="img/daniel-fox.jpg" alt="Daniel Fox" width="50" height="50">
       <span class="byline-text"><span class="byline-name">Daniel Fox</span><span class="byline-role">Fractional B2C CMO</span></span>
     </div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/team-meeting.jpg" alt="A leader running a working session with a team and laptops" loading="lazy" decoding="async">
-    </figure>
   </div>
 </section>
 
@@ -75,14 +68,6 @@
     <h2>An eight-year director whose departure showed what was missing</h2>
     <p>Here is how that hides in plain sight. A high-ticket custom furniture company had a marketing director for about eight years. Day to day he scheduled posts and designed graphics. He set up some ads and campaigns too, but they were never optimized and did not connect with the voice of the customer. The work was real, and so was the title, and the two did not match. He was a coordinator with design and social hands, and no one above him was authoring strategy either.</p>
     <p>He chose to leave, on good terms, because the company genuinely liked him. His leaving is what exposed the gap. The title had been covering for it. The name of the role was hiding the lack of strategic work being done. The product was strong and the business grew steadily the whole time, which is exactly why no one caught it. The cost was never decline. It was the growth that never happened, invisible because the topline kept ticking up.</p>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/calculator-finance.jpg" alt="Working through numbers on a calculator at a desk" loading="lazy" decoding="async">
-    </figure>
   </div>
 </section>
 
@@ -110,7 +95,8 @@
   </div>
 </section>
 
-<section class="section section-ink">
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
   <div class="container reveal" style="text-align:center">
     <h2 class="measure" style="margin:0 auto 1rem">If the number keeps climbing but no one is deciding what your marketing should do, that is the gap.</h2>
     <p class="lead" style="margin:0 auto 2rem;max-width:48ch">A short conversation to tell whether you need hands, a leader, or the senior judgment sitting on top of the hands you have.</p>
@@ -167,6 +153,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>

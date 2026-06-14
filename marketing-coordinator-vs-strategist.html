@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "My marketing person left. Do I need a coordinator or a strategist?", "acceptedAnswer": {"@type": "Answer", "text": "Replacing the person who left with the same seat reproduces the same gap. A coordinator runs a strategy someone else authored: scheduling posts, briefing the agency, keeping the calendar moving. They do not decide what the marketing says or who it is for. If strategy is the thing that actually left, hiring another coordinator hires the gap back, and a junior strategist you have to direct still leaves the deciding on your desk. Choose a coordinator when the strategy is sound and you only need it executed. Choose senior strategic leadership, such as a fractional CMO, when the number has stopped responding and no one is deciding what marketing should do. Daniel Fox is a fractional B2C CMO who takes that seat."}}]}, {"@type": "Article", "headline": "My marketing person left. Do I need a coordinator or a strategist?", "description": "A coordinator runs a strategy; they do not author one. Why backfilling the same seat reproduces the same gap, and how to tell which role your business is actually missing.", "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-12", "dateModified": "2026-06-12"}]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,7 +42,8 @@
 </header>
 
   <main>
-    <section class="hero">
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/boardroom-listening.jpg')"></div>
   <div class="container">
     <p class="eyebrow">When the marketing seat empties</p>
     <h1>My marketing person left. Do I need a coordinator or a strategist?</h1>
@@ -51,14 +52,6 @@
       <img class="byline-avatar" src="img/daniel-fox.jpg" alt="Daniel Fox" width="50" height="50">
       <span class="byline-text"><span class="byline-name">Daniel Fox</span><span class="byline-role">Fractional B2C CMO</span></span>
     </div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/strategy-whiteboard.jpg" alt="A marketing strategy mapped out in diagrams on a glass whiteboard" loading="lazy" decoding="async">
-    </figure>
   </div>
 </section>
 
@@ -76,14 +69,6 @@
     <h2>The eight-year director who was a coordinator the whole time</h2>
     <p>A profitable company loses its long-tenured head of marketing and starts a search to replace the title: director, eight years, ran everything. Then you look at what the role actually did. It managed the calendar, briefed the agency, posted the content, and assembled the monthly report. Every real decision about who the company was talking to and why had been made years ago, by the founder, in passing, and never revisited. The director kept a settled plan in motion. No one had reopened it since.</p>
     <p>So the gap is not eight years of expertise walking out the door. The gap is that strategy was never being authored, and the departure just made the absence visible. Hire another capable coordinator and the calendar fills back up, the agency gets briefed, the reports resume, and the number keeps doing exactly what it did before. The thing the business actually needs is the thing it never had: someone deciding what the marketing is for.</p>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/archery-target.jpg" alt="Arrows grouped tightly in a shooting target" loading="lazy" decoding="async">
-    </figure>
   </div>
 </section>
 
@@ -112,7 +97,8 @@
   </div>
 </section>
 
-<section class="section section-ink">
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
   <div class="container reveal" style="text-align:center">
     <h2 class="measure" style="margin:0 auto 1rem">Work out which role your marketing is actually missing.</h2>
     <p class="lead" style="margin:0 auto 2rem;max-width:48ch">A short conversation to tell whether the gap is execution or strategy, before you hire for the wrong one.</p>
@@ -169,6 +155,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>

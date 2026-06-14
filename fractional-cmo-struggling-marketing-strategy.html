@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can a fractional CMO help my struggling marketing strategy?", "acceptedAnswer": {"@type": "Answer", "text": "Often, but first by reframing what struggling means. When a number stops responding to effort across more than one capable team, that is usually an answers problem, not an execution problem. Your marketing is not broken. It is working as designed, reproducing the customers you already have, and the answers that produced your revenue also produced your ceiling. A fractional CMO can help if the gap is strategic judgment: deciding who the customer is and what to say. But not everything is even a marketing problem. The real cause may be product-market fit waning, slow turnaround times, worse reviews, a fading trending product, or a channel under-reporting traffic. A real CMO rules those out before selling a marketing fix. Daniel Fox is a fractional B2C CMO who does that diagnosis first."}}]}, {"@type": "Article", "headline": "Can a fractional CMO help my struggling marketing strategy?", "description": "Struggling marketing is usually working as designed, reproducing the customers you already have. How to tell an answers problem from an execution problem, and when the issue is not marketing at all.", "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-12", "dateModified": "2026-06-12"}]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,7 +42,8 @@
 </header>
 
   <main>
-    <section class="hero">
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-office-night.jpg')"></div>
   <div class="container">
     <p class="eyebrow">When the number stalls</p>
     <h1>Can a fractional CMO help my struggling marketing strategy?</h1>
@@ -51,15 +52,6 @@
       <img class="byline-avatar" src="img/daniel-fox.jpg" alt="Daniel Fox" width="50" height="50">
       <span class="byline-text"><span class="byline-name">Daniel Fox</span><span class="byline-role">Fractional B2C CMO</span></span>
     </div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/sticky-notes-planning.jpg" alt="A planning board crowded with sticky notes" loading="lazy" decoding="async">
-      <figcaption>A lot of activity is not the same as a strategy.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -88,14 +80,6 @@
   </div>
 </section>
 
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/compass-direction.jpg" alt="A compass in shallow focus, suggesting direction" loading="lazy" decoding="async">
-    </figure>
-  </div>
-</section>
-
 <section class="section">
   <div class="container reveal" style="max-width:64ch">
     <h2>When the honest answer is to use your AI tools better</h2>
@@ -120,7 +104,8 @@
   </div>
 </section>
 
-<section class="section section-ink">
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
   <div class="container reveal" style="text-align:center">
     <h2 class="measure" style="margin:0 auto 1rem">Find out whether your strategy is struggling or just finished.</h2>
     <p class="lead" style="margin:0 auto 2rem;max-width:48ch">A short conversation to tell an answers problem from an execution problem, before you spend another dollar solving the wrong one.</p>
@@ -177,6 +162,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>

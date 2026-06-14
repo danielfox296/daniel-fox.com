@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20260614">
+  <link rel="stylesheet" href="styles.css?v=20260614d">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does a fractional CMO cost?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on scope, but here is the anchor: most fractional CMOs charge a monthly retainer between $8,000 and $22,000, and my engagements start at $10,000 a month, scoped and sized to the work rather than sold as a fixed package. The more useful question than the rate is what the seat returns. For an established company selling a considered, high-ticket purchase, a single incremental customer can cover months of the fee, and the relevant comparison is not the retainer against zero. It is the retainer against the true cost of a full-time CMO, which runs $300,000 to $450,000 a year all in before a 25 to 35 percent search fee and a six-month ramp, and against the agency and freelancer spend you are probably already carrying with no senior leader deciding whether it is the right work. Daniel Fox is a fractional B2C CMO whose engagements start at $10,000 a month."}}]}, {"@type": "Article", "headline": "How much does a fractional CMO cost?", "description": "Most fractional CMOs run $8,000 to $22,000 a month; mine start at $10,000. Why the rate is the wrong first question, and how to weigh it against a full-time hire and the spend you already carry.", "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-12", "dateModified": "2026-06-12"}]}</script>
   <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
   
@@ -42,7 +42,8 @@
 </header>
 
   <main>
-    <section class="hero">
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-trading-dark.jpg')"></div>
   <div class="container">
     <p class="eyebrow">What it costs, and what it returns</p>
     <h1>How much does a fractional CMO cost?</h1>
@@ -51,15 +52,6 @@
       <img class="byline-avatar" src="img/daniel-fox.jpg" alt="Daniel Fox" width="50" height="50">
       <span class="byline-text"><span class="byline-name">Daniel Fox</span><span class="byline-role">Fractional B2C CMO</span></span>
     </div>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/calculator-finance.jpg" alt="Working through numbers on a calculator at a desk" loading="lazy" decoding="async">
-      <figcaption>The fee is the easy part. The return is the real question.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -78,14 +70,6 @@
     <p><strong>A full-time CMO.</strong> The same caliber of leader, hired full-time, runs $300,000 to $450,000 a year all in once you add benefits, payroll taxes, bonus, and equity to the base. That is before the 25 to 35 percent search fee to find them and the six-month ramp before they are fully effective. For most companies in the $3 to $12M range, that is a seat they cannot justify yet, which is exactly why the strategic layer goes unfilled.</p>
     <p><strong>The spend you already carry.</strong> Most established companies are already paying real money every month: an agency, a few freelancers, the tools, often $30,000 a month or more in total. The gap is not the spending. It is that no one senior is deciding whether the spend is pointed at the right work. You are already paying for a marketing department. You just do not have anyone running it.</p>
     <p><strong>Where fractional lands.</strong> Across the category, fractional CMO retainers run roughly $8,000 to $22,000 a month depending on scope and seniority. Mine start at $10,000. That is a fraction of the full-time seat, with no search, no ramp, and no equity, and it puts an accountable leader on top of the spend you are already making instead of adding more spend underneath no one.</p>
-  </div>
-</section>
-
-<section class="section-tight">
-  <div class="container">
-    <figure class="fig fig-wide">
-      <img src="img/photos/calculator-money.jpg" alt="A calculator, pen, and money on a table" loading="lazy" decoding="async">
-    </figure>
   </div>
 </section>
 
@@ -114,7 +98,8 @@
   </div>
 </section>
 
-<section class="section section-ink">
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
   <div class="container reveal" style="text-align:center">
     <h2 class="measure" style="margin:0 auto 1rem">Want a real number for your business?</h2>
     <p class="lead" style="margin:0 auto 2rem;max-width:48ch">A short conversation to scope the work and put a figure to it, against what your current setup is already costing you.</p>
@@ -171,6 +156,34 @@
       els.forEach(function (el) { io.observe(el); });
       // Failsafe: reveal anything still hidden shortly after load, regardless of observer behavior.
       window.addEventListener('load', function () { setTimeout(showAll, 1200); });
+    })();
+    // Subtle parallax on full-bleed photo bands — desktop pointer devices only, and never
+    // when the user prefers reduced motion. The .photo-bg layer is inset 9% top/bottom, so a
+    // translate up to ~9% of its height never bares an edge.
+    (function () {
+      var fine = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine)');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!fine.matches || reduce.matches) { return; }
+      var layers = [].slice.call(document.querySelectorAll('.photo-section .photo-bg'));
+      if (!layers.length) { return; }
+      var ticking = false;
+      function update() {
+        var vh = window.innerHeight;
+        for (var i = 0; i < layers.length; i++) {
+          var sec = layers[i].parentElement;
+          var r = sec.getBoundingClientRect();
+          if (r.bottom < -100 || r.top > vh + 100) { continue; }
+          // -1 (section below view) .. +1 (above view); 0 when centered.
+          var prog = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (prog < -1) { prog = -1; } else if (prog > 1) { prog = 1; }
+          layers[i].style.transform = 'translate3d(0,' + (prog * r.height * 0.08).toFixed(1) + 'px,0)';
+        }
+        ticking = false;
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
     })();
   </script>
 </body>
