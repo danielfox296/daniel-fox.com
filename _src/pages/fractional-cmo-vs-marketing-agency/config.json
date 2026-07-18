@@ -3,19 +3,44 @@
   "meta_description": "Agency, freelancer, or fractional marketing leader? A plain breakdown for owners of high-ticket businesses on who actually answers for the outcome, and who just runs tasks.",
   "output": "fractional-cmo-vs-marketing-agency.html",
   "schema": {
-    "@type": "Article",
-    "headline": "Fractional marketing leadership vs. an agency vs. a freelancer",
-    "description": "Agency, freelancer, or fractional marketing leader? A plain breakdown for owners of high-ticket businesses on who actually answers for the outcome, and who just runs tasks.",
-    "author": {
-      "@type": "Person",
-      "name": "Daniel Fox"
-    },
-    "publisher": {
-      "@type": "Person",
-      "name": "Daniel Fox"
-    },
-    "datePublished": "2026-06-08",
-    "dateModified": "2026-06-12"
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Should I hire a fractional CMO or a marketing agency?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An agency executes the tasks you assign and reports activity. A fractional CMO answers for the outcome: sets the strategy, directs the agencies and freelancers you already have, and stands behind the number. If you already know exactly what work needs doing and just need hands, an agency covers it. If nobody senior is deciding what the right work is, that decision layer is what a fractional CMO adds, and many established companies end up with both: one leader on top, agencies executing under direction."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a fractional CMO manage my existing agency?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, that is a normal part of the seat. Most companies already have some marketing in motion. A fractional CMO runs and directs it, cuts what is underperforming, and adds what is missing, so the spend you already carry finally has a senior leader accountable for what it returns."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Fractional marketing leadership vs. an agency vs. a freelancer",
+        "description": "Agency, freelancer, or fractional marketing leader? A plain breakdown for owners of high-ticket businesses on who actually answers for the outcome, and who just runs tasks.",
+        "author": {
+          "@type": "Person",
+          "name": "Daniel Fox"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Daniel Fox"
+        },
+        "datePublished": "2026-06-08",
+        "dateModified": "2026-07-18"
+      }
+    ]
   },
   "nav": "insights",
   "og_type": "article"

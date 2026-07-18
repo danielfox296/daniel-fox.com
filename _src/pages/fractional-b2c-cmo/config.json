@@ -1,0 +1,57 @@
+{
+  "title": "Fractional B2C CMO: Marketing Leadership for Consumer Businesses | Daniel Fox",
+  "meta_description": "A fractional B2C CMO runs the whole marketing function for established consumer businesses selling considered, high-ticket purchases. I work from one lens: why consumers buy. What the seat covers, who it fits, and how it works. Daniel Fox.",
+  "output": "fractional-b2c-cmo.html",
+  "nav": "insights",
+  "og_type": "article",
+  "schema": {
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a fractional B2C CMO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A fractional B2C CMO is a chief marketing officer who leads the marketing function for consumer businesses part-time, at executive level, with accountability for the revenue number. The B2C part is the point: the buyer is a person spending their own money on something they will live with, so the strategy, the message, and the channel choices all get built around why consumers buy. Daniel Fox is a fractional B2C CMO who works with established, profitable consumer businesses, typically $3 to $12M, selling considered, high-ticket purchases. Engagements start at $10,000 a month."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is leading B2C marketing different from B2B?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A B2C buyer at a high price point is a person spending household money, and the decision runs on confidence and feel as much as on comparison. They research for weeks, shortlist quietly, and commit when something makes them sure. Leading marketing for that buyer means reading the moment of choice: what they are actually weighing, what builds enough confidence to commit, and which story earns the shortlist. Positioning, content, search, and paid all get pointed at that moment rather than at a procurement process."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who does a fractional B2C CMO make sense for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Established, profitable consumer businesses, typically $3 to $12M in revenue, that sell a considered, high-ticket purchase: a custom home, a premium service, a wellness program, anything a real person researches before choosing. Usually there is real marketing spend already in motion and no senior marketer deciding whether it is the right work. The fractional B2C CMO takes over that function and answers for what it produces."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "What a fractional B2C CMO is, and who the seat fits",
+        "description": "A fractional B2C CMO runs the whole marketing function for established consumer businesses selling considered, high-ticket purchases, built around one question: why consumers buy.",
+        "author": {
+          "@type": "Person",
+          "name": "Daniel Fox",
+          "url": "https://daniel-fox.com",
+          "jobTitle": "Fractional B2C CMO"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Daniel Fox"
+        },
+        "datePublished": "2026-07-18",
+        "dateModified": "2026-07-18"
+      }
+    ]
+  }
+}
