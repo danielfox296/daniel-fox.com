@@ -26,7 +26,7 @@ jobs:
         run: |
           mkdir -p _site
           cp -r *.html styles.css CNAME _site/ 2>/dev/null || true
-          cp -r sitemap.xml robots.txt llms.txt _site/ 2>/dev/null || true
+          cp -r sitemap.xml *.txt _site/ 2>/dev/null || true
           cp -r img _site/img 2>/dev/null || true
 
       - name: Upload Pages artifact
