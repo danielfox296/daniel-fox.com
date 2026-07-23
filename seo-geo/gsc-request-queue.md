@@ -66,3 +66,7 @@ ones for free (marking `[i]` costs no quota).
   as "URL is unknown to Google / no referring sitemaps" despite being in sitemap.xml —
   GSC's sitemap state may be stale; consider resubmitting sitemap.xml in the Sitemaps
   report if more URLs show this.
+- 2026-07-23 (scheduled run): 0 requested. First request click (what-we-run.html,
+  inspected "Discovered - currently not indexed") hit "Quota Exceeded" immediately —
+  the quota appears to be a rolling ~24h window and yesterday's 7 requests hadn't
+  aged out at this run time. URL left unchecked for next run.
