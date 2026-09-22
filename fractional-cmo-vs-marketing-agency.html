@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Set `.js` before first paint so initial hidden states never flash.
+       Everything hidden by CSS is gated behind this class, so a no-JS visitor
+       sees the full page. The timer is the safety net: if cinema.js fails to
+       load or throws before it finishes booting, `.js` comes back off and all
+       content becomes visible. cinema.js clears it on a clean boot. */
+    document.documentElement.classList.add('js');
+    window.__cinemaBoot = setTimeout(function () {
+      document.documentElement.classList.remove('js');
+    }, 4000);
+  </script>
+  <title>Fractional CMO vs. Agency: Which Do You Need? | Daniel Fox</title>
+  <meta name="description" content="Agency, freelancer, or fractional marketing leader? A plain breakdown for owners of high-ticket businesses on who actually answers for the outcome, and who just runs tasks.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://daniel-fox.com/fractional-cmo-vs-marketing-agency.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Fractional CMO vs. Agency: Which Do You Need? | Daniel Fox">
+  <meta property="og:description" content="Agency, freelancer, or fractional marketing leader? A plain breakdown for owners of high-ticket businesses on who actually answers for the outcome, and who just runs tasks.">
+  <meta property="og:url" content="https://daniel-fox.com/fractional-cmo-vs-marketing-agency.html">
+  <meta property="og:image" content="https://daniel-fox.com/img/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#0b0912">
+  <meta name="color-scheme" content="dark">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Roman only, both families: the design forbids italics anywhere. -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Serif&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=20260804c">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should I hire a fractional CMO or a marketing agency?", "acceptedAnswer": {"@type": "Answer", "text": "An agency executes the tasks you assign and reports activity. A fractional CMO answers for the outcome: sets the strategy, directs the agencies and freelancers you already have, and stands behind the number. If you already know exactly what work needs doing and just need hands, an agency covers it. If nobody senior is deciding what the right work is, that decision layer is what a fractional CMO adds, and many established companies end up with both: one leader on top, agencies executing under direction."}}, {"@type": "Question", "name": "Can a fractional CMO manage my existing agency?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, that's a normal part of the job. Most companies already have some marketing in motion. A fractional CMO runs and directs it, cuts what is underperforming, and adds what is missing, so the spend you already carry finally has a senior leader accountable for what it returns."}}]}, {"@type": "Article", "headline": "Fractional marketing leadership vs. an agency vs. a freelancer", "description": "Agency, freelancer, or fractional marketing leader? A plain breakdown for owners of high-ticket businesses on who actually answers for the outcome, and who just runs tasks.", "author": {"@type": "Person", "name": "Daniel Fox"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-08", "dateModified": "2026-07-18"}]}</script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
+  
+</head>
+<body>
+  <!-- Animated background: WebGL smoke, its no-WebGL gradient fallback, film
+       grain, and the veil that quiets all of it on long-form reading pages. -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="gl-fallback" id="glfb" aria-hidden="true" style="display:none"></div>
+  <div class="read-veil" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="what-we-run.html" >What I do</a>
+      <a href="who-its-for.html" >Who it's for</a>
+      <a href="about.html" >About</a>
+      <a href="insights.html" aria-current="page">Insights</a>
+      <a class="nav-cta" href="contact.html" >Start a conversation</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/boardroom-listening.jpg')"></div>
+  <div class="container">
+    <h1>Fractional marketing leadership vs. <span class="accent">an agency vs. a freelancer.</span></h1>
+    <p class="lead">You've likely already been burned. You hired an agency, the reports looked busy, the invoices were real, and the number that matters never moved. So now you're asking the right question: agency, freelancer, in-house hire, or a fractional marketing leader. Who actually answers for the result? Here's the plain version, from someone who has run the whole function end to end.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="contact.html">Start a conversation</a>
+      <a class="btn btn-ghost" href="#comparison">See the comparison</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line" id="comparison">
+  <div class="container reveal">
+    <h2 class="measure">Four options. The real question is who answers for the outcome.</h2>
+    <p class="lead measure-wide">Every option below can produce work. The difference comes down to whether anyone is accountable for the result the task is supposed to serve, and how much of the thinking still comes back to your desk.</p>
+    <div class="grid grid-3" style="margin-top:2.5rem">
+      <div class="card">
+        <h3>A marketing agency</h3>
+        <p>Handles the execution of channels you point them at: ads, social, sometimes a site. They run tasks well. What stays on your desk: the strategy, the priorities, and the call on whether any of it is the right thing to be doing at all.</p>
+      </div>
+      <div class="card">
+        <h3>A freelancer</h3>
+        <p>Delivers one craft: the copy, the ads, the design. Often very good at it. What stays on your desk: everything around that craft, plus the job of managing them and stitching their output into a plan that doesn't exist yet.</p>
+      </div>
+      <div class="card">
+        <h3>An in-house hire</h3>
+        <p>Covers whatever their seniority allows. A coordinator coordinates; a director directs, if you can afford a real one and attract them. What stays on your desk: the gap between the title you could fund and the leadership you actually need. More on that in <a href="marketing-coordinator-vs-strategist.html">coordinator vs. strategist</a>.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:1.5rem;background:var(--bg-panel)">
+      <h3>A fractional marketing leader</h3>
+      <p>Leads the whole plan and every layer that serves it (strategy, search, paid, capture, nurture, measurement) for a fraction of a full-time executive's cost. What stays on your desk: the decision to say yes, and the budget. One leader, one number, one person answering for the result.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container reveal">
+    <h2 class="measure">They're built to deliver output while your number stays your problem.</h2>
+    <p class="lead measure-wide">This is about how the model is staffed and paid, and it's no knock on agencies as people. Understand the incentives and the gap explains itself.</p>
+    <div class="measure-wide" style="margin-top:1.5rem">
+      <p>An agency makes money by delivering a volume of output across a roster of clients. The account is profitable when the work ships on time and the client renews. All it requires is producing the things you asked for, with your strategy left to you. So you get a steady stream of posts, campaigns, and dashboards, and a monthly call where the activity is reviewed. Motion is the product, and whether the motion points the right message at the right buyer is your problem.</p>
+      <p>That's the activity-versus-strategy distinction, and it's the whole game for a considered, high-ticket purchase. When someone spends weeks researching before they buy, the win comes from a plan: what you stand for, who you're talking to, what you publish, how you get found, how you stay with them through a long decision. An agency staffed to produce output volume is structurally the wrong kind of thing to own that plan. It can execute pieces of it beautifully. It was never hired to decide whether the pieces add up.</p>
+      <p>So the reports look busy and the number sits still. You bought exactly what the model sells, which is activity, and assumed it came with the strategy. It almost never does, because no one in the arrangement is accountable for it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <h2 class="measure">Cheaper help leaves the strategic gap exactly where it was.</h2>
+    <p class="lead measure-wide">When the agency disappoints, the instinct is to go cheaper and more hands-on. There are two versions of that, and neither closes the gap.</p>
+    <div class="measure-wide" style="margin-top:1.5rem">
+      <p><strong>The nephew for $2k.</strong> Someone in your orbit is good at social, charges almost nothing, and starts next week. The content even improves. But you've hired a pair of hands, and the brain that answers for the outcome is still yours. Every real decision (what to say, where to spend, what to stop) still routes through you, between everything else you do. You bought more execution to direct, on a desk that was already too full.</p>
+      <p><strong>The underpowered coordinator.</strong> So you hire in-house instead, at a salary you can actually justify. What that buys is a coordinator: someone who can run the tasks, keep the calendar, talk to vendors, which is useful. But a coordinator runs a strategy that someone senior still has to author. The senior brain that decides what the whole effort is for still isn't in the building. You've filled a job and left the gap.</p>
+      <p>This is the problem under all the cheaper options. The expensive part of marketing has always been the leadership: the judgment about what's worth doing, the willingness to be accountable for the number, the experience to know which activity is theater and which is the thing that compounds. Pay less and you simply buy more activity to manage. The strategic gap sits exactly where it always was, on your desk.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-panel">
+  <div class="container reveal">
+    <h2 class="measure">The whole plan, and every layer that serves it.</h2>
+    <p class="lead measure-wide">A fractional marketing leader sits where the agency, the freelancer, and the coordinator can't: above the channels, accountable for the outcome. They lead the strategy and then run the layers that turn it into pipeline. They own the whole function.</p>
+    <div class="cap-grid" style="margin-top:2.5rem">
+      <div class="cap-item"><span class="cap-name">Strategy</span><span class="cap-desc">The conductor role no agency was hired to play. The plan everything else serves, led end to end.</span></div>
+      <div class="cap-item"><span class="cap-name">Content &amp; SEO</span><span class="cap-desc">The authority and search footprint that wins a researched, considered purchase.</span></div>
+      <div class="cap-item"><span class="cap-name">AI-search visibility</span><span class="cap-desc">Showing up when buyers ask the models as well as the search bar.</span></div>
+      <div class="cap-item"><span class="cap-name">Paid &amp; social</span><span class="cap-desc">Spend pointed at the right message and the right person, audited before it's scaled.</span></div>
+      <div class="cap-item"><span class="cap-name">Capture</span><span class="cap-desc">Landing pages and forms that turn earned attention into a real, trackable lead.</span></div>
+      <div class="cap-item"><span class="cap-name">Nurture</span><span class="cap-desc">Email that stays with a long consideration cycle until the buyer is ready.</span></div>
+      <div class="cap-item"><span class="cap-name">Creative</span><span class="cap-desc">The ad and brand work to execute the plan, with design treated as implementation.</span></div>
+      <div class="cap-item"><span class="cap-name">Measurement</span><span class="cap-desc">A scoreboard that's actually read, with the contribution fenced from referrals and season.</span></div>
+    </div>
+    <p class="measure-wide" style="margin-top:2rem;font-family:var(--font-head);font-weight:500;font-size:1.15rem;letter-spacing:-0.01em">When one leader runs all of it, there's one place to look for the result and one person answering for it. That's the difference you were trying to buy when you hired the agency, and the thing the agency was never structured to sell you.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container reveal">
+    <h2 class="measure">Sometimes the agency is the correct call, and here's when.</h2>
+    <p class="lead measure-wide">A fractional leader isn't the answer to every situation, and I'll say so. If any of the right-hand column is you, an agency or a freelancer is the smarter, cheaper move, and you should make it.</p>
+    <div class="fit-cols" style="margin-top:2.5rem">
+      <div class="fit-col">
+        <h3>A fractional leader fits if&hellip;</h3>
+        <ul class="fit-yes">
+          <li>Your purchase is considered and high-ticket: researched for days or weeks before anyone buys.</li>
+          <li>Real budget already flows across channels, and the business is profitable.</li>
+          <li>No senior marketing brain owns the plan, and the strategy keeps coming back to you.</li>
+          <li>You want to hand over the whole space instead of managing another vendor.</li>
+        </ul>
+      </div>
+      <div class="fit-col">
+        <h3>An agency or freelancer is the better call if&hellip;</h3>
+        <ul class="fit-no">
+          <li>You're already led well: a capable strategist owns the plan and just needs hands to execute it.</li>
+          <li>The purchase is an impulse buy with no consideration cycle to win.</li>
+          <li>There's no real budget flowing yet. A fractional leader conducts spend; it isn't zero-to-one.</li>
+          <li>You want one craft done well, like a set of ads or a site refresh, rather than a whole function owned.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="measure-wide" style="margin-top:2rem">If you're already led well, adding a fractional leader is redundant. If you have no budget moving, there's nothing yet to conduct. And if the buy is impulse, the long, compounding work that a leader is built to run won't pay for itself. I'd rather tell you that on the first call than sell you something that doesn't fit.</p>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <h2 class="measure">Why it only compounds when one leader runs it.</h2>
+    <div class="measure-wide" style="margin-top:1rem">
+      <p>Choosing between an agency, a freelancer, and a fractional leader is really a question about how demand gets built for a purchase people think hard about before they make it. Search, content, AI visibility, paid, capture, and nurture only compound when they're pointed at the same plan by the same leader. Split them across vendors who each optimize their own slice and you get activity that cancels itself out.</p>
+      <p>This page is one piece of a larger picture: <a href="demand-generation-for-high-ticket-businesses.html">how demand actually gets generated for a considered purchase</a>. That's the category, and the case for one leader running all of it.</p>
+      <p>If your next question is what leading it actually produces (the pipeline as well as the plan), read <a href="lead-generation-beyond-referrals.html">how to generate leads for a custom business or high-ticket trade</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
+  <div class="container reveal" style="text-align:center">
+    <h2 class="measure" style="margin:0 auto 1rem">Not sure which one you need? That's the conversation.</h2>
+    <p class="lead" style="margin:0 auto 2rem;max-width:48ch">A short conversation tells us both whether a fractional leader is the right fit, or whether an agency or freelancer would serve you better. No pitch deck, no pressure.</p>
+    <a class="btn btn-on-ink" href="contact.html">Start a conversation</a>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="wordmark footer-wordmark">Daniel Fox</span>
+      <p class="footer-line">Fractional marketing leadership for consumer businesses that get chosen after the customer does their research.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="what-we-run.html">What I do</a>
+      <a href="who-its-for.html">Who it's for</a>
+      <a href="about.html">About</a>
+      <a href="beliefs.html">What I believe</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Start a conversation</a>
+    </nav>
+    <div class="footer-meta">
+      <span>&copy; 2026 Daniel Fox</span>
+    </div>
+  </div>
+</footer>
+
+
+  <script defer src="cinema.js?v=20260804c"></script>
+</body>
+</html>

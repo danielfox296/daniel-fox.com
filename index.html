@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Set `.js` before first paint so initial hidden states never flash.
+       Everything hidden by CSS is gated behind this class, so a no-JS visitor
+       sees the full page. The timer is the safety net: if cinema.js fails to
+       load or throws before it finishes booting, `.js` comes back off and all
+       content becomes visible. cinema.js clears it on a clean boot. */
+    document.documentElement.classList.add('js');
+    window.__cinemaBoot = setTimeout(function () {
+      document.documentElement.classList.remove('js');
+    }, 4000);
+  </script>
+  <title>Fractional B2C CMO for Your Next Stage of Growth | Daniel Fox</title>
+  <meta name="description" content="Fractional B2C CMO and marketing leadership for established, profitable consumer businesses. I run the whole marketing function, strategy through pipeline. Marketing for your next stage of growth.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://daniel-fox.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fractional B2C CMO for Your Next Stage of Growth | Daniel Fox">
+  <meta property="og:description" content="Fractional B2C CMO and marketing leadership for established, profitable consumer businesses. I run the whole marketing function, strategy through pipeline. Marketing for your next stage of growth.">
+  <meta property="og:url" content="https://daniel-fox.com/">
+  <meta property="og:image" content="https://daniel-fox.com/img/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#0b0912">
+  <meta name="color-scheme" content="dark">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Roman only, both families: the design forbids italics anywhere. -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Serif&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=20260804c">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "image": "https://daniel-fox.com/img/daniel-fox.jpg", "sameAs": ["https://www.linkedin.com/in/danielcfox/"], "jobTitle": "Fractional B2C CMO", "address": {"@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US"}, "areaServed": "US", "description": "Fractional B2C CMO and marketing leadership for established, profitable consumer businesses with considered, high-ticket purchases. I run the whole marketing function, strategy through pipeline, and answer for the number.", "alumniOf": {"@type": "CollegeOrUniversity", "name": "The Ohio State University"}, "knowsAbout": ["Fractional CMO services", "B2C and consumer-brand marketing", "Marketing leadership", "Demand generation", "Positioning", "Go-to-market strategy", "High-ticket and considered-purchase marketing"]}</script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
+  
+</head>
+<body class="home">
+  <!-- Animated background: WebGL smoke, its no-WebGL gradient fallback, film
+       grain, and the veil that quiets all of it on long-form reading pages. -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="gl-fallback" id="glfb" aria-hidden="true" style="display:none"></div>
+  <div class="read-veil" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="what-we-run.html" >What I do</a>
+      <a href="who-its-for.html" >Who it's for</a>
+      <a href="about.html" >About</a>
+      <a href="insights.html" >Insights</a>
+      <a class="nav-cta" href="contact.html" >Start a conversation</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <!-- Intro curtain — homepage only, once per browser session (cinema.js). Fixed and
+     aria-hidden, so its position in the DOM is irrelevant to layout or to readers. -->
+<div id="intro" aria-hidden="true"><div class="mark"></div></div>
+
+<!-- SCENE 1 · pinned hero (200vh): letter-split headline left, designed visual right.
+     Copy is the live front-door copy, unchanged. The payoff device splits the
+     existing sentence across two lines — no words added, removed or reordered.
+
+     The right panel is a drawn schematic, not a photograph. Nothing in the photo
+     library reads as marketing leadership (landscapes, a workshop, a candlestick
+     chart, a stock meeting shot), and a literal image of "spend running with
+     nobody in charge" doesn't exist. So the panel states it: six channels live
+     and pulsing, every one of them feeding a leadership seat that is empty.
+     Deliberately abstract — no numbers, no metrics, nothing that could read as a
+     performance claim. -->
+<section class="scene-hero" id="s-hero">
+  <div class="stick">
+    <div class="container">
+      <div class="hero-grid" id="heroInner">
+        <div>
+          <h1 class="hero-title" id="heroTitle">You're spending like a company with a marketing department, <span class="payoff">and nobody's running it.</span></h1>
+          <p class="hero-lead">Ads run, posts go out, an agency sends reports, and the strategy is still yours to figure out. I take the whole marketing function off your plate and answer for the number, so the next stage of growth doesn't depend on who referred you last quarter.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">Start a conversation</a>
+            <a class="btn btn-ghost" href="what-we-run.html">See what I do</a>
+          </div>
+          <p class="hero-credential">Founded, built, and sold Skreened (~$16M custom-apparel company) &middot; dozens of fractional engagements &middot; one accountable leader.</p>
+        </div>
+
+        <figure class="hero-figure" id="heroMedia">
+          <svg class="fig-svg" viewBox="0 0 520 560" role="img" aria-labelledby="heroFigTitle" preserveAspectRatio="xMidYMid meet">
+            <title id="heroFigTitle">Six marketing channels running in parallel, every one of them feeding a leadership seat that sits empty.</title>
+
+            <!-- channel tracks: run, then converge on the empty seat -->
+            <g class="fig-tracks" fill="none" stroke-linecap="round">
+              <path d="M34 90  H290 C336 90  340 240 368 278"/>
+              <path d="M34 174 H290 C332 174 344 250 368 282"/>
+              <path d="M34 258 H290 C330 258 348 276 368 285"/>
+              <path d="M34 342 H290 C330 342 348 296 368 289"/>
+              <path d="M34 426 H290 C332 426 344 322 368 292"/>
+              <path d="M34 510 H290 C336 510 340 332 368 296"/>
+            </g>
+
+            <!-- live pulses travelling toward the seat -->
+            <g class="fig-pulses" fill="none" stroke-linecap="round">
+              <path d="M34 90  H290 C336 90  340 240 368 278"/>
+              <path d="M34 174 H290 C332 174 344 250 368 282"/>
+              <path d="M34 258 H290 C330 258 348 276 368 285"/>
+              <path d="M34 342 H290 C330 342 348 296 368 289"/>
+              <path d="M34 426 H290 C332 426 344 322 368 292"/>
+              <path d="M34 510 H290 C336 510 340 332 368 296"/>
+            </g>
+
+            <!-- each channel: active, lit -->
+            <g class="fig-nodes">
+              <circle cx="34" cy="90"  r="7"/><circle cx="34" cy="174" r="7"/>
+              <circle cx="34" cy="258" r="7"/><circle cx="34" cy="342" r="7"/>
+              <circle cx="34" cy="426" r="7"/><circle cx="34" cy="510" r="7"/>
+            </g>
+
+            <!-- the seat: drawn, waiting, empty -->
+            <circle class="fig-seat-halo" cx="432" cy="286" r="76"/>
+            <circle class="fig-seat" cx="432" cy="286" r="52"/>
+          </svg>
+        </figure>
+      </div>
+    </div>
+    <div class="hero-progress" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<!-- SCENE 2 · pinned "ceiling" (460vh): statements crossfade left in lockstep with
+     a media frame right, progress line filling between them.
+
+     Four beats, because the live copy is four blocks (the H2 plus its three
+     paragraphs) and all of them are kept verbatim. The concept condensed them to
+     three shorter lines; condensing would have been a copy edit, so instead the
+     opening beat renders at display size (.stmt-lead) and the prose beats sit a
+     step down. -->
+<section class="scene-ceiling" id="s-ceiling">
+  <div class="stick">
+    <div class="container">
+      <div class="ceiling-grid">
+        <div class="ceiling-left">
+          <div class="ceiling-line" aria-hidden="true"><i id="clProg"></i></div>
+          <h2 class="stmt stmt-lead">The growth strategies that got you here <em>have a ceiling.</em></h2>
+          <p class="stmt">Every tactic has its place, and referrals, repeat buyers, word of mouth and a reputation you earned all really work, <em>to a point.</em> Past that point, the same tactics hit diminishing returns.</p>
+          <p class="stmt">And the marketing you do have (a freelancer here, an agency there, a platform you're told to post on) isn't getting the attention and expertise it needs. Time and money go in, and <em>no one's accountable</em> for what comes back.</p>
+          <p class="stmt">The next stage comes from fresh eyes, practices that work, and putting <em>someone qualified in charge.</em></p>
+        </div>
+        <div class="ceiling-media" id="ceilMedia" aria-hidden="true">
+          <div class="cm duo"><div class="ph" style="background-image:url('img/photos/band-boulder-sunset.jpg')"></div></div>
+          <div class="cm duo"><div class="ph" style="background-image:url('img/photos/band-mountains-sunset.jpg')"></div></div>
+          <div class="cm duo"><div class="ph" style="background-image:url('img/photos/band-trading-dark.jpg')"></div></div>
+          <div class="cm duo"><div class="ph" style="background-image:url('img/photos/band-office-night.jpg')"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cards — heading wipes in, then four cards door-swing on a 110ms stagger.
+     Hover: extreme tilt, pointer-tracked glow, and a duotone image sliver that
+     grows from the bottom edge. 4-across -> 2x2 -> 1-col: never an orphan card. -->
+<section class="section section-line">
+  <div class="container reveal">
+    <h2 class="measure">See whether this is a fit <em>before we ever get on a call.</em></h2>
+    <div class="explore-grid">
+      <a class="explore-card" href="what-we-run.html">
+        <span class="im duo" aria-hidden="true"><span class="ph" style="background-image:url('img/photos/band-office-night.jpg')"></span></span>
+        <span class="explore-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 16 9 5 9-5"/></svg></span>
+        <span class="explore-title">What I do</span>
+        <span class="explore-desc">I run the demand function end to end, strategy through pipeline, and answer for one number.</span>
+        <span class="explore-go">See the function &rarr;</span>
+      </a>
+      <a class="explore-card" href="who-its-for.html">
+        <span class="im duo" aria-hidden="true"><span class="ph" style="background-image:url('img/photos/band-mountains-sunset.jpg')"></span></span>
+        <span class="explore-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span>
+        <span class="explore-title">Who it's for</span>
+        <span class="explore-desc">I built this for one kind of business, the considered, high-ticket purchase a person researches before choosing.</span>
+        <span class="explore-go">Check the fit &rarr;</span>
+      </a>
+      <a class="explore-card" href="about.html">
+        <span class="im duo" aria-hidden="true"><span class="ph" style="background-image:url('img/photos/band-workshop.jpg')"></span></span>
+        <span class="explore-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg></span>
+        <span class="explore-title">Who's behind it</span>
+        <span class="explore-desc">I've run the whole thing myself: dozens of engagements, and a company of my own built and sold.</span>
+        <span class="explore-go">Meet the operator &rarr;</span>
+      </a>
+      <a class="explore-card" href="insights.html">
+        <span class="im duo" aria-hidden="true"><span class="ph" style="background-image:url('img/photos/band-city-night.jpg')"></span></span>
+        <span class="explore-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7a6 6 0 0 0-4 10.5c.7.6.9 1.1 1 2.5h6c.1-1.4.3-1.9 1-2.5A6 6 0 0 0 12 7Z"/><path d="M10 21h4"/></svg></span>
+        <span class="explore-title">Insights</span>
+        <span class="explore-desc">I write about how demand actually works for high-ticket consumer brands, in plain terms.</span>
+        <span class="explore-go">Read the thinking &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Full-bleed band — diagonal clip-path reveal, parallax, saturation interpolating
+     in as it crosses the viewport. NOTE: the caption is new on-page text from the
+     approved concept (§5.6) — confirm the wording. -->
+<div class="band duo" id="band">
+  <div class="ph" id="bandPh" style="background-image:url('img/photos/denver-downtown-dusk.jpg')"></div>
+  <p class="cap">Denver &middot; Boulder &middot; working with owners nationally</p>
+</div>
+
+<!-- Beliefs strip — heading + lead slide in from the left, ghost button from the
+     right. The concept dropped the lead paragraph; it is kept here so no copy is
+     lost, and the grid gives it its own column. -->
+<section class="beliefs-strip">
+  <div class="container inner">
+    <div class="rv-l">
+      <h2>Your marketing is built to reproduce the customers <em>you already have.</em></h2>
+      <p class="lead measure-wide">Your answer to who the customer is got tested, survived, and produced your current revenue. It produced your current ceiling out of the same material. I work from seven positions on why that happens and what to do about it. They are meant to be easy to disagree with.</p>
+    </div>
+    <a class="btn btn-ghost rv-r" href="beliefs.html">Read what I believe</a>
+  </div>
+</section>
+
+<!-- SCENE · pinned quote (260vh): PT Serif roman (the one place the serif survives,
+     as a structurally different voice — never italic). Words light up with scroll
+     progress while the photo slowly pulls back under a purple tint. -->
+<section class="scene-quote" id="s-quote">
+  <div class="stick">
+    <div class="photo" id="qPhoto" aria-hidden="true" style="background-image:url('img/photos/boardroom-listening.jpg')"></div>
+    <div class="tint" aria-hidden="true"></div>
+    <div class="veil" aria-hidden="true"></div>
+    <div class="container">
+      <blockquote class="quote-txt" id="quoteTxt">&ldquo;I had someone doing activity. I wanted someone to take this over and run the whole thing.&rdquo;</blockquote>
+      <p class="quote-attr">A client</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA — headline zooms in out of a blur, solid button. Live copy, unchanged. -->
+<section class="cta-sec">
+  <div class="container">
+    <h2 class="big rv-zoom">Are you spending real money on marketing with <em>nobody accountable</em> for what comes back?</h2>
+    <p class="rv">A short conversation tells us both whether the math and the fit are there. No pitch deck, no pressure.</p>
+    <span class="rv" style="display:inline-block"><a class="btn btn-primary btn-big" href="contact.html">Start a conversation</a></span>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="wordmark footer-wordmark">Daniel Fox</span>
+      <p class="footer-line">Fractional marketing leadership for consumer businesses that get chosen after the customer does their research.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="what-we-run.html">What I do</a>
+      <a href="who-its-for.html">Who it's for</a>
+      <a href="about.html">About</a>
+      <a href="beliefs.html">What I believe</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Start a conversation</a>
+    </nav>
+    <div class="footer-meta">
+      <span>&copy; 2026 Daniel Fox</span>
+    </div>
+  </div>
+</footer>
+
+
+  <script defer src="cinema.js?v=20260804c"></script>
+</body>
+</html>

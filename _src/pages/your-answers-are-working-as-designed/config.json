@@ -1,0 +1,23 @@
+{
+  "title": "Your Answers About the Customer Are Working as Designed | Daniel Fox",
+  "meta_description": "Your answer to 'who is our customer' is calibrated to produce exactly your current numbers. Why the question gets filed as settled, and how to reopen it deliberately.",
+  "output": "your-answers-are-working-as-designed.html",
+  "schema": {
+    "@type": "Article",
+    "headline": "Your answers are working exactly as designed",
+    "description": "Your answer to 'who is our customer' is calibrated to produce exactly your current numbers. Why the question gets filed as settled, and how to reopen it.",
+    "author": {
+      "@type": "Person",
+      "name": "Daniel Fox"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Daniel Fox"
+    },
+    "datePublished": "2026-06-11",
+    "dateModified": "2026-06-11"
+  },
+  "body_class": "article",
+  "nav": "insights",
+  "og_type": "article"
+}

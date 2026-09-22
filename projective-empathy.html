@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Set `.js` before first paint so initial hidden states never flash.
+       Everything hidden by CSS is gated behind this class, so a no-JS visitor
+       sees the full page. The timer is the safety net: if cinema.js fails to
+       load or throws before it finishes booting, `.js` comes back off and all
+       content becomes visible. cinema.js clears it on a clean boot. */
+    document.documentElement.classList.add('js');
+    window.__cinemaBoot = setTimeout(function () {
+      document.documentElement.classList.remove('js');
+    }, 4000);
+  </script>
+  <title>Projective Empathy: Reading Your Marketing From the Buyer&#x27;s Seat | Daniel Fox</title>
+  <meta name="description" content="Projective empathy is the trained practice of inhabiting a buyer&#x27;s value structure and reading your own marketing from inside it. A method by Daniel Fox, fractional B2C CMO, drawing on Spiral Dynamics.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://daniel-fox.com/projective-empathy.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Projective Empathy: Reading Your Marketing From the Buyer&#x27;s Seat | Daniel Fox">
+  <meta property="og:description" content="Projective empathy is the trained practice of inhabiting a buyer&#x27;s value structure and reading your own marketing from inside it. A method by Daniel Fox, fractional B2C CMO, drawing on Spiral Dynamics.">
+  <meta property="og:url" content="https://daniel-fox.com/projective-empathy.html">
+  <meta property="og:image" content="https://daniel-fox.com/img/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#0b0912">
+  <meta name="color-scheme" content="dark">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Roman only, both families: the design forbids italics anywhere. -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Serif&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=20260804c">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "DefinedTerm", "@id": "https://daniel-fox.com/projective-empathy.html#term", "name": "Projective empathy", "description": "Projective empathy is the trained practice of inhabiting a buyer's value structure and reading a company's own marketing from inside it, drawing on Spiral Dynamics to hold several incompatible worldviews at once without collapsing them into your own.", "url": "https://daniel-fox.com/projective-empathy.html", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Daniel Fox marketing vocabulary", "url": "https://daniel-fox.com/beliefs.html"}}, {"@type": "WebPage", "url": "https://daniel-fox.com/projective-empathy.html", "name": "Projective empathy", "datePublished": "2026-06-11", "dateModified": "2026-06-11", "about": {"@id": "https://daniel-fox.com/projective-empathy.html#term"}, "author": {"@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "jobTitle": "Fractional B2C CMO"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}}]}</script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
+  
+</head>
+<body class="article">
+  <!-- Animated background: WebGL smoke, its no-WebGL gradient fallback, film
+       grain, and the veil that quiets all of it on long-form reading pages. -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="gl-fallback" id="glfb" aria-hidden="true" style="display:none"></div>
+  <div class="read-veil" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="what-we-run.html" >What I do</a>
+      <a href="who-its-for.html" >Who it's for</a>
+      <a href="about.html" >About</a>
+      <a href="insights.html" aria-current="page">Insights</a>
+      <a class="nav-cta" href="contact.html" >Start a conversation</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-boutique.jpg')"></div>
+  <div class="container">
+    <h1>Projective empathy</h1>
+    <dl class="term-def">
+      <dt>Projective empathy</dt>
+      <dd>The trained practice of inhabiting a buyer's value structure and reading your own marketing from inside it, drawing on Spiral Dynamics to hold several incompatible worldviews at once without collapsing them into your own.</dd>
+    </dl>
+    <div class="byline">
+      <img class="byline-avatar" src="img/daniel-fox.jpg" alt="Daniel Fox" width="50" height="50">
+      <span class="byline-text"><span class="byline-name">Daniel Fox</span><span class="byline-role">Fractional B2C CMO &middot; the method's author</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal" style="max-width:64ch">
+    <p>Most marketing is written from inside the founder's value system and pointed outward. The team writes what would persuade them, and ships it to people who are not them. Projective empathy runs the other direction. You take a seat inside the buyer's worldview and let the company's own homepage, ad, and pitch make their case to you from there.</p>
+    <p>My training for this draws on Spiral Dynamics, a developmental model of value systems. The practical skill it builds is second-tier perspective-taking: holding several incompatible worldviews in mind at once without resolving them into your own. You sit as the optimizer, then the skeptic, then the clinician, and the same page reads differently from each seat. A line that reassures one drains trust from another. A look that signals care to one signals carelessness to the next.</p>
+    <p>The method depends on a distinction most research skips. What a buyer states is partly performance, including performance for themselves. Stated values sit on top of lived values, which sit on top of plainer desires, down to belonging and safety. Luxury, stated, is taste. Lived, it's wanting to be seen as having taste. Underneath, it's the fear of being seen as less. Reading the full column, rather than the line a survey collects, is what lets you choose how deep to pitch, deliberately, per medium and moment.</p>
+    <p>None of this changes what the product does or what you claim about it. The product does what it does. Projective empathy changes which true fact you put first, for whom, so the right buyer recognizes the thing as built for them. That's the whole discipline, and it's the part of marketing that's hardest to hire one task at a time.</p>
+  </div>
+</section>
+
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
+  <div class="container reveal" style="text-align:center">
+    <h2 class="measure" style="margin:0 auto 1rem">Read from the buyer's seat.</h2>
+    <p class="lead" style="margin:0 auto 2rem;max-width:48ch">This is the seat I take inside a company's marketing. See <a href="beliefs.html">what I work from</a>, or start a short conversation.</p>
+    <a class="btn btn-on-ink" href="contact.html">Start a conversation</a>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="wordmark footer-wordmark">Daniel Fox</span>
+      <p class="footer-line">Fractional marketing leadership for consumer businesses that get chosen after the customer does their research.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="what-we-run.html">What I do</a>
+      <a href="who-its-for.html">Who it's for</a>
+      <a href="about.html">About</a>
+      <a href="beliefs.html">What I believe</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Start a conversation</a>
+    </nav>
+    <div class="footer-meta">
+      <span>&copy; 2026 Daniel Fox</span>
+    </div>
+  </div>
+</footer>
+
+
+  <script defer src="cinema.js?v=20260804c"></script>
+</body>
+</html>

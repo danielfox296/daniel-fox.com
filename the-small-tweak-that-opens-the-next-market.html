@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Set `.js` before first paint so initial hidden states never flash.
+       Everything hidden by CSS is gated behind this class, so a no-JS visitor
+       sees the full page. The timer is the safety net: if cinema.js fails to
+       load or throws before it finishes booting, `.js` comes back off and all
+       content becomes visible. cinema.js clears it on a clean boot. */
+    document.documentElement.classList.add('js');
+    window.__cinemaBoot = setTimeout(function () {
+      document.documentElement.classList.remove('js');
+    }, 4000);
+  </script>
+  <title>The Small Tweak That Opens the Next Market | Daniel Fox</title>
+  <meta name="description" content="When growth stalls, founders reach for a rebrand. Usually the next market needs the same story reframed. How to change one variable and reach the adjacent cohort.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://daniel-fox.com/the-small-tweak-that-opens-the-next-market.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Small Tweak That Opens the Next Market | Daniel Fox">
+  <meta property="og:description" content="When growth stalls, founders reach for a rebrand. Usually the next market needs the same story reframed. How to change one variable and reach the adjacent cohort.">
+  <meta property="og:url" content="https://daniel-fox.com/the-small-tweak-that-opens-the-next-market.html">
+  <meta property="og:image" content="https://daniel-fox.com/img/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#0b0912">
+  <meta name="color-scheme" content="dark">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Roman only, both families: the design forbids italics anywhere. -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Serif&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=20260804c">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The small tweak that opens the next market", "description": "When growth stalls, founders reach for a rebrand. Usually the next market needs the same story reframed. How to change one variable and reach the adjacent cohort.", "author": {"@type": "Person", "name": "Daniel Fox"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-11", "dateModified": "2026-06-12"}</script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
+  
+</head>
+<body class="article">
+  <!-- Animated background: WebGL smoke, its no-WebGL gradient fallback, film
+       grain, and the veil that quiets all of it on long-form reading pages. -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="gl-fallback" id="glfb" aria-hidden="true" style="display:none"></div>
+  <div class="read-veil" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="what-we-run.html" >What I do</a>
+      <a href="who-its-for.html" >Who it's for</a>
+      <a href="about.html" >About</a>
+      <a href="insights.html" aria-current="page">Insights</a>
+      <a class="nav-cta" href="contact.html" >Start a conversation</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-mountains-sunset.jpg')"></div>
+  <div class="container">
+    <h1>The next few million rarely need a new story, <span class="accent">just the right address on the envelope.</span></h1>
+    <p class="lead">Say you've done the diagnostic work. You watched your return on ad spend slide, you got out of the dashboard and into conversations, and the diagnosis came back: the segment that built your business is mostly converted. The next few million in revenue live with people who aren't quite your current customer. The instinct at this point is dramatic, a new segment and a new story. Founders at this stage start sketching rebrands, second websites, repositioning decks. Usually it's a much smaller change than that.</p>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <h2 class="measure">The cohort sitting next to yours already has the problem your product solves.</h2>
+    <p class="lead measure-wide">The adjacent segment is, almost by definition, similar to the one you've already won. They have a parallel problem, and the proof that your product works is the same proof.</p>
+    <div class="measure-wide" style="margin-top:1.5rem">
+      <p>What differs is the frame they need before they'll let that proof in. And frames turn on details that look trivial from the inside: a word choice, a visual register, which outcome you lead with, whose testimonial appears first.</p>
+      <p>First Round's writing on the levels of product-market fit includes a useful model from Persona founder Rick Song: once you've saturated a fit, you expand by remixing one of three things, your product, your market, or your model, and only one. The companies that grow through these transitions tend to change a single variable and keep the rest steady. The companies that struggle change everything at once and can no longer tell what worked.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container reveal">
+    <h2 class="measure">At Skreened, the variable was channel. The tweak that mattered was language.</h2>
+    <p class="lead measure-wide">At Skreened, the custom-apparel company I founded and scaled, the variable was channel, and the tweak that mattered was language.</p>
+    <div class="measure-wide" style="margin-top:1.5rem">
+      <p>When Skreened expanded onto Amazon, Etsy, and Google Shopping, we didn't relaunch the brand or rebuild the product line. We rewrote titles and descriptions. A product name that charmed people on the Skreened site, where buyers had already absorbed the company's sensibility, communicated nothing to someone scanning a search results page on Amazon. We had to learn to anchor descriptions in what that buyer was actually searching for and how each platform surfaced results. They were small, unglamorous edits, and they were the difference between existing on those platforms and selling on them.</p>
+      <p>Notice what stayed fixed: the shirts, the prices, the values of the company, the actual claims being made. Nothing got invented for the new context. We chose different things to say first.</p>
+      <blockquote class="pull">Nothing got invented for the new context. We chose different things to say first.</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <h2 class="measure">Your core value proposition and your proof points stay, and what shifts is emphasis.</h2>
+    <p class="lead measure-wide">The adjacent cohort was never rejecting your product. They were reading your current message and concluding it was meant for somebody else.</p>
+    <div class="measure-wide" style="margin-top:1.5rem">
+      <p>The specific facts you foreground, the language register, the fears you address before the buyer raises them: those are the things that shift. A surgical change in the frame corrects the address on the envelope.</p>
+      <p>That's the general form of it. Your existing proof and your existing offer work, and what changes is which part of the truth you lead with, tuned to the specific way this adjacent buyer is reading the room.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container reveal">
+    <h2 class="measure">The two failure modes here are opposites, and both are expensive.</h2>
+    <p class="lead measure-wide">One is dismissing the reframe as beneath the moment. The other is treating the adjacent cohort as a foreign country and rebuilding everything for them.</p>
+    <div class="measure-wide" style="margin-top:1.5rem">
+      <p>The first failure looks like this: growth stalled, the board is asking questions, and the proposed fix is changing which benefit leads the homepage. It feels unserious. So teams reach for bigger interventions, new product lines, new pricing tiers, acquisitions, when the answer was a sentence. The size of a change and the size of its effect are unrelated. Human instincts insist otherwise, especially under pressure.</p>
+      <p>The second failure is the overcorrection. Now you have two stories competing for one brand, your original customers feel the ground shift under them, and you've spent a year on a rebrand that a reframe would have covered. There are real cases where two cohorts diverge far enough to justify a second brand. That's a real strategic fork, and it deserves its own deliberate decision. It shouldn't happen by accident because nobody asked how small the change could be.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <h2 class="measure">Run the cheaper experiment first.</h2>
+    <p class="lead measure-wide">Before commissioning the rebrand, take your existing offer, change only the frame, and put it in front of the adjacent cohort.</p>
+    <div class="measure-wide" style="margin-top:1.5rem">
+      <p>One campaign, one landing page, a few weeks. If the cohort is who your ground-truth conversations suggested, you'll see it fast. These people have been ready to buy from someone. They were waiting for a message that sounded like it was for them.</p>
+      <p>The operating principle is that when the diagnosis says new cohort, reach for the scalpel before the sledgehammer. Your next market has been reading your ads the whole time. They just haven't seen their name on one yet.</p>
+      <p>The skill underneath all of this is knowing which details matter most to a given buyer, which is a longer conversation about how buyers' values actually work. I'll take that up separately. For now the principle is enough.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <h2 class="measure">Where this sits in the series.</h2>
+    <div class="measure-wide" style="margin-top:1rem">
+      <p>This is the third piece, after <a href="your-dashboard-cant-tell-you-whats-wrong.html">why your dashboard can't tell you what's wrong</a>. Next: <a href="your-answers-are-working-as-designed.html">why your answers about the customer are working exactly as designed</a>.</p>
+      <p>It's also one part of a larger picture: <a href="demand-generation-for-high-ticket-businesses.html">how demand actually gets generated for a considered, high-ticket purchase</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <div class="related-grid">
+      <a class="related-card" href="should-i-rebrand-or-reposition.html">
+        <span class="related-kicker">Quick answer</span>
+        <span class="related-title">Should I rebrand or reposition?</span>
+      </a>
+      <a class="related-card" href="why-arent-my-ads-converting-with-a-new-audience.html">
+        <span class="related-kicker">Quick answer</span>
+        <span class="related-title">Why aren't my ads converting with a new audience?</span>
+      </a>
+    </div>
+    <p style="margin-top:1.6rem"><a class="belief-link" href="beliefs.html">The positions underneath all of this &rarr;</a></p>
+  </div>
+</section>
+
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
+  <div class="container reveal" style="text-align:center">
+    <h2 class="measure" style="margin:0 auto 1rem">Before you commission the rebrand, run the cheaper experiment.</h2>
+    <p class="lead" style="margin:0 auto 2rem;max-width:48ch">One campaign, one landing page, the same offer with a new frame, put in front of the adjacent cohort. I'll run it with you and tell you what came back.</p>
+    <a class="btn btn-on-ink" href="contact.html">Start a conversation</a>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="wordmark footer-wordmark">Daniel Fox</span>
+      <p class="footer-line">Fractional marketing leadership for consumer businesses that get chosen after the customer does their research.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="what-we-run.html">What I do</a>
+      <a href="who-its-for.html">Who it's for</a>
+      <a href="about.html">About</a>
+      <a href="beliefs.html">What I believe</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Start a conversation</a>
+    </nav>
+    <div class="footer-meta">
+      <span>&copy; 2026 Daniel Fox</span>
+    </div>
+  </div>
+</footer>
+
+
+  <script defer src="cinema.js?v=20260804c"></script>
+</body>
+</html>

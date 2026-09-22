@@ -1,0 +1,83 @@
+name: Deploy daniel-fox.com
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # BEFORE build/deploy — post-deploy the live sitemap equals the new
+      # one, so a later fetch would always diff empty. This snapshot makes
+      # the changed-only IndexNow ping meaningful.
+      - name: Snapshot live sitemap (IndexNow baseline)
+        run: |
+          curl -fsS --max-time 30 https://daniel-fox.com/sitemap.xml \
+            -o /tmp/live-sitemap.xml \
+            || echo "live sitemap unavailable — IndexNow will submit all URLs"
+
+      - name: Build site
+        run: python3 build.py
+
+      - name: Stage site
+        run: |
+          mkdir -p _site
+          cp -r *.html *.css *.js CNAME _site/ 2>/dev/null || true
+          cp -r sitemap.xml *.txt _site/ 2>/dev/null || true
+          cp -r img _site/img 2>/dev/null || true
+
+      # This staging step is an ALLOWLIST, so any new asset type is silently
+      # dropped and only shows up as a 404 in production. That is exactly how
+      # cinema.js shipped missing on 2026-08-04. Fail the deploy instead: every
+      # local asset the built HTML references must exist in _site.
+      - name: Verify referenced assets were staged
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+          site = pathlib.Path('_site')
+          missing = set()
+          for page in site.glob('*.html'):
+              html = page.read_text(encoding='utf-8')
+              for attr in re.findall(r'(?:href|src)="([^"]+)"', html):
+                  if attr.startswith(('http://', 'https://', '//', '#', 'mailto:', 'data:')):
+                      continue
+                  path = attr.split('?')[0].split('#')[0].lstrip('/')
+                  if not path or not pathlib.Path(path).suffix:
+                      continue
+                  if not (site / path).exists():
+                      missing.add(f"{path}  (referenced by {page.name})")
+          if missing:
+              print("Referenced assets missing from _site:")
+              for m in sorted(missing):
+                  print("  -", m)
+              sys.exit(1)
+          print("All referenced local assets are staged.")
+          PY
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # Tell IndexNow-participating engines (Bing, etc.) what changed — only
+      # URLs new or lastmod-moved vs the pre-deploy snapshot; skips the ping
+      # when nothing did. The script swallows its own errors, so a dead
+      # endpoint never fails a deploy.
+      - name: Ping IndexNow (changed URLs only)
+        run: python3 scripts/indexnow.py --baseline /tmp/live-sitemap.xml

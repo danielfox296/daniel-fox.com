@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Set `.js` before first paint so initial hidden states never flash.
+       Everything hidden by CSS is gated behind this class, so a no-JS visitor
+       sees the full page. The timer is the safety net: if cinema.js fails to
+       load or throws before it finishes booting, `.js` comes back off and all
+       content becomes visible. cinema.js clears it on a clean boot. */
+    document.documentElement.classList.add('js');
+    window.__cinemaBoot = setTimeout(function () {
+      document.documentElement.classList.remove('js');
+    }, 4000);
+  </script>
+  <title>{{title}}</title>
+  <meta name="description" content="{{meta_description}}">
+  <meta name="robots" content="{{robots}}">
+  <link rel="canonical" href="{{canonical}}">
+
+  <meta property="og:type" content="{{og_type}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{meta_description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{og_image}}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#0b0912">
+  <meta name="color-scheme" content="dark">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Roman only, both families: the design forbids italics anywhere. -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Serif&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{nav_prefix}}styles.css?v=20260804c">
+  {{schema}}
+  {{ga}}
+  {{page_css}}
+</head>
+<body{{body_attr}}>
+  <!-- Animated background: WebGL smoke, its no-WebGL gradient fallback, film
+       grain, and the veil that quiets all of it on long-form reading pages. -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="gl-fallback" id="glfb" aria-hidden="true" style="display:none"></div>
+  <div class="read-veil" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  {{header}}
+  <main>
+    {{content}}
+  </main>
+  {{footer}}
+
+  <script defer src="{{nav_prefix}}cinema.js?v=20260804c"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "title": "What to Ask a Fractional CMO in an Interview | Daniel Fox",
+  "meta_description": "Skip the resume questions. Every question that matters in a fractional CMO interview tests one thing: does this person diagnose before they prescribe? A practical checklist from Daniel Fox, fractional B2C CMO.",
+  "output": "what-to-ask-a-fractional-cmo-interview.html",
+  "nav": "insights",
+  "og_type": "article",
+  "schema": {
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What should I ask a fractional CMO in an interview?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Skip the resume questions. Every question that matters tests one thing: does this person diagnose before they prescribe? Anyone who tells you the first thing they would do before they have looked at your creative, your analytics, and your current positioning is selling a playbook, because from outside the company that data is opaque. Ask what happens in month one and listen for a baseline and customer conversations, not a week-one to-do list. Ask what they refuse to do, because a CMO who refuses nothing does not know the edges of their own capabilities or is over-promising to win a bad-fit job. Ask what they actually believe, because a CMO with no positions you could disagree with has no positions at all. Daniel Fox is a fractional B2C CMO who works this way."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "What should I ask a fractional CMO in an interview?",
+        "description": "Skip the resume questions. Every question worth asking a fractional CMO tests whether they diagnose before they prescribe, refuse the right work, and hold real positions.",
+        "author": {
+          "@type": "Person",
+          "name": "Daniel Fox",
+          "url": "https://daniel-fox.com",
+          "jobTitle": "Fractional B2C CMO"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Daniel Fox"
+        },
+        "datePublished": "2026-06-12",
+        "dateModified": "2026-06-12"
+      }
+    ]
+  }
+}

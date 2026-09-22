@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Set `.js` before first paint so initial hidden states never flash.
+       Everything hidden by CSS is gated behind this class, so a no-JS visitor
+       sees the full page. The timer is the safety net: if cinema.js fails to
+       load or throws before it finishes booting, `.js` comes back off and all
+       content becomes visible. cinema.js clears it on a clean boot. */
+    document.documentElement.classList.add('js');
+    window.__cinemaBoot = setTimeout(function () {
+      document.documentElement.classList.remove('js');
+    }, 4000);
+  </script>
+  <title>Start a Conversation with a Fractional B2C CMO | Daniel Fox</title>
+  <meta name="description" content="Tell me about your business in two minutes. A short conversation tells us both whether the math and the fit are there. No pitch deck, no pressure.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://daniel-fox.com/contact.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Start a Conversation with a Fractional B2C CMO | Daniel Fox">
+  <meta property="og:description" content="Tell me about your business in two minutes. A short conversation tells us both whether the math and the fit are there. No pitch deck, no pressure.">
+  <meta property="og:url" content="https://daniel-fox.com/contact.html">
+  <meta property="og:image" content="https://daniel-fox.com/img/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#0b0912">
+  <meta name="color-scheme" content="dark">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Roman only, both families: the design forbids italics anywhere. -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Serif&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=20260804c">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "image": "https://daniel-fox.com/img/daniel-fox.jpg", "sameAs": ["https://www.linkedin.com/in/danielcfox/"], "jobTitle": "Fractional B2C CMO", "address": {"@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US"}, "areaServed": "US", "description": "Fractional B2C CMO and marketing leadership for established, profitable consumer businesses with considered, high-ticket purchases. I run the whole marketing function, strategy through pipeline, and answer for the number.", "alumniOf": {"@type": "CollegeOrUniversity", "name": "The Ohio State University"}, "knowsAbout": ["Fractional CMO services", "B2C and consumer-brand marketing", "Marketing leadership", "Demand generation", "Positioning", "Go-to-market strategy", "High-ticket and considered-purchase marketing"]}</script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
+  
+</head>
+<body>
+  <!-- Animated background: WebGL smoke, its no-WebGL gradient fallback, film
+       grain, and the veil that quiets all of it on long-form reading pages. -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="gl-fallback" id="glfb" aria-hidden="true" style="display:none"></div>
+  <div class="read-veil" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="what-we-run.html" >What I do</a>
+      <a href="who-its-for.html" >Who it's for</a>
+      <a href="about.html" >About</a>
+      <a href="insights.html" >Insights</a>
+      <a class="nav-cta" href="contact.html" aria-current="page">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="section">
+  <div class="container reveal">
+    <h1 class="measure">Tell me about <span class="accent">your business.</span></h1>
+    <p class="lead measure-wide">Two minutes here, then a short call. I'll tell you whether the math and the fit are there, including if they're not.</p>
+
+    <form class="form" action="https://formsubmit.co/3c6b469e2813a6c022ec9d9ce772e704" method="POST">
+      <input type="hidden" name="_subject" value="New inquiry from daniel-fox.com">
+      <input type="hidden" name="_next" value="https://daniel-fox.com/thanks.html">
+      <input type="hidden" name="_captcha" value="false">
+      <!-- No honeypot, on purpose: formsubmit drops any submission with
+           _honey set while still redirecting to the thanks page, and browser
+           autofill fills hidden fields it can classify (it ignores
+           autocomplete="off"). That combination silently killed a real
+           enquiry on signetartists.com the week of 2026-08-24. FormSubmit's
+           own server-side filtering is the spam layer; if spam grows,
+           escalate to a relay that logs submissions, never a silent trap.
+           The visible "company" field below is a real question for the
+           visitor, not a trap. -->
+
+      <label for="name">Your name</label>
+      <input id="name" type="text" name="name" required>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required>
+
+      <label for="company">Company</label>
+      <input id="company" type="text" name="company" required>
+
+      <label for="website">Website</label>
+      <input id="website" type="url" name="website" placeholder="https://">
+
+      <label for="spend">Roughly what do you spend on marketing each month?</label>
+      <select id="spend" name="monthly_spend">
+        <option value="">Select one</option>
+        <option>Under $10k</option>
+        <option>$10k&ndash;$30k</option>
+        <option>$30k&ndash;$75k</option>
+        <option>$75k&ndash;$150k</option>
+        <option>$150k+</option>
+      </select>
+
+      <label for="message">What's the gap you're feeling?</label>
+      <textarea id="message" name="message" placeholder="What's working, what isn't, and what you wish someone would just take off your desk."></textarea>
+
+      <button class="btn btn-primary" type="submit">Send it over</button>
+    </form>
+    <p class="measure" style="margin-top:1.5rem;opacity:0.8">Prefer to skip the form? <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener">Grab a time directly.</a></p>
+  </div>
+</section>
+
+<!-- Full-bleed photographic close under the form. Image only, no caption:
+     the contact page carried no imagery at all before this. -->
+<div class="band duo">
+  <div class="ph" style="background-image:url('img/photos/denver-downtown-dusk.jpg')"></div>
+</div>
+
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="wordmark footer-wordmark">Daniel Fox</span>
+      <p class="footer-line">Fractional marketing leadership for consumer businesses that get chosen after the customer does their research.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="what-we-run.html">What I do</a>
+      <a href="who-its-for.html">Who it's for</a>
+      <a href="about.html">About</a>
+      <a href="beliefs.html">What I believe</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Start a conversation</a>
+    </nav>
+    <div class="footer-meta">
+      <span>&copy; 2026 Daniel Fox</span>
+    </div>
+  </div>
+</footer>
+
+
+  <script defer src="cinema.js?v=20260804c"></script>
+</body>
+</html>

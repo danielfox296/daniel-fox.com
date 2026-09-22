@@ -1,0 +1,67 @@
+<!-- SCENE 1 · pinned hero (200vh): letter-split headline left, designed visual right.
+     Copy is the live front-door copy, unchanged. The payoff device splits the
+     existing sentence across two lines — no words added, removed or reordered.
+
+     The right panel is a drawn schematic, not a photograph. Nothing in the photo
+     library reads as marketing leadership (landscapes, a workshop, a candlestick
+     chart, a stock meeting shot), and a literal image of "spend running with
+     nobody in charge" doesn't exist. So the panel states it: six channels live
+     and pulsing, every one of them feeding a leadership seat that is empty.
+     Deliberately abstract — no numbers, no metrics, nothing that could read as a
+     performance claim. -->
+<section class="scene-hero" id="s-hero">
+  <div class="stick">
+    <div class="container">
+      <div class="hero-grid" id="heroInner">
+        <div>
+          <p class="eyebrow">Fractional B2C CMO &middot; marketing leadership</p>
+          <h1 class="hero-title" id="heroTitle">You're spending like a company with a marketing department, <span class="payoff">and nobody's running it.</span></h1>
+          <p class="hero-lead">Ads run, posts go out, an agency sends reports, and the strategy is still yours to figure out. I take the whole marketing function off your plate and answer for the number, so the next stage of growth doesn't depend on who referred you last quarter.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">Start a conversation</a>
+            <a class="btn btn-ghost" href="what-we-run.html">See what I do</a>
+          </div>
+          <p class="hero-credential">Founded, built, and sold Skreened (~$16M custom-apparel company) &middot; dozens of fractional engagements &middot; one accountable leader.</p>
+        </div>
+
+        <figure class="hero-figure" id="heroMedia">
+          <svg class="fig-svg" viewBox="0 0 520 560" role="img" aria-labelledby="heroFigTitle" preserveAspectRatio="xMidYMid meet">
+            <title id="heroFigTitle">Six marketing channels running in parallel, every one of them feeding a leadership seat that sits empty.</title>
+
+            <!-- channel tracks: run, then converge on the empty seat -->
+            <g class="fig-tracks" fill="none" stroke-linecap="round">
+              <path d="M34 90  H290 C336 90  340 240 368 278"/>
+              <path d="M34 174 H290 C332 174 344 250 368 282"/>
+              <path d="M34 258 H290 C330 258 348 276 368 285"/>
+              <path d="M34 342 H290 C330 342 348 296 368 289"/>
+              <path d="M34 426 H290 C332 426 344 322 368 292"/>
+              <path d="M34 510 H290 C336 510 340 332 368 296"/>
+            </g>
+
+            <!-- live pulses travelling toward the seat -->
+            <g class="fig-pulses" fill="none" stroke-linecap="round">
+              <path d="M34 90  H290 C336 90  340 240 368 278"/>
+              <path d="M34 174 H290 C332 174 344 250 368 282"/>
+              <path d="M34 258 H290 C330 258 348 276 368 285"/>
+              <path d="M34 342 H290 C330 342 348 296 368 289"/>
+              <path d="M34 426 H290 C332 426 344 322 368 292"/>
+              <path d="M34 510 H290 C336 510 340 332 368 296"/>
+            </g>
+
+            <!-- each channel: active, lit -->
+            <g class="fig-nodes">
+              <circle cx="34" cy="90"  r="7"/><circle cx="34" cy="174" r="7"/>
+              <circle cx="34" cy="258" r="7"/><circle cx="34" cy="342" r="7"/>
+              <circle cx="34" cy="426" r="7"/><circle cx="34" cy="510" r="7"/>
+            </g>
+
+            <!-- the seat: drawn, waiting, empty -->
+            <circle class="fig-seat-halo" cx="432" cy="286" r="76"/>
+            <circle class="fig-seat" cx="432" cy="286" r="52"/>
+          </svg>
+        </figure>
+      </div>
+    </div>
+    <div class="hero-progress" aria-hidden="true"><i></i></div>
+  </div>
+</section>

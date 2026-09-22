@@ -1,0 +1,190 @@
+{
+  "intro": "Daniel Fox is a fractional B2C CMO and marketing leader for established, profitable consumer businesses (typically $3M-$12M revenue) selling a considered, high-ticket purchase. The work is to run the whole marketing function - strategy through pipeline - and answer for the number, rather than hand a business another vendor doing activity without leadership. He founded, built, and sold Skreened, a custom-apparel company, and has run dozens of fractional engagements since.",
+  "sections": [
+    {
+      "title": "Start here",
+      "pages": [
+        {
+          "page": "index.html",
+          "title": "Fractional CMO for Your Next Stage of Growth",
+          "desc": "Fractional CMO and marketing leadership for established, profitable companies. I run the whole marketing function, strategy through pipeline. Marketing for your next stage of growth."
+        },
+        {
+          "page": "what-we-run.html",
+          "title": "What Does a Fractional CMO Do? The Whole Function",
+          "desc": "What a fractional CMO does: runs the entire marketing function (strategy, content, SEO, AI-search visibility, paid, capture, nurture, creative, and measurement) part-time, with one number to hold."
+        },
+        {
+          "page": "who-its-for.html",
+          "title": "Is a Fractional CMO Right for Your Business?",
+          "desc": "When a fractional CMO is the right call for a considered, high-ticket business, and when it isn't. A plain fit check."
+        },
+        {
+          "page": "fractional-b2c-cmo.html",
+          "title": "Fractional B2C CMO: Marketing Leadership for Consumer Businesses",
+          "desc": "What a fractional B2C CMO is: executive marketing leadership for consumer businesses selling considered, high-ticket purchases, built around one question: why consumers buy. What the seat covers and who it fits."
+        },
+        {
+          "page": "about.html",
+          "title": "About Daniel Fox: Fractional CMO & Operator",
+          "desc": "I'm Daniel Fox, a fractional CMO who has personally run the marketing function for dozens of high-ticket businesses, and who built and sold a company of my own."
+        },
+        {
+          "page": "contact.html",
+          "title": "Start a Conversation with a Fractional CMO",
+          "desc": "Tell me about your business in two minutes. A short conversation tells us both whether the math and the fit are there. No pitch deck, no pressure."
+        }
+      ]
+    },
+    {
+      "title": "How demand works (pillar and guides)",
+      "pages": [
+        {
+          "page": "demand-generation-for-high-ticket-businesses.html",
+          "title": "Demand Generation for High-Ticket Buyers",
+          "desc": "How to generate steady demand for a considered, high-ticket purchase, and why one accountable leader running the whole marketing function beats paying for scattered activity that never compounds."
+        },
+        {
+          "page": "fractional-cmo-vs-marketing-agency.html",
+          "title": "Fractional CMO vs. Agency: Which Do You Need?",
+          "desc": "Agency, freelancer, or fractional marketing leader? A plain breakdown for owners of high-ticket businesses on who actually answers for the outcome, and who just runs tasks."
+        },
+        {
+          "page": "seo-for-high-ticket-businesses.html",
+          "title": "SEO for High-Ticket Businesses",
+          "desc": "How a high-ticket business wins search for a researched, considered purchase, and why content and SEO only compound when one leader runs the plan. A fractional CMO's view."
+        },
+        {
+          "page": "getting-found-by-ai-search.html",
+          "title": "Getting Found in AI Search Results",
+          "desc": "When buyers ask an assistant to recommend a business like yours, will it name you? A clear look at earning visibility in AI answers without chasing vanity metrics."
+        },
+        {
+          "page": "lead-generation-beyond-referrals.html",
+          "title": "How to Generate Leads Beyond Referrals",
+          "desc": "Real lead generation for high-ticket businesses (beyond referrals and luck), and why a fenced channel you can measure is the one that scales. A fractional CMO's view."
+        }
+      ]
+    },
+    {
+      "title": "Quick answers",
+      "pages": [
+        {
+          "page": "insights.html",
+          "title": "Fractional CMO Insights: Demand for High-Ticket Businesses",
+          "desc": "How demand actually works for considered, high-ticket purchases: the fractional-CMO category argument, plus plain answers to the questions high-ticket business owners ask next."
+        },
+        {
+          "page": "how-much-does-a-fractional-cmo-cost.html",
+          "title": "How Much Does a Fractional CMO Cost?",
+          "desc": "What a fractional CMO costs: most run $8,000 to $22,000 a month; mine start at $10,000. Why the rate is the wrong first question, and how to weigh it against a full-time hire and the agency spend you already carry. Daniel Fox, fractional CMO."
+        },
+        {
+          "page": "do-i-need-a-fractional-cmo-or-an-agency.html",
+          "title": "Do I Need a Fractional CMO or an Agency?",
+          "desc": "Agencies execute inside your current answers about the customer. A fractional CMO reopens those answers. If your answers are producing your ceiling, execution isn't the constraint. Daniel Fox."
+        },
+        {
+          "page": "marketing-coordinator-vs-strategist.html",
+          "title": "Marketing Coordinator vs. Strategist: Which Do You Need?",
+          "desc": "Your marketing person left and you are choosing a replacement. A coordinator executes a strategy; a strategist decides what it is. How to tell which role your business actually needs. Daniel Fox, fractional CMO."
+        },
+        {
+          "page": "why-is-my-roas-declining.html",
+          "title": "Why Is My ROAS Declining When Nothing Changed?",
+          "desc": "Return on ad spend slipping with steady spend and unchanged campaigns usually means your perfect-fit cohort is saturating. Why the dashboard can't tell saturation from noise, and what to do."
+        },
+        {
+          "page": "how-do-i-know-if-my-market-is-saturated.html",
+          "title": "How Do I Know If My Market Is Saturated?",
+          "desc": "A saturating market and a market you address wrong produce the same silence. The wrong market won't tell you they're the wrong market. How to separate the two. Daniel Fox, fractional CMO."
+        },
+        {
+          "page": "why-arent-my-ads-converting-with-a-new-audience.html",
+          "title": "Why Aren't My Ads Converting With a New Audience?",
+          "desc": "The messaging that built trust with your first audience is actively disqualifying the next one. Trust-builders become door-closers. What to do instead. Daniel Fox, fractional CMO."
+        },
+        {
+          "page": "should-i-rebrand-or-reposition.html",
+          "title": "Should I Rebrand or Reposition?",
+          "desc": "Most rebrands are an expensive way to avoid a sentence-level fix. The adjacent market usually needs a reframe, not a new identity. Run the cheap experiment first. Daniel Fox, fractional CMO."
+        },
+        {
+          "page": "do-i-need-a-cmo-for-my-small-business.html",
+          "title": null,
+          "desc": null
+        },
+        {
+          "page": "is-a-fractional-cmo-worth-it.html",
+          "title": null,
+          "desc": null
+        },
+        {
+          "page": "fractional-cmo-vs-full-time-marketing-director.html",
+          "title": null,
+          "desc": null
+        },
+        {
+          "page": "what-to-ask-a-fractional-cmo-interview.html",
+          "title": null,
+          "desc": null
+        },
+        {
+          "page": "fractional-cmo-paid-advertising-strategy.html",
+          "title": null,
+          "desc": null
+        },
+        {
+          "page": "fractional-cmo-struggling-marketing-strategy.html",
+          "title": null,
+          "desc": null
+        },
+        {
+          "page": "fractional-cmo-denver-boulder.html",
+          "title": null,
+          "desc": null
+        }
+      ]
+    },
+    {
+      "title": "Essays",
+      "pages": [
+        {
+          "page": "product-market-fit-has-a-ceiling.html",
+          "title": "Product-Market Fit Has a Ceiling",
+          "desc": "The fit that got you to your first few million covers one segment, one channel, one story. Why product-market fit is a gradient you keep climbing, and how the next fit hides in plain sight."
+        },
+        {
+          "page": "the-small-tweak-that-opens-the-next-market.html",
+          "title": "The Small Tweak That Opens the Next Market",
+          "desc": "When growth stalls, founders reach for a rebrand. Usually the next market needs a reframe, not a new story. How to change one variable and reach the adjacent cohort."
+        },
+        {
+          "page": "your-answers-are-working-as-designed.html",
+          "title": "Your Answers About the Customer Are Working as Designed",
+          "desc": "Your answer to 'who is our customer' is calibrated to produce exactly your current numbers. Why the question gets filed as settled, and how to reopen it deliberately."
+        },
+        {
+          "page": "your-dashboard-cant-tell-you-whats-wrong.html",
+          "title": "Your Dashboard Can't Tell You What's Wrong",
+          "desc": "Declining return on ad spend has three different causes and one identical-looking graph. Why analytics flag the symptom, and where the real diagnosis actually happens."
+        }
+      ]
+    },
+    {
+      "title": "Vocabulary",
+      "pages": [
+        {
+          "page": "beliefs.html",
+          "title": "What I Believe About Why Growth Stalls",
+          "desc": "Seven positions on why a profitable company hits a marketing ceiling, and why the answer that built your revenue is the one keeping it where it is. Daniel Fox, fractional CMO."
+        },
+        {
+          "page": "projective-empathy.html",
+          "title": "Projective Empathy: Reading Your Marketing From the Buyer's Seat",
+          "desc": "Projective empathy is the trained practice of inhabiting a buyer's value structure and reading your own marketing from inside it. A method by Daniel Fox, fractional CMO, drawing on Spiral Dynamics."
+        }
+      ]
+    }
+  ]
+}

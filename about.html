@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Set `.js` before first paint so initial hidden states never flash.
+       Everything hidden by CSS is gated behind this class, so a no-JS visitor
+       sees the full page. The timer is the safety net: if cinema.js fails to
+       load or throws before it finishes booting, `.js` comes back off and all
+       content becomes visible. cinema.js clears it on a clean boot. */
+    document.documentElement.classList.add('js');
+    window.__cinemaBoot = setTimeout(function () {
+      document.documentElement.classList.remove('js');
+    }, 4000);
+  </script>
+  <title>About Daniel Fox, Fractional B2C CMO &amp; Operator</title>
+  <meta name="description" content="I&#x27;m Daniel Fox, a fractional B2C CMO who has personally run the marketing function for dozens of high-ticket consumer businesses, and who built and sold a company of my own.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://daniel-fox.com/about.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Daniel Fox, Fractional B2C CMO &amp; Operator">
+  <meta property="og:description" content="I&#x27;m Daniel Fox, a fractional B2C CMO who has personally run the marketing function for dozens of high-ticket consumer businesses, and who built and sold a company of my own.">
+  <meta property="og:url" content="https://daniel-fox.com/about.html">
+  <meta property="og:image" content="https://daniel-fox.com/img/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#0b0912">
+  <meta name="color-scheme" content="dark">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Roman only, both families: the design forbids italics anywhere. -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Serif&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=20260804c">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Daniel Fox", "url": "https://daniel-fox.com", "image": "https://daniel-fox.com/img/daniel-fox.jpg", "sameAs": ["https://www.linkedin.com/in/danielcfox/"], "jobTitle": "Fractional B2C CMO", "address": {"@type": "PostalAddress", "addressLocality": "Denver", "addressRegion": "CO", "addressCountry": "US"}, "areaServed": "US", "description": "Fractional B2C CMO and marketing leadership for established, profitable consumer businesses with considered, high-ticket purchases. I run the whole marketing function, strategy through pipeline, and answer for the number.", "alumniOf": {"@type": "CollegeOrUniversity", "name": "The Ohio State University"}, "knowsAbout": ["Fractional CMO services", "B2C and consumer-brand marketing", "Marketing leadership", "Demand generation", "Positioning", "Go-to-market strategy", "High-ticket and considered-purchase marketing"]}</script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
+  
+</head>
+<body>
+  <!-- Animated background: WebGL smoke, its no-WebGL gradient fallback, film
+       grain, and the veil that quiets all of it on long-form reading pages. -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="gl-fallback" id="glfb" aria-hidden="true" style="display:none"></div>
+  <div class="read-veil" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="what-we-run.html" >What I do</a>
+      <a href="who-its-for.html" >Who it's for</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="insights.html" >Insights</a>
+      <a class="nav-cta" href="contact.html" >Start a conversation</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="hero">
+  <div class="container">
+    <div class="about-hero-grid">
+      <div>
+        <h1>I've run the whole thing, <span class="accent">P&amp;L and all.</span></h1>
+        <p class="lead">I'm Daniel Fox. The work is years of personally leading the marketing function for high-ticket businesses, on top of having built and sold a company of my own. I'm based in the <a href="fractional-cmo-denver-boulder.html">Denver and Boulder area</a> and work remotely with companies nationwide.</p>
+      </div>
+      <figure class="about-portrait">
+        <img src="img/daniel-fox.jpg" alt="Daniel Fox, fractional B2C CMO based in Denver and Boulder, Colorado" width="512" height="512">
+        <figcaption>Daniel Fox, fractional B2C CMO in Denver &amp; Boulder.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <div class="operator-grid">
+      <div>
+        <h2>Dozens of engagements, and one company built and sold.</h2>
+      </div>
+      <div>
+        <p class="lead">Over the past several years, I've personally led the marketing function for dozens of established, high-ticket consumer businesses as a fractional operator who leads the whole plan and answers for the number.</p>
+        <p>Before that, I founded, bootstrapped, built, and sold Skreened, a custom-apparel company I grew past 100 people and roughly $16M in revenue before it was acquired. I engineered the demand under that growth: an organic search engine that carried the business to its first $8M with almost no ad spend, then a content-and-culture engine that doubled it. You're handing the most important function in your business to one accountable leader who has run a P&amp;L, scaled a team, and answered for the number at the end of it.</p>
+        <div class="operator-stats">
+          <div>
+            <div class="operator-stat">Dozens</div>
+            <div class="operator-stat-label">fractional engagements led</div>
+          </div>
+          <div>
+            <div class="operator-stat">Built &amp; sold</div>
+            <div class="operator-stat-label">Skreened, built and sold</div>
+          </div>
+          <div>
+            <div class="operator-stat">Hundreds</div>
+            <div class="operator-stat-label">of people led</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-ink">
+  <div class="container reveal">
+    <blockquote class="pull">&ldquo;It completely feels like a dream come true. I didn't even know this could happen. This is the stuff you're masterful at. I'm giddy with gratitude.&rdquo;</blockquote>
+    <p class="pull-attr">Victoria L., client</p>
+    <blockquote class="pull" style="margin-top:2.6rem">&ldquo;This is your genius, and I love it.&rdquo;</blockquote>
+    <p class="pull-attr">Nathan H., founder of a wellness brand</p>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <h2 class="measure">Companies keep hiring me to do the same job, which is to move the number.</h2>
+    <p class="lead measure-wide">Here are a few of those engagements, anonymized. The industry changed each time, and the job stayed the same: lead the marketing, build demand that doesn't ride on referrals, and answer for the number.</p>
+    <div class="cap-grid" style="margin-top:2.5rem">
+      <div class="cap-item"><span class="cap-name">Doubled revenue in a year</span><span class="cap-desc">For a direct-to-consumer wellness brand, I surfaced three buyer segments the founder couldn't see and repositioned to serve all four.</span></div>
+      <div class="cap-item"><span class="cap-name">From a road business to a digital one</span><span class="cap-desc">A solo expert had built her whole business in person, on the road. Inside a single year, I rebuilt it with her to run online.</span></div>
+      <div class="cap-item"><span class="cap-name">A launch tripled in six weeks</span><span class="cap-desc">For a coaching practice, I fixed the offer, the message, and the launch itself.</span></div>
+      <div class="cap-item"><span class="cap-name">A lead engine you can read</span><span class="cap-desc">For a real-estate practice, I built the landing pages, funnels, and CRM that turn local attention into booked appointments.</span></div>
+      <div class="cap-item"><span class="cap-name">Profitable in year one</span><span class="cap-desc">I founded and ran a high-ticket live-events company, with a <em>New York Times</em> best-selling author as headline faculty.</span></div>
+    </div>
+    <p class="pull measure" style="margin-top:3rem">You built something people want, and the product is there. What's missing is that demand still rides on referrals, and running it is no one's job. That's the job I take.</p>
+    <p class="measure" style="margin-top:1.5rem">The thinking behind that job is all public: <a href="demand-generation-for-high-ticket-businesses.html">how demand actually works for a considered, high-ticket purchase</a>.</p>
+  </div>
+</section>
+
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
+  <div class="container reveal" style="text-align:center">
+    <h2 class="measure" style="margin:0 auto 1rem">Do you want a leader who answers for the number?</h2>
+    <p class="lead" style="margin:0 auto 2rem;max-width:46ch">A short conversation tells us both whether the math and the fit are there. No pitch deck, no pressure.</p>
+    <a class="btn btn-on-ink" href="contact.html">Start a conversation</a>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="wordmark footer-wordmark">Daniel Fox</span>
+      <p class="footer-line">Fractional marketing leadership for consumer businesses that get chosen after the customer does their research.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="what-we-run.html">What I do</a>
+      <a href="who-its-for.html">Who it's for</a>
+      <a href="about.html">About</a>
+      <a href="beliefs.html">What I believe</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Start a conversation</a>
+    </nav>
+    <div class="footer-meta">
+      <span>&copy; 2026 Daniel Fox</span>
+    </div>
+  </div>
+</footer>
+
+
+  <script defer src="cinema.js?v=20260804c"></script>
+</body>
+</html>

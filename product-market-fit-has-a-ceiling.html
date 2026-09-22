@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Set `.js` before first paint so initial hidden states never flash.
+       Everything hidden by CSS is gated behind this class, so a no-JS visitor
+       sees the full page. The timer is the safety net: if cinema.js fails to
+       load or throws before it finishes booting, `.js` comes back off and all
+       content becomes visible. cinema.js clears it on a clean boot. */
+    document.documentElement.classList.add('js');
+    window.__cinemaBoot = setTimeout(function () {
+      document.documentElement.classList.remove('js');
+    }, 4000);
+  </script>
+  <title>Product-Market Fit Has a Ceiling | Daniel Fox</title>
+  <meta name="description" content="The fit that got you to your first few million covers one segment, one channel, one story. Why product-market fit is a gradient you keep climbing, and how the next fit hides in plain sight.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://daniel-fox.com/product-market-fit-has-a-ceiling.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Product-Market Fit Has a Ceiling | Daniel Fox">
+  <meta property="og:description" content="The fit that got you to your first few million covers one segment, one channel, one story. Why product-market fit is a gradient you keep climbing, and how the next fit hides in plain sight.">
+  <meta property="og:url" content="https://daniel-fox.com/product-market-fit-has-a-ceiling.html">
+  <meta property="og:image" content="https://daniel-fox.com/img/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#0b0912">
+  <meta name="color-scheme" content="dark">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Roman only, both families: the design forbids italics anywhere. -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Serif&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=20260804c">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The product-market fit you found has a ceiling", "description": "The fit that got you to your first few million covers one segment, one channel, one story. Why product-market fit is a gradient you keep climbing.", "author": {"@type": "Person", "name": "Daniel Fox"}, "publisher": {"@type": "Person", "name": "Daniel Fox"}, "datePublished": "2026-06-11", "dateModified": "2026-06-12"}</script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-FGSHJ5C5ZT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FGSHJ5C5ZT');</script>
+  
+</head>
+<body class="article">
+  <!-- Animated background: WebGL smoke, its no-WebGL gradient fallback, film
+       grain, and the veil that quiets all of it on long-form reading pages. -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="gl-fallback" id="glfb" aria-hidden="true" style="display:none"></div>
+  <div class="read-veil" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/">Daniel Fox</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="what-we-run.html" >What I do</a>
+      <a href="who-its-for.html" >Who it's for</a>
+      <a href="about.html" >About</a>
+      <a href="insights.html" aria-current="page">Insights</a>
+      <a class="nav-cta" href="contact.html" >Start a conversation</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="hero photo-section photo-hero" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-mountains-sunset.jpg')"></div>
+  <div class="container">
+    <h1>The fit you found is real. <span class="accent">It just doesn't cover your whole market.</span></h1>
+    <p class="lead">There's a story founders tell about product-market fit. You search for it, you suffer for it, and one day you cross it. Customers pull, revenue compounds, the hard part is over, and now the job is pouring fuel on the fire. The story is half true. What you crossed was fit with one segment, reached through one channel, sold one way. And that segment is smaller than your market.</p>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <h2 class="measure">The people who study this at scale have stopped treating fit as a single event.</h2>
+    <p class="lead measure-wide">First Round Capital describes four levels of product-market fit, from nascent to extreme, and notes that most companies stall at the middle levels, where there's real repeatability but the marginal customer still takes effort to win.</p>
+    <div class="measure-wide" style="margin-top:1.5rem">
+      <p>Sequoia walks founders through three distinct archetypes of fit in its Arc program rather than a yes-or-no diagnosis. Roger Norton makes the point with Tesla's master plan: the roadster, the family sedan, and the mass-market car were three separate product-market fits, each with its own customer, pursued in sequence. Fit was something the company had to find again at every stage.</p>
+      <p>The revenue benchmarks tell the same story from the other direction. Bessemer's T2D3 model, the canonical growth path for venture-backed software, asks you to triple from one million to three, then triple again to nine. Nobody triples to nine by doing more of what got them to three. The math forbids it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container reveal">
+    <h2 class="measure">Your first customers are a real cohort. They are also a finite one.</h2>
+    <p class="lead measure-wide">The customers who got you to your first few million are the ones whose problem your product fits perfectly, who discovered you through the channel you happened to build, and who responded to the exact story you happened to tell.</p>
+    <div class="measure-wide" style="margin-top:1.5rem">
+      <p>That's a real cohort. It's also finite, and it's almost always smaller than the founder believes, because the founder is usually a member of it. You built for people like you, found them, and converted them at a rate that felt like destiny.</p>
+      <p>Then the cohort starts to empty. Acquisition gets a little more expensive each quarter. The campaigns that printed money produce a little less. The instinct at this point is to spend harder, because spending harder is what worked. But the segment that was a perfect match for your message is running out of people in it, and money can't manufacture more of them.</p>
+      <blockquote class="pull">The segment that was a perfect match for your message is running out of people in it, and money can't manufacture more of them.</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <h2 class="measure">A channel ceiling looks like a performance problem until you see it clearly.</h2>
+    <p class="lead measure-wide">I lived a version of this. Before going fractional, I founded and scaled Skreened, a custom-apparel company.</p>
+    <div class="measure-wide" style="margin-top:1.5rem">
+      <p>Skreened had a channel that worked, and for years the answer to growth was more of that channel. Somewhere around eight million in revenue, the numbers stopped cooperating. What we could see was that the direct channel had a ceiling, and the next phase of growth lived on platforms we had been avoiding: Amazon, Etsy, eBay, Google Shopping.</p>
+      <p>We avoided them for reasons that sounded responsible. Listing fees ate margin. Returns worked differently on every platform. Part of the customer relationship would be handed over. Every one of those concerns was legitimate, and the conversation about cannibalizing direct sales was a real conversation, held more than once.</p>
+      <p>What wasn't fully appreciated going in was that the channel decision was the easy half. The hard half came after, and it was a marketing problem. A buyer who finds you on Amazon discovered you differently, trusts differently, and decides differently than a buyer who lands on your own site. We had written product titles and descriptions for one context. They had to be rewritten for several, each with its own logic of discovery, because the words that worked on the Skreened site were close to invisible everywhere else.</p>
+      <p>The product didn't change. The customer, in the broadest sense, didn't change. But who we were talking to, where we found them, and what those buyers needed to hear changed completely. That's a new fit, found on the far side of a revenue threshold, and it cost real effort to find it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container reveal">
+    <h2 class="measure">Treating fit as a binary leads you to spend a year solving the wrong problem.</h2>
+    <p class="lead measure-wide">When fit is either present or absent, the early signs of segment exhaustion read as a performance problem. So you spend a year tuning campaigns aimed at a cohort that's already mostly converted.</p>
+    <div class="measure-wide" style="margin-top:1.5rem">
+      <p>Treating fit as a gradient changes the question. You can see the next fit coming before you're forced into it. The founders who get through the three-million mark well are the ones who notice when the playbook's audience is running out, more than the ones with the best original playbook.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <h2 class="measure">The signal shows up in your numbers long before it shows up in your gut.</h2>
+    <div class="measure-wide" style="margin-top:1.5rem">
+      <p>The dashboard will tell you something is wrong without telling you what. How you notice the ceiling approaching is its own subject, and that's where I go next.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <h2 class="measure">Where this goes next.</h2>
+    <div class="measure-wide" style="margin-top:1rem">
+      <p>This is the first piece in a short series on what happens after the first product-market fit runs its course. Next: <a href="your-dashboard-cant-tell-you-whats-wrong.html">why your dashboard can tell you something is wrong without telling you what</a>.</p>
+      <p>It's also one part of a larger picture: <a href="demand-generation-for-high-ticket-businesses.html">how demand actually gets generated for a considered, high-ticket purchase</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-line">
+  <div class="container reveal">
+    <div class="related-grid">
+      <a class="related-card" href="how-do-i-know-if-my-market-is-saturated.html">
+        <span class="related-kicker">Quick answer</span>
+        <span class="related-title">How do I know if my market is saturated?</span>
+      </a>
+      <a class="related-card" href="why-is-my-roas-declining.html">
+        <span class="related-kicker">Quick answer</span>
+        <span class="related-title">Why is my ROAS declining when nothing changed?</span>
+      </a>
+    </div>
+    <p style="margin-top:1.6rem"><a class="belief-link" href="beliefs.html">The positions underneath all of this &rarr;</a></p>
+  </div>
+</section>
+
+<section class="section photo-section photo-center" data-parallax>
+  <div class="photo-bg" style="background-image:url('img/photos/band-denver-night.jpg')"></div>
+  <div class="container reveal" style="text-align:center">
+    <h2 class="measure" style="margin:0 auto 1rem">Not sure whether you're out of segment or out of message?</h2>
+    <p class="lead" style="margin:0 auto 2rem;max-width:48ch">That's the conversation. A short call tells us both whether your next move is a positioning problem, a channel problem, or neither.</p>
+    <a class="btn btn-on-ink" href="contact.html">Start a conversation</a>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="wordmark footer-wordmark">Daniel Fox</span>
+      <p class="footer-line">Fractional marketing leadership for consumer businesses that get chosen after the customer does their research.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="what-we-run.html">What I do</a>
+      <a href="who-its-for.html">Who it's for</a>
+      <a href="about.html">About</a>
+      <a href="beliefs.html">What I believe</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Start a conversation</a>
+    </nav>
+    <div class="footer-meta">
+      <span>&copy; 2026 Daniel Fox</span>
+    </div>
+  </div>
+</footer>
+
+
+  <script defer src="cinema.js?v=20260804c"></script>
+</body>
+</html>

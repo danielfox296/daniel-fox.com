@@ -1,0 +1,50 @@
+<section class="section">
+  <div class="container reveal">
+    <p class="eyebrow">Start a conversation</p>
+    <h1 class="measure">Tell me about <span class="accent">your business.</span></h1>
+    <p class="lead measure-wide">Two minutes here, then a short call. I'll tell you whether the math and the fit are there, including if they're not.</p>
+
+    <form class="form" action="https://formsubmit.co/3c6b469e2813a6c022ec9d9ce772e704" method="POST">
+      <input type="hidden" name="_subject" value="New inquiry from daniel-fox.com">
+      <input type="hidden" name="_next" value="https://daniel-fox.com/thanks.html">
+      <input type="hidden" name="_captcha" value="false">
+      <!-- No honeypot, on purpose: formsubmit drops any submission with
+           _honey set while still redirecting to the thanks page, and browser
+           autofill fills hidden fields it can classify (it ignores
+           autocomplete="off"). That combination silently killed a real
+           enquiry on signetartists.com the week of 2026-08-24. FormSubmit's
+           own server-side filtering is the spam layer; if spam grows,
+           escalate to a relay that logs submissions, never a silent trap.
+           The visible "company" field below is a real question for the
+           visitor, not a trap. -->
+
+      <label for="name">Your name</label>
+      <input id="name" type="text" name="name" required>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required>
+
+      <label for="company">Company</label>
+      <input id="company" type="text" name="company" required>
+
+      <label for="website">Website</label>
+      <input id="website" type="url" name="website" placeholder="https://">
+
+      <label for="spend">Roughly what do you spend on marketing each month?</label>
+      <select id="spend" name="monthly_spend">
+        <option value="">Select one</option>
+        <option>Under $10k</option>
+        <option>$10k&ndash;$30k</option>
+        <option>$30k&ndash;$75k</option>
+        <option>$75k&ndash;$150k</option>
+        <option>$150k+</option>
+      </select>
+
+      <label for="message">What's the gap you're feeling?</label>
+      <textarea id="message" name="message" placeholder="What's working, what isn't, and what you wish someone would just take off your desk."></textarea>
+
+      <button class="btn btn-primary" type="submit">Send it over</button>
+    </form>
+    <p class="measure" style="margin-top:1.5rem;opacity:0.8">Prefer to skip the form? <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener">Grab a time directly.</a></p>
+  </div>
+</section>
